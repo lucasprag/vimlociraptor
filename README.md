@@ -24,6 +24,10 @@ git clone git@github.com:Lucasosf/vimlociraptor.git ~/.vimlociraptor
 ```
 ln -s ~/.vimlociraptor/vimrc ~/.config/nvim/init.vim
 ```
+ - Install [Vundle](https://github.com/VundleVim/Vundle.vim)
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
  - Install the vundle plugins
 ```

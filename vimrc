@@ -8,7 +8,7 @@ set nocompatible
 
 " Vundle - you need to install it before. Check more details: https://github.com/gmarik/Vundle.vim
 filetype off " required by vundle
-set rtp+=~/.config/nvim/vundle
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
