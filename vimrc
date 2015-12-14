@@ -36,6 +36,9 @@ Plugin 'tpope/vim-endwise' " helps to end certain structures
 " > python
 Plugin 'hdima/python-syntax'
 
+" > swift
+Plugin 'kballard/vim-swift'
+
 " > elixir
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'carlosgaldino/elixir-snippets'
@@ -79,7 +82,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-airline'
 
 " Inception: install this repository to get ftplugins and other configurations
-Plugin 'Lucasosf/dragoz'
+Plugin 'Lucasosf/vimlociraptor'
 
 " END PLUGINS
 call vundle#end()
@@ -95,6 +98,9 @@ set laststatus=2
 
 " A guide column to keep the code to a maximum of 80 chars
 set colorcolumn=80
+
+" Change the ColorColumn color to lightgrey
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
