@@ -26,7 +26,7 @@ ln -s ~/.vimlociraptor/vimrc ~/.config/nvim/init.vim
 ```
  - Install [Vundle](https://github.com/VundleVim/Vundle.vim)
 ```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 ```
 
  - Install the vundle plugins
