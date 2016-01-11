@@ -18,23 +18,16 @@ Plugin 'gmarik/vundle'
 " > navigation
 Plugin 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plugin 'Lokaltog/vim-easymotion' " makes a map to easy move the cursor
-Plugin 'kien/ctrlp.vim' " index and search for files
-Plugin 'dyng/ctrlsf.vim' " an ack/ag powered code search and view tool
 
 " > editing tools
 Plugin 'scrooloose/nerdcommenter' " comment code
-Plugin 'tpope/vim-surround' " edit surrounding something
 
 " > ruby
 Plugin 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
 Plugin 'vim-ruby/vim-ruby' " ruby support
 Plugin 'tpope/vim-rails' " rails support
 Plugin 'thoughtbot/vim-rspec' " rspec support
-Plugin 'tpope/vim-rake' " rake support
-Plugin 'tpope/vim-endwise' " helps to end certain structures 
-
-" > python
-Plugin 'hdima/python-syntax'
+Plugin 'lucasosf/vim-endwise' " helps to end certain structures
 
 " > swift
 Plugin 'kballard/vim-swift'
@@ -46,33 +39,21 @@ Plugin 'mattreduce/vim-mix'
 
 " > javascript
 Plugin 'mxw/vim-jsx'
-Plugin 'elzr/vim-json'
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript' " dependency for the vim-jsx
 
 " > CSS
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'groenewege/vim-less'
 
 " > git
-Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 
 " > util
-Plugin 'tpope/vim-repeat'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-markdown'
 Plugin 'scrooloose/syntastic'
-Plugin 'rizzatti/dash.vim'
-Plugin 'tpope/vim-dispatch'
 Plugin 'vim-scripts/restore_view.vim'
-
-Plugin 'MarcWeber/vim-addon-mw-utils' " dependency for vim-snippets
-Plugin 'tomtom/tlib_vim' " dependency for vim-snippets
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets' " dependency for vim-snippets
 
 " > style
 Plugin 'godlygeek/tabular'
@@ -80,6 +61,8 @@ Plugin 'godlygeek/tabular'
 " > visual
 Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-airline'
+
+Plugin 'petelewis/vim-evolution'
 
 " Inception: install this repository to get ftplugins and other configurations
 Plugin 'Lucasosf/vimlociraptor'
@@ -210,6 +193,9 @@ let g:syntastic_scss_checkers = ['scss_lint']
 " (using Droid Sans Mono for Powerline)
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+set background=dark
+colorscheme evolution
 
 " Load config per project if '.vimrc.local' is present
 if filereadable(glob("./.vimrc.local"))
