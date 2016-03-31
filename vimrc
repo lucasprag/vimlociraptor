@@ -54,6 +54,7 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/restore_view.vim'
+Plugin 'pbrisbin/vim-mkdir'
 
 " > style
 Plugin 'godlygeek/tabular'
@@ -104,7 +105,7 @@ set autoindent
 " Stop certain movements from always going to the first character of a line.
 " " While this behaviour deviates from that of Vi, it does what most users
 " " coming from other editors would expect.
-set nostartofline
+"set nostartofline
 
 " Display the cursor position on the last line of the screen or in the status
 " " line of a window
@@ -113,13 +114,10 @@ set ruler
 " Use visual bell instead of beeping when doing something wrong
 set visualbell
 
-" Enable use of the mouse for all modes
-set mouse=a
-
 " Display line numbers on the left
 set number
 
-" IDENTATION -----------------------------------
+" IDENTATION ----------------------------------------
 
 " Indentation settings for using 2 spaces instead of tabs.
 " " Do not change 'tabstop' from its default value of 8 with this setup.
@@ -130,7 +128,7 @@ set expandtab
 " " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-" MAPPINGS --------------------------------------
+" MAPPINGS ------------------------------------------
 
 " Mapping <tab> to change navigate on tabs
 nmap <tab> :tabnext<CR>
@@ -149,7 +147,7 @@ set tabpagemax=100
 " Blank spaces killer
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=white guibg=white
 match ExtraWhitespace /\s\+$/
 autocmd WinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -167,20 +165,6 @@ set clipboard=unnamed
 vmap <C-c> :w !pbcopy<CR><CR>
 vmap <C-x> :!pbcopy<CR>
 
-" Function to Increment numbers in a column.
-" Extracted from: http://vim.wikia.com/wiki/Making_a_list_of_numbers
-function! IncrementNumbersInColumn()
-  let a = line('.') - line("'<")
-  let c = virtcol("'<")
-  if a > 0
-    execute 'normal! '.c.'|'.a."\<C-a>"
-  endif
-  normal `<
-endfunction
-
-" Map the above function to CTRL + a
-vnoremap <C-a> :call IncrementNumbersInColumn()<CR>
-
 " Linters - JS, SCSS and Ruby
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_scss_checkers = ['scss_lint']
@@ -193,9 +177,6 @@ let g:syntastic_scss_checkers = ['scss_lint']
 " (using Droid Sans Mono for Powerline)
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-
-set background=dark
-colorscheme evolution
 
 " Load config per project if '.vimrc.local' is present
 if filereadable(glob("./.vimrc.local"))
