@@ -34,3 +34,5 @@ command FixSpaces %s/\s\+$/
 " Copy and cut an entire line to clipboard
 vmap <C-c> :w !pbcopy<CR><CR>
 vmap <C-x> :!pbcopy<CR>
+
+nmap <space> :NERDTreeToggle<enter>
