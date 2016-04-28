@@ -1,7 +1,4 @@
-syntax on
-
-" Makes no compatible with the venerable old vi
-set nocompatible
+" [vim] lociraptor ------------------------------------
 
 " absolute path to vimlociraptor dir
 let g:vimlociraptor_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')

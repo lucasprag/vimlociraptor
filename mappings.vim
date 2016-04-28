@@ -1,4 +1,4 @@
-" MAPPINGS ------------------------------------------
+" MAPPINGS --------------------------------------------
 
 " Map <C-L> (redraw screen) to also turn off search highlighting until the
 " " next search
@@ -22,6 +22,7 @@ set tabpagemax=100
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=white guibg=white
+
 match ExtraWhitespace /\s\+$/
 autocmd WinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/

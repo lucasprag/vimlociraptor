@@ -50,6 +50,7 @@ Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'pbrisbin/vim-mkdir'
+Plugin 'tpope/vim-sensible'
 
 " > style
 Plugin 'godlygeek/tabular'
