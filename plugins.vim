@@ -1,3 +1,5 @@
+" PLUGINS ---------------------------------------------
+
 " Vundle - you need to install it before. Check more details: https://github.com/gmarik/Vundle.vim
 filetype off " required by vundle
 set rtp+=~/.vim/bundle/vundle
