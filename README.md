@@ -17,13 +17,9 @@ brew install neovim/neovim/neovim
 
  - clone the project
 ```
-git clone git@github.com:Lucasosf/vimlociraptor.git ~/.vimlociraptor
+git clone git@github.com:Lucasosf/vimlociraptor.git ~/.config/nvim/
 ```
 
- - create a symlink as the follow:
-```
-ln -s ~/.vimlociraptor/vimrc ~/.config/nvim/init.vim
-```
  - Install [Vundle](https://github.com/VundleVim/Vundle.vim)
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
@@ -46,12 +42,12 @@ cd ~/Downloads/fonts
 nvim
 ```
 
-Welcome to Vimlociraptor
+Welcome to Vimlociraptor!
 
 # Updating
 
 ```
-cd ~/.vimlociraptor
+cd ~/.config/nvim/
 git pull
 nvim \+PluginUpdate \+qa
 ```
@@ -63,6 +59,4 @@ Feel free to open an issue or fork and open a pull request.
 ---
 Cheers,
 
-[Contributors](https://github.com/Lucasosf/dragoz/graphs/contributors)
-
-
+[Contributors](https://github.com/Lucasosf/vimlociraptor/graphs/contributors)
