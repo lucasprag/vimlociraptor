@@ -4,7 +4,6 @@
 " " next search
 nnoremap <C-L> :nohl<CR><C-L>
 
-
 " Mapping <tab> to change navigate on tabs
 nmap <tab> :tabnext<CR>
 " Mapping control + <tab> to go to the previous tab
