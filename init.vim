@@ -22,10 +22,7 @@ call LoadFile('configs.vim')
 
 call LoadFile('mappings.vim')
 
-" Linters for the sake of good style
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_scss_checkers = ['scss_lint']
-"let g:syntastic_ruby_checkers = ['rubocop']
+call LoadFile('playground.vim')
 
 " Load config per project if '.vimrc.local' is present
 if filereadable(glob("./.vimrc.local"))

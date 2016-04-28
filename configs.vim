@@ -65,3 +65,8 @@ set clipboard=unnamed
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
+" Linters for the sake of good style
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_scss_checkers = ['scss_lint']
+"let g:syntastic_ruby_checkers = ['rubocop']
+
