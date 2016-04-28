@@ -23,16 +23,22 @@ set tabpagemax=100
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=white guibg=white
 
+" show white spaces with the red color
 match ExtraWhitespace /\s\+$/
 autocmd WinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " Run to clean trailing whitespace
-command FixSpaces %s/\s\+$/
+command CleanWhiteSpaces %s/\s\+$/
+nmap <leader><space> :CleanWhiteSpaces<enter>
 
 " Copy and cut an entire line to clipboard
 vmap <C-c> :w !pbcopy<CR><CR>
 vmap <C-x> :!pbcopy<CR>
 
 nmap <space> :NERDTreeToggle<enter>
+
+" Resize of windows made easily
+nmap <leader>w :InteractiveWindow<CR>
+

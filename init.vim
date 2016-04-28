@@ -1,4 +1,9 @@
-" [vim] lociraptor ------------------------------------
+" =============================================================================
+" Name:          [Vim]lociraptor
+" File:          init.vim
+" Description:   Init file
+" Author:        Lucas Oliveira <github.com/lucasosf>
+" =============================================================================
 
 " absolute path to vimlociraptor dir
 let g:vimlociraptor_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')

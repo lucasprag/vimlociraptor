@@ -12,11 +12,11 @@ Plugin 'gmarik/vundle'
 " > navigation
 Plugin 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plugin 'Lokaltog/vim-easymotion' " makes a map to easy move the cursor
-Plugin 'tpope/vim-surround' " makes surroundings easy
 Plugin 'ctrlpvim/ctrlp.vim'
 
 " > editing tools
 Plugin 'scrooloose/nerdcommenter' " comment code
+Plugin 'tpope/vim-surround' " makes surroundings easy
 
 " > ruby
 Plugin 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
@@ -59,6 +59,7 @@ Plugin 'godlygeek/tabular'
 " > visual
 Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-airline'
+Plugin 'romgrk/winteract.vim'
 
 Plugin 'petelewis/vim-evolution'
 
