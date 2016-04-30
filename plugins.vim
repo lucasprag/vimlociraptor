@@ -23,7 +23,7 @@ Plugin 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
 Plugin 'vim-ruby/vim-ruby' " ruby support
 Plugin 'tpope/vim-rails' " rails support
 Plugin 'thoughtbot/vim-rspec' " rspec support
-Plugin 'lucasosf/vim-endwise' " helps to end certain structures
+Plugin 'tpope/vim-endwise' " helps to end certain structures
 
 " > swift
 Plugin 'kballard/vim-swift'
