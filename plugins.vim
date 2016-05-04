@@ -13,6 +13,7 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plugin 'Lokaltog/vim-easymotion' " makes a map to easy move the cursor
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Shougo/unite.vim' " better that ctrlp?
 
 " > editing tools
 Plugin 'scrooloose/nerdcommenter' " comment code
@@ -62,9 +63,6 @@ Plugin 'bling/vim-airline'
 Plugin 'romgrk/winteract.vim'
 
 Plugin 'petelewis/vim-evolution'
-
-" Inception: install this repository to get ftplugins and other configurations
-Plugin 'Lucasosf/vimlociraptor'
 
 " END PLUGINS
 call vundle#end()
