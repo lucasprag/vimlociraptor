@@ -16,7 +16,8 @@ set laststatus=2
 set colorcolumn=80
 
 " Change the ColorColumn color to lightgrey
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+" TODO: change color according with something less versionable
+highlight ColorColumn ctermbg=7 guibg=lightgrey
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)

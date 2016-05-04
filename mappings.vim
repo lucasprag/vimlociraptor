@@ -18,7 +18,6 @@ au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 " Max of open tabs opened
 set tabpagemax=100
 
-" Blank spaces killer
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=white guibg=white
@@ -41,4 +40,8 @@ nmap <space> :NERDTreeToggle<enter>
 
 " Resize of windows made easily
 nmap <leader>w :InteractiveWindow<CR>
+
+" Run to remove debug methods
+command RemoveByebugs g/byebug/d
+nmap <leader>b :RemoveByebugs<enter>
 
