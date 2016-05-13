@@ -56,6 +56,7 @@ Plugin 'tpope/vim-sensible'
 
 " > style
 Plugin 'godlygeek/tabular'
+Plugin 'editorconfig/editorconfig-vim'
 
 " > visual
 Plugin 'itchyny/lightline.vim'
@@ -63,6 +64,9 @@ Plugin 'bling/vim-airline'
 Plugin 'romgrk/winteract.vim'
 
 Plugin 'petelewis/vim-evolution'
+
+" > metrics
+Plugin 'wakatime/vim-wakatime'
 
 " END PLUGINS
 call vundle#end()
