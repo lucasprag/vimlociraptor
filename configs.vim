@@ -71,3 +71,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_scss_checkers = ['scss_lint']
 "let g:syntastic_ruby_checkers = ['rubocop']
 
+" Rspec command
+let g:rspec_command = "Dispatch bundle exec rspec {spec} --color"
+let g:rspec_runner = "os_x_iterm2"
