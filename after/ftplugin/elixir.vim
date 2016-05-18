@@ -1,4 +1,4 @@
-let g:mix_test_command = "! mix test {spec}"
+let g:mix_test_command = "! docker-compose run web mix test {spec}"
 
 function! RunNearestSpec()
   let l:spec = @% . ":" . line(".")
@@ -6,5 +6,5 @@ function! RunNearestSpec()
 endfunction
 
 " Runs the tests
-map <leader>t :Dispatch mix test<CR>
+map <leader>t :Dispatch docker-compose run web mix test<CR>
 map <leader>s :call RunNearestSpec()<CR>
