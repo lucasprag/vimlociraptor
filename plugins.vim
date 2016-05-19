@@ -68,9 +68,6 @@ Plugin 'petelewis/vim-evolution'
 " > metrics
 Plugin 'wakatime/vim-wakatime'
 
-Plugin 'tpope/vim-dispatch'
-Plugin 'radenling/vim-dispatch-neovim'
-
 " > load the ftplugin configs
 Plugin 'Lucasosf/vimlociraptor'
 

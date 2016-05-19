@@ -1,3 +1,5 @@
+"au BufRead,BufNewFile *.exs		set filetype=elixir
+
 let g:mix_test_command = "! docker-compose run web mix test {spec}"
 
 function! RunNearestSpec()
@@ -6,5 +8,8 @@ function! RunNearestSpec()
 endfunction
 
 " Runs the tests
-map <leader>t :Dispatch docker-compose run web mix test<CR>
+map <leader>t docker-compose run web mix test<CR>
 map <leader>s :call RunNearestSpec()<CR>
+
+
+

@@ -45,3 +45,6 @@ nmap <leader>w :InteractiveWindow<CR>
 command RemoveByebugs g/byebug/d
 nmap <leader>b :RemoveByebugs<enter>
 
+" Rspec command
+let g:rspec_command = "! docker-compose run web bundle exec rspec {spec} --color"
+let g:rspec_runner = "os_x_iterm2"
