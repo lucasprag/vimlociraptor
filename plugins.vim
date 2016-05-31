@@ -33,6 +33,7 @@ Plugin 'kballard/vim-swift'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'carlosgaldino/elixir-snippets'
 Plugin 'mattreduce/vim-mix'
+Plugin 'awetzel/elixir.nvim'
 
 " > javascript
 Plugin 'mxw/vim-jsx'
