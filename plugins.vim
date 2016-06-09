@@ -38,6 +38,10 @@ Plugin 'awetzel/elixir.nvim'
 " > javascript
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript' " dependency for the vim-jsx
+Plugin 'isRuslan/vim-es6' " enables ES6
+Plugin 'garbas/vim-snipmate' " dependency vim-es6
+Plugin 'SirVer/ultisnips' " dependency vim-es6
+Plugin 'Shutnik/jshint2.vim'
 
 " > CSS
 Plugin 'cakebaker/scss-syntax.vim'
@@ -48,7 +52,6 @@ Plugin 'airblade/vim-gitgutter'
 
 " > util
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'Shutnik/jshint2.vim'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/restore_view.vim'
