@@ -69,9 +69,6 @@ Plugin 'romgrk/winteract.vim'
 
 Plugin 'petelewis/vim-evolution'
 
-" > metrics
-Plugin 'wakatime/vim-wakatime'
-
 " > load the ftplugin configs
 Plugin 'Lucasosf/vimlociraptor'
 
