@@ -25,8 +25,8 @@ set hlsearch
 
 " USABILITY -------------------------------------
 
-"add some line space for easy reading
-set linespace=4
+" add some line space for easy reading
+set linespace=2
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -60,7 +60,11 @@ set expandtab
 " Reload the file on changes
 set autoread
 
-set clipboard=unnamed
+" Makes the yank/past work in the X-server
+" Ubuntu: it uses xclip
+" OSX: it uses pbcopy/pbpaste
+" See more details :help provider-clipboard
+set clipboard=unnamedplus
 
 " Airline - status bar
 let g:airline#extensions#tabline#enabled = 1
