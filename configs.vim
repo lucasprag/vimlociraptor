@@ -78,3 +78,5 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_scss_checkers = ['scss_lint']
 "let g:syntastic_ruby_checkers = ['rubocop']
 
+" set syntax html for handlebar files
+autocmd BufNewFile,BufRead *.hbs   set syntax=html
