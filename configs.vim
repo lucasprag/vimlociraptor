@@ -13,11 +13,14 @@ set showcmd
 set laststatus=2
 
 " A guide column to keep the code to a maximum of 80 chars
-set colorcolumn=80
+set colorcolumn=100
 
 " Change the ColorColumn color to lightgrey
 " TODO: change color according with something less versionable
 highlight ColorColumn ctermbg=7 guibg=lightgrey
+
+colorscheme solarized
+set background=dark
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)

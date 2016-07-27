@@ -70,6 +70,9 @@ Plugin 'romgrk/winteract.vim'
 
 Plugin 'petelewis/vim-evolution'
 
+" > colors
+Plugin 'altercation/vim-colors-solarized'
+
 " > load the ftplugin configs
 Plugin 'Lucasosf/vimlociraptor'
 
