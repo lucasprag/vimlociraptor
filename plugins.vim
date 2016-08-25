@@ -38,10 +38,7 @@ Plugin 'awetzel/elixir.nvim'
 " > javascript
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript' " dependency for the vim-jsx
-Plugin 'isRuslan/vim-es6' " enables ES6
-Plugin 'garbas/vim-snipmate' " dependency vim-es6
 Plugin 'marcweber/vim-addon-mw-utils' " dependency for snipmate
-Plugin 'SirVer/ultisnips' " dependency vim-es6
 Plugin 'Shutnik/jshint2.vim'
 
 " > CSS
