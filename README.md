@@ -30,12 +30,13 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 nvim \+PluginInstall \+qa
 ```
 
-- Install [powerline fonts](https://github.com/powerline/fonts#font-families) 
+- Install [powerline fonts](https://github.com/powerline/fonts#font-families)
 ```
 git clone git@github.com:powerline/fonts.git ~/Downloads/fonts
 cd ~/Downloads/fonts
 ./install.sh
 ```
+Then set one of the powerline fonts in your terminal.
 
 - run neovim
 ```
@@ -52,11 +53,7 @@ git pull
 nvim \+PluginUpdate \+qa
 ```
 
-# Contributing
-
-Feel free to open an issue or fork and open a pull request.
-
 ---
 Cheers,
 
-[Contributors](https://github.com/Lucasosf/vimlociraptor/graphs/contributors)
+Lucas Oliveira
