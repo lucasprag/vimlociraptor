@@ -20,7 +20,7 @@ set colorcolumn=100
 highlight ColorColumn ctermbg=7 guibg=lightgrey
 
 colorscheme solarized
-set background=dark
+set background=light
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
@@ -80,3 +80,5 @@ let g:syntastic_scss_checkers = ['scss_lint']
 
 " set syntax html for handlebar files
 autocmd BufNewFile,BufRead *.hbs   set syntax=html
+
+let g:notes_directories = ['~/Dropbox/Notes']

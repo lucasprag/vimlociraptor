@@ -56,6 +56,10 @@ Plugin 'vim-scripts/restore_view.vim'
 Plugin 'pbrisbin/vim-mkdir' " to create files without creating dirs previously
 Plugin 'tpope/vim-sensible'
 
+" > notes
+Plugin 'xolox/vim-misc' " dependency for vim-notes
+Plugin 'xolox/vim-notes'
+
 " > style
 Plugin 'godlygeek/tabular'
 Plugin 'editorconfig/editorconfig-vim'
