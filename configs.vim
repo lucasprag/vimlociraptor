@@ -16,7 +16,6 @@ set laststatus=2
 set colorcolumn=100
 
 " Change the ColorColumn color to lightgrey
-" TODO: change color according with something less versionable
 highlight ColorColumn ctermbg=7 guibg=lightgrey
 
 colorscheme solarized
