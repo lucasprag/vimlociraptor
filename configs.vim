@@ -20,7 +20,7 @@ set colorcolumn=100
 highlight ColorColumn ctermbg=7 guibg=lightgrey
 
 colorscheme solarized
-set background=light
+set background=dark
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
