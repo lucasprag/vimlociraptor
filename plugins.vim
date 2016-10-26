@@ -64,6 +64,9 @@ Plugin 'xolox/vim-notes'
 Plugin 'godlygeek/tabular'
 Plugin 'editorconfig/editorconfig-vim'
 
+" > tmux
+Plugin 'christoomey/vim-tmux-navigator' " transparent navigator
+
 " > visual
 Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-airline'
