@@ -55,6 +55,7 @@ Plugin 'ervandew/supertab'
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'pbrisbin/vim-mkdir' " to create files without creating dirs previously
 Plugin 'tpope/vim-sensible'
+Plugin 'mileszs/ack.vim'
 
 " > notes
 Plugin 'xolox/vim-misc' " dependency for vim-notes

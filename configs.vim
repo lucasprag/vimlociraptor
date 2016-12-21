@@ -52,6 +52,21 @@ set visualbell
 " Display line numbers on the left
 set number
 
+" configs stolen from https://github.com/carlosantoniodasilva/vimfiles/blob/master/vimrc#L134
+" Open new split panes to right and bottom, which feels more natural than vim’s default:
+set splitbelow
+set splitright
+
+" Disable cursor keys in normal mode
+map <Left>  :echo ":trollface:"<cr>
+map <Right> :echo ":trollface:"<cr>
+map <Up>    :echo ":trollface:"<cr>
+map <Down>  :echo ":trollface:"<cr>
+
+" No more Ack typing.
+cmap ack Ack
+map <leader>a :Ack 
+
 " IDENTATION ----------------------------------------
 
 " Indentation settings for using 2 spaces instead of tabs.

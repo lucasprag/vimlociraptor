@@ -20,6 +20,12 @@ brew install neovim/neovim/neovim
 git clone git@github.com:Lucasosf/vimlociraptor.git ~/.config/nvim/
 ```
 
+- Install [Ack](http://beyondgrep.com/install/)
+```
+sudo apt-get install ack-grep
+sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
+```
+
  - Install [Vundle](https://github.com/VundleVim/Vundle.vim)
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
