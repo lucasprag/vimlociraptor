@@ -13,7 +13,6 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plugin 'Lokaltog/vim-easymotion' " makes a map to easy move the cursor
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Shougo/unite.vim' " better than ctrlp?
 
 " > editing tools
 Plugin 'scrooloose/nerdcommenter' " comment code
