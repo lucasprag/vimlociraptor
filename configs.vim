@@ -52,6 +52,9 @@ set visualbell
 " Display line numbers on the left
 set number
 
+" ignore node_modules when running ctrlp plugin
+set wildignore+=*/node_modules/*,*.so,*.swp,*.zip
+
 " configs stolen from https://github.com/carlosantoniodasilva/vimfiles/blob/master/vimrc#L134
 " Open new split panes to right and bottom, which feels more natural than vim’s default:
 set splitbelow
@@ -65,7 +68,7 @@ map <Down>  :echo ":trollface:"<cr>
 
 " No more Ack typing.
 cmap ack Ack
-map <leader>a :Ack 
+map <leader>a :Ack
 
 " IDENTATION ----------------------------------------
 
