@@ -20,6 +20,11 @@ brew install neovim/neovim/neovim
 git clone git@github.com:Lucasosf/vimlociraptor.git ~/.config/nvim/
 ```
 
+- Install [EditorConfig](http://editorconfig.org/)
+```
+sudo apt-get install editorconfig
+```
+
 - Install [Ack](http://beyondgrep.com/install/)
 ```
 sudo apt-get install ack-grep

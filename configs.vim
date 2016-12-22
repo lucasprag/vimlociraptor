@@ -99,3 +99,6 @@ let g:syntastic_scss_checkers = ['scss_lint']
 autocmd BufNewFile,BufRead *.hbs   set syntax=html
 
 let g:notes_directories = ['~/Dropbox/Notes']
+
+" make the editorconfig work using the external command
+let g:EditorConfig_core_mode = 'external_command'
