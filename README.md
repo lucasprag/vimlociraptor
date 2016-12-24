@@ -22,6 +22,9 @@ git clone git@github.com:Lucasosf/vimlociraptor.git ~/.config/nvim/
 
 - Install [EditorConfig](http://editorconfig.org/)
 ```
+brew install editorconfig
+
+# or for ubuntu/debian
 sudo apt-get install editorconfig
 ```
 
