@@ -27,6 +27,9 @@ sudo apt-get install editorconfig
 
 - Install [Ack](http://beyondgrep.com/install/)
 ```
+brew install ack
+
+# or for ubuntu/debian
 sudo apt-get install ack-grep
 sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 ```
