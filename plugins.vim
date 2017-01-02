@@ -12,7 +12,7 @@ Plugin 'gmarik/vundle'
 " > navigation
 Plugin 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plugin 'Lokaltog/vim-easymotion' " makes a map to easy move the cursor
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim' " search and open any file given a name
 
 " > editing tools
 Plugin 'scrooloose/nerdcommenter' " comment code
@@ -24,25 +24,6 @@ Plugin 'vim-ruby/vim-ruby' " ruby support
 Plugin 'tpope/vim-rails' " rails support
 Plugin 'thoughtbot/vim-rspec' " rspec support
 Plugin 'tpope/vim-endwise' " helps to end certain structures
-
-" > swift
-Plugin 'kballard/vim-swift'
-
-" > elixir
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'carlosgaldino/elixir-snippets'
-Plugin 'mattreduce/vim-mix'
-Plugin 'awetzel/elixir.nvim'
-
-" > javascript
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript' " dependency for the vim-jsx
-Plugin 'marcweber/vim-addon-mw-utils' " dependency for snipmate
-Plugin 'Shutnik/jshint2.vim'
-
-" > CSS
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'groenewege/vim-less'
 
 " > git
 Plugin 'airblade/vim-gitgutter'
@@ -73,6 +54,9 @@ Plugin 'bling/vim-airline'
 Plugin 'romgrk/winteract.vim'
 
 Plugin 'petelewis/vim-evolution'
+
+" > WOW!
+Plugin 'sheerun/vim-polyglot'
 
 " > colors
 Plugin 'altercation/vim-colors-solarized'
