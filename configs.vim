@@ -18,7 +18,13 @@ set colorcolumn=100
 " Change the ColorColumn color to lightgrey
 highlight ColorColumn ctermbg=7 guibg=lightgrey
 
-colorscheme solarized
+" true color
+if has('termguicolors')
+  set termguicolors
+endif
+
+"colorscheme solarized
+colorscheme one
 set background=dark
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the

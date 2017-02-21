@@ -60,6 +60,7 @@ Plugin 'sheerun/vim-polyglot'
 
 " > colors
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'rakr/vim-one' " true color
 
 " > load the ftplugin configs
 Plugin 'Lucasosf/vimlociraptor'
