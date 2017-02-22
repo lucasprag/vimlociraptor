@@ -48,3 +48,13 @@ nmap <leader>b :RemoveByebugs<enter>
 " Rspec command
 let g:rspec_command = "! docker-compose run web bundle exec rspec {spec} --color"
 let g:rspec_runner = "os_x_iterm2"
+
+" Save with Ctrl + S, so friends can use my vim
+map <C-s> :w<enter>
+
+" I type to fast, so :W becomes :w
+command WQ wq
+command Wq wq
+command W w
+command Q q
+
