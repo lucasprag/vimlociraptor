@@ -55,6 +55,9 @@ map <C-s> :w<enter>
 " I type to fast, so :W becomes :w
 command WQ wq
 command Wq wq
+command WQa wqa
+command Wqa wqa
+command WQA wqa
 command W w
 command Q q
 
