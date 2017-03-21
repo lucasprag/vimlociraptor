@@ -55,9 +55,9 @@ Plugin 'petelewis/vim-evolution'
 " > WOW!
 Plugin 'sheerun/vim-polyglot'
 
-" > colors
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'rakr/vim-one' " true color
+" > colors with true color support
+Plugin 'lifepillar/vim-solarized8'
+Plugin 'rakr/vim-one'
 
 " > load the ftplugin configs
 Plugin 'Lucasosf/vimlociraptor'

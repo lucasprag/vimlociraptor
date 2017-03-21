@@ -9,9 +9,6 @@ nmap <tab> :tabnext<CR>
 " Mapping control + <tab> to go to the previous tab
 nmap <S-tab> :tabprevious<CR>
 
-" Open file under cursor in another tab
-map gft <C-w>gf<CR>
-
 " Opens XML files with xmllint
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
