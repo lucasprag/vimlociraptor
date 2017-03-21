@@ -31,15 +31,12 @@ Plugin 'airblade/vim-gitgutter'
 " > util
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
+Plugin 'mtscout6/syntastic-local-eslint.vim' "Prefer local repo install of eslint over global install
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'pbrisbin/vim-mkdir' " to create files without creating dirs previously
 Plugin 'tpope/vim-sensible'
 Plugin 'mileszs/ack.vim'
-
-" > notes
-Plugin 'xolox/vim-misc' " dependency for vim-notes
-Plugin 'xolox/vim-notes'
 
 " > style
 Plugin 'godlygeek/tabular'

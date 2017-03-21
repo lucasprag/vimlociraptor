@@ -61,3 +61,12 @@ command WQA wqa
 command W w
 command Q q
 
+" Disable cursor keys in normal mode
+map <Left>  :echo ":trollface:"<cr>
+map <Right> :echo ":trollface:"<cr>
+map <Up>    :echo ":trollface:"<cr>
+map <Down>  :echo ":trollface:"<cr>
+
+" ACK
+map <leader>a :tabnew<enter>:Ack
+

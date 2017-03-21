@@ -66,16 +66,6 @@ set wildignore+=*/node_modules/*,*.so,*.swp,*.zip
 set splitbelow
 set splitright
 
-" Disable cursor keys in normal mode
-map <Left>  :echo ":trollface:"<cr>
-map <Right> :echo ":trollface:"<cr>
-map <Up>    :echo ":trollface:"<cr>
-map <Down>  :echo ":trollface:"<cr>
-
-" No more Ack typing.
-cmap ack Ack
-map <leader>a :Ack
-
 " IDENTATION ----------------------------------------
 
 " Indentation settings for using 2 spaces instead of tabs.
@@ -97,14 +87,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " Linters for the sake of good style
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_scss_checkers = ['scss_lint']
 "let g:syntastic_ruby_checkers = ['rubocop']
 
 " set syntax html for handlebar files
 autocmd BufNewFile,BufRead *.hbs   set syntax=html
-
-let g:notes_directories = ['~/Dropbox/Notes']
 
 " make the editorconfig work using the external command
 let g:EditorConfig_core_mode = 'external_command'
