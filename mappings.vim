@@ -48,6 +48,7 @@ let g:rspec_runner = "os_x_iterm2"
 
 " Save with Ctrl + S, so friends can use my vim
 map <C-s> :w<enter>
+map <C-q> :q<enter>
 
 " I type to fast, so :W becomes :w
 command WQ wq
