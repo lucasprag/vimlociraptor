@@ -23,7 +23,7 @@ if has('termguicolors')
   set termguicolors
 endif
 
-colorscheme solarized8_light_high
+colorscheme solarized8_dark_high
 "set background=dark
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
