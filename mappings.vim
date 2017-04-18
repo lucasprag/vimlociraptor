@@ -1,8 +1,7 @@
 " MAPPINGS --------------------------------------------
 
-" Map <C-L> (redraw screen) to also turn off search highlighting until the
-" " next search
-nnoremap <C-L> :nohl<CR><C-L>
+" turn off search highlighting until the next search
+nnoremap <C-space> :nohl<CR><C-space>
 
 " Mapping <tab> to change navigate on tabs
 nmap <tab> :tabnext<CR>
@@ -49,15 +48,16 @@ let g:rspec_runner = "os_x_iterm2"
 " Save with Ctrl + S, so friends can use my vim
 map <C-s> :w<enter>
 map <C-q> :q<enter>
+map <C-a> :wqa<enter>
 
-" I type to fast, so :W becomes :w
+" I type so fast that :w becomes :W
+command W w
+command Q q
 command WQ wq
 command Wq wq
 command WQa wqa
 command Wqa wqa
 command WQA wqa
-command W w
-command Q q
 
 " Disable cursor keys in normal mode
 map <Left>  :echo ":trollface:"<cr>
