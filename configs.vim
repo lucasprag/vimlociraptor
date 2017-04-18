@@ -12,24 +12,18 @@ set showcmd
 " Enable light line
 set laststatus=2
 
-" A guide column to keep the code to a maximum of 80 chars
-set colorcolumn=100
-
-" Change the ColorColumn color to lightgrey
-highlight ColorColumn ctermbg=7 guibg=lightgrey
-
 " true color
 if has('termguicolors')
   set termguicolors
 endif
 
-colorscheme solarized8_dark_high
-"set background=dark
+colorscheme apprentice
 
 " Highlight searches
 set hlsearch
 
-" USABILITY -------------------------------------
+" A guide column to keep the code to a maximum of 80 chars
+set colorcolumn=100
 
 " add some line space for easy reading
 set linespace=2
