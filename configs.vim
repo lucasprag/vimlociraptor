@@ -1,15 +1,12 @@
 " CONFIGS ---------------------------------------------
 
-" Toggle past mode
-set pastetoggle=<F2>
-
 " TODO: describe this
 filetype indent plugin on
 
 " Show partial commands in the last line of the screen
 set showcmd
 
-" Enable light line
+" Always show the light line
 set laststatus=2
 
 " true color
@@ -34,11 +31,6 @@ set ignorecase
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
-
-" Stop certain movements from always going to the first character of a line.
-" " While this behaviour deviates from that of Vi, it does what most users
-" " coming from other editors would expect.
-"set nostartofline
 
 " Display the cursor position on the last line of the screen or in the status
 " " line of a window
