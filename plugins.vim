@@ -58,7 +58,7 @@ Plugin 'sheerun/vim-polyglot'
 " > colors with true color support
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'rakr/vim-one'
-Plugin 'romainl/Apprentice'
+Plugin 'Lucasosf/Apprentice'
 
 " > load the ftplugin configs
 Plugin 'Lucasosf/vimlociraptor'
