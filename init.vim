@@ -24,12 +24,3 @@ call LoadFile('mappings.vim')
 
 call LoadFile('playground.vim')
 
-" Load config per project if '.vimrc.local' is present
-if filereadable(glob("./.vimrc.local"))
-  source ./.vimrc.local
-endif
-
-" Load custom configs without have to change insane-coder
-if filereadable(glob("~/.vimrc.after"))
-  source ~/.vimrc.after
-endif

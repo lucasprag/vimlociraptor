@@ -8,9 +8,6 @@ nmap <tab> :tabnext<CR>
 " Mapping control + <tab> to go to the previous tab
 nmap <S-tab> :tabprevious<CR>
 
-" Opens XML files with xmllint
-au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
-
 " Max of open tabs opened
 set tabpagemax=100
 
