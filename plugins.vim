@@ -24,7 +24,6 @@ Plugin 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
 Plugin 'vim-ruby/vim-ruby' " ruby support
 Plugin 'tpope/vim-rails' " rails support
 Plugin 'thoughtbot/vim-rspec' " rspec support
-Plugin 'tpope/vim-endwise' " helps to end certain structures
 
 " > git
 Plugin 'airblade/vim-gitgutter'
@@ -32,12 +31,13 @@ Plugin 'airblade/vim-gitgutter'
 " > util
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
-Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic' " syntax checking
 Plugin 'mtscout6/syntastic-local-eslint.vim' "Prefer local repo install of eslint over global install
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'pbrisbin/vim-mkdir' " to create files without creating dirs previously
 Plugin 'tpope/vim-sensible'
-Plugin 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim' " better than git grep
+Plugin 'tpope/vim-endwise' " helps to end certain structures
 
 " > style
 Plugin 'godlygeek/tabular'
@@ -60,9 +60,6 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'rakr/vim-one'
 Plugin 'Lucasosf/Apprentice'
-
-" > load the ftplugin configs
-Plugin 'Lucasosf/vimlociraptor'
 
 " END PLUGINS
 call vundle#end()

@@ -41,10 +41,6 @@ nmap <leader>w :InteractiveWindow<CR>
 command RemoveByebugs g/byebug/d
 nmap <leader>b :RemoveByebugs<enter>
 
-" Rspec command
-let g:rspec_command = "! docker-compose run web bundle exec rspec {spec} --color"
-let g:rspec_runner = "os_x_iterm2"
-
 " Save with Ctrl + S, so friends can use my vim
 map <C-s> :w<enter>
 map <C-q> :q<enter>
@@ -66,5 +62,5 @@ map <Up>    :echo ":trollface:"<cr>
 map <Down>  :echo ":trollface:"<cr>
 
 " ACK
-map <leader>a :tabnew<enter>:Ack
+map <leader>a :Ack
 
