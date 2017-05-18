@@ -59,7 +59,7 @@ Plugin 'sheerun/vim-polyglot'
 " > colors with true color support
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'rakr/vim-one'
-Plugin 'Lucasosf/Apprentice'
+Plugin 'romainl/Apprentice'
 
 " END PLUGINS
 call vundle#end()
