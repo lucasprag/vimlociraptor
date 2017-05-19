@@ -5,6 +5,7 @@ nnoremap <C-space> :nohl<CR><C-space>
 
 " Mapping <tab> to change navigate on tabs
 nmap <tab> :tabnext<CR>
+
 " Mapping control + <tab> to go to the previous tab
 nmap <S-tab> :tabprevious<CR>
 

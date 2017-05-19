@@ -3,41 +3,27 @@
 
 This is a distribution of plugins and mappings for Vim.
 
->To acquire knowledge, one must study; but to acquire wisdom, one must observe.<br>
-><small>- Marilyn vos Savant</small>
-
 # Installation
 
  - Install [Neovim](https://github.com/neovim/neovim)
-<small>for OSX users:
-```
-brew update
-brew install neovim/neovim/neovim
-```
 
- - clone the project
+ - Clone the project
 ```
 git clone git@github.com:Lucasosf/vimlociraptor.git ~/.config/nvim/
 ```
 
 - Install [EditorConfig](http://editorconfig.org/)
-```
-brew install editorconfig
-
-# or for ubuntu/debian
-sudo apt-get install editorconfig
-```
 
 - Install [Ack](http://beyondgrep.com/install/)
-```
-brew install ack
 
-# or for ubuntu/debian
-sudo apt-get install ack-grep
-sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
+- Install [powerline fonts](https://github.com/powerline/fonts#font-families) and set one of the powerline fonts on your terminal
+```
+git clone git@github.com:powerline/fonts.git ~/Downloads/fonts
+cd ~/Downloads/fonts
+./install.sh
 ```
 
- - Install [Vundle](https://github.com/VundleVim/Vundle.vim)
+- Install [Vundle](https://github.com/VundleVim/Vundle.vim)
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 ```
@@ -47,14 +33,6 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
 nvim \+PluginInstall \+qa
 ```
 
-- Install [powerline fonts](https://github.com/powerline/fonts#font-families)
-```
-git clone git@github.com:powerline/fonts.git ~/Downloads/fonts
-cd ~/Downloads/fonts
-./install.sh
-```
-Then set one of the powerline fonts in your terminal.
-
 - run neovim
 ```
 nvim
@@ -62,12 +40,16 @@ nvim
 
 Welcome to Vimlociraptor!
 
+# Usage
+
+(soon)
+
 # Updating
 
 ```
 cd ~/.config/nvim/
 git pull
-nvim \+PluginUpdate \+qa
+nvim \+PluginInstall \+qa
 ```
 
 ---
