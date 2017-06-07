@@ -18,6 +18,7 @@ Plugin 'matze/vim-move' " move lines up and down like sublime text 3
 " > editing tools
 Plugin 'scrooloose/nerdcommenter' " comment code
 Plugin 'tpope/vim-surround' " makes surroundings easy
+Plugin 'AndrewRadev/deleft.vim' " delete wrapping if-clauses, try-catch blocks, and similar constructs
 
 " > ruby
 Plugin 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
