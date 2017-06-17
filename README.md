@@ -9,7 +9,7 @@ This is a distribution of plugins and mappings for Vim.
 
  - Clone the project
 ```
-git clone git@github.com:Lucasosf/vimlociraptor.git ~/.config/nvim/
+git clone git@github.com:lucasprag/vimlociraptor.git ~/.config/nvim/
 ```
 
 - Install [EditorConfig](http://editorconfig.org/)

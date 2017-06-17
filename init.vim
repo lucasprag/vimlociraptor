@@ -2,7 +2,7 @@
 " Name:          [Vim]lociraptor
 " File:          init.vim
 " Description:   Init file
-" Author:        Lucas Oliveira <github.com/lucasosf>
+" Author:        Lucas Oliveira <github.com/lucasprag>
 " =============================================================================
 
 " absolute path to vimlociraptor dir
