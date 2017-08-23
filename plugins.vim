@@ -44,6 +44,9 @@ Plugin 'tpope/vim-endwise' " helps to end certain structures
 Plugin 'godlygeek/tabular'
 Plugin 'editorconfig/editorconfig-vim'
 
+" > WOW!
+Plugin 'sheerun/vim-polyglot'
+
 " > tmux
 Plugin 'christoomey/vim-tmux-navigator' " transparent navigator
 
@@ -54,13 +57,11 @@ Plugin 'romgrk/winteract.vim'
 
 Plugin 'petelewis/vim-evolution'
 
-" > WOW!
-Plugin 'sheerun/vim-polyglot'
-
 " > colors with true color support
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'rakr/vim-one'
 Plugin 'romainl/Apprentice'
+Plugin 'raphamorim/lucario'
 
 " END PLUGINS
 call vundle#end()
