@@ -14,7 +14,7 @@ if has('termguicolors')
   set termguicolors
 endif
 
-colorscheme apprentice
+colorscheme vim-material
 
 " Highlight searches
 set hlsearch
@@ -69,6 +69,7 @@ set clipboard=unnamedplus
 " Airline - status bar
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline_theme='material'
 
 " Linters for the sake of good style
 let g:syntastic_javascript_checkers = ['eslint']

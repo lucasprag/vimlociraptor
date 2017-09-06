@@ -62,6 +62,7 @@ Plugin 'lifepillar/vim-solarized8'
 Plugin 'rakr/vim-one'
 Plugin 'romainl/Apprentice'
 Plugin 'raphamorim/lucario'
+Plugin 'hzchirs/vim-material'
 
 " END PLUGINS
 call vundle#end()
