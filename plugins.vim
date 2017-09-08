@@ -44,6 +44,9 @@ Plugin 'tpope/vim-endwise' " helps to end certain structures
 Plugin 'godlygeek/tabular'
 Plugin 'editorconfig/editorconfig-vim'
 
+" > CSS
+Plugin 'alexlafroscia/postcss-syntax.vim' " syntax for postcss
+
 " > WOW!
 Plugin 'sheerun/vim-polyglot'
 
