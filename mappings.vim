@@ -62,3 +62,6 @@ map <Down>  :echo ":trollface:"<cr>
 " ACK
 map <leader>a :Ack
 
+" Notes
+map <leader>n :vsplit ~/Dropbox/devnotes.md <enter>
+
