@@ -47,6 +47,8 @@ Plugin 'editorconfig/editorconfig-vim'
 " > CSS
 Plugin 'alexlafroscia/postcss-syntax.vim' " syntax for postcss
 
+Plugin 'AndrewRadev/vim-eco'
+
 " > WOW!
 Plugin 'sheerun/vim-polyglot'
 
