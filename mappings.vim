@@ -64,4 +64,3 @@ map <leader>a :Ack
 
 " Notes
 map <leader>n :vsplit ~/Dropbox/devnotes.md <enter>
-

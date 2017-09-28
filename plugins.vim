@@ -40,6 +40,8 @@ Plugin 'tpope/vim-sensible'
 Plugin 'mileszs/ack.vim' " better than git grep
 Plugin 'tpope/vim-endwise' " helps to end certain structures
 
+Plugin 'janko-m/vim-test'
+
 " > style
 Plugin 'godlygeek/tabular'
 Plugin 'editorconfig/editorconfig-vim'
