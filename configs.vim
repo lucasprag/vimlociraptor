@@ -83,4 +83,4 @@ autocmd BufNewFile,BufRead *.hbs   set syntax=html
 let g:EditorConfig_core_mode = 'external_command'
 
 " make vim-test use vim-tmux-runner
-let test#strategy = "vtr"
+let test#strategy = "vimux"
