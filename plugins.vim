@@ -32,12 +32,11 @@ Plugin 'airblade/vim-gitgutter'
 " > util
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab'
-Plugin 'scrooloose/syntastic' " syntax checking
-Plugin 'mtscout6/syntastic-local-eslint.vim' "Prefer local repo install of eslint over global install
+Plugin 'neomake/neomake' "async syntax checking
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'pbrisbin/vim-mkdir' " to create files without creating dirs previously
 Plugin 'tpope/vim-sensible'
-Plugin 'mileszs/ack.vim' " better than git grep
+Plugin 'mileszs/ack.vim' " search with Ack
 Plugin 'tpope/vim-endwise' " helps to end certain structures
 
 Plugin 'janko-m/vim-test' " run tests
