@@ -60,7 +60,7 @@ map <Up>    :echo ":trollface:"<cr>
 map <Down>  :echo ":trollface:"<cr>
 
 " ACK
-map <leader>a :Ack
+map <leader>a :tabnew<enter>:Ack
 
 " Notes
 map <leader>n :vsplit ~/Dropbox/devnotes/heap.md <enter>
