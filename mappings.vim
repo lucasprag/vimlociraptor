@@ -39,6 +39,8 @@ nmap <leader>w :InteractiveWindow<CR>
 command RemoveByebugs g/byebug/d
 nmap <leader>b :RemoveByebugs<enter>
 
+nmap <leader>t :tabnew<enter>
+
 " Save with Ctrl + S, so friends can use my vim
 map <C-s> :w<enter>
 map <C-q> :q<enter>
