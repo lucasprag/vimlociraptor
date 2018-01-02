@@ -62,14 +62,15 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'bling/vim-airline'
 Plugin 'romgrk/winteract.vim'
 
-Plugin 'petelewis/vim-evolution'
 
 " > colors with true color support
+Plugin 'petelewis/vim-evolution'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'rakr/vim-one'
 Plugin 'romainl/Apprentice'
 Plugin 'raphamorim/lucario'
 Plugin 'hzchirs/vim-material'
+Plugin 'morhetz/gruvbox'
 
 " END PLUGINS
 call vundle#end()

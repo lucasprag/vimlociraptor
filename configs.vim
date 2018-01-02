@@ -14,7 +14,8 @@ if has('termguicolors')
   set termguicolors
 endif
 
-colorscheme vim-material
+set background=dark
+colorscheme gruvbox
 
 " Highlight searches
 set hlsearch
