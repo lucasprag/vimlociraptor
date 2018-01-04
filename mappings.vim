@@ -39,8 +39,6 @@ nmap <leader>w :InteractiveWindow<CR>
 command RemoveByebugs g/byebug/d
 nmap <leader>b :RemoveByebugs<enter>
 
-nmap <leader>t :tabnew<enter>
-
 " Save with Ctrl + S, so friends can use my vim
 map <C-s> :w<enter>
 map <C-q> :q<enter>
@@ -65,4 +63,11 @@ map <Down>  :echo ":trollface:"<cr>
 map <leader>a :tabnew<enter>:Ack
 
 " Notes
-map <leader>n :vsplit ~/Dropbox/devnotes/heap.md <enter>
+map <leader>n :vsplit ~/Dropbox/devnotes/todo.md <enter>
+
+" run tests
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
