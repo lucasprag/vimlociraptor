@@ -1,7 +1,7 @@
 [Vim]lociraptor
 ===============
 
-This is a distribution of plugins and mappings for Vim.
+Yet another distribution of plugins and mappings for Vim.
 
 # Installation
 
