@@ -15,7 +15,7 @@ if has('termguicolors')
 endif
 
 set background=dark
-colorscheme apprentice
+colorscheme evolution
 
 " Highlight searches
 set hlsearch
