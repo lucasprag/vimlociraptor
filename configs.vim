@@ -81,5 +81,3 @@ autocmd BufNewFile,BufRead *.hbs   set syntax=html
 " make the editorconfig work using the external command
 let g:EditorConfig_core_mode = 'external_command'
 
-" make vim-test use vim-tmux-runner
-let test#strategy = "vimux"
