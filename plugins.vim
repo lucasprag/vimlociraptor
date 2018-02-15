@@ -40,6 +40,10 @@ Plugin 'mileszs/ack.vim' " search with Ack
 Plugin 'tpope/vim-endwise' " helps to end certain structures
 
 Plugin 'janko-m/vim-test' " run tests
+Plugin 'benmills/vimux' " run tests on a tmux pane
+
+" > tmux
+Plugin 'christoomey/vim-tmux-navigator' " transparent navigator
 
 " > style
 Plugin 'godlygeek/tabular'
