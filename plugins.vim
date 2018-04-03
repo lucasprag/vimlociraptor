@@ -42,15 +42,15 @@ Plugin 'benmills/vimux' " run tests on a tmux pane
 Plugin 'w0rp/ale' " Asynchronous Lint Engine
 Plugin 'AndrewRadev/vim-eco' " support for eco templates
 
+" > tmux
+Plugin 'christoomey/vim-tmux-navigator' " transparent navigator
+
 " > style
 Plugin 'godlygeek/tabular'
 Plugin 'editorconfig/editorconfig-vim'
 
 " > WOW!
 Plugin 'sheerun/vim-polyglot'
-
-" > tmux
-Plugin 'christoomey/vim-tmux-navigator' " transparent navigator
 
 " > visual
 Plugin 'itchyny/lightline.vim'
