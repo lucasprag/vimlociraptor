@@ -14,14 +14,13 @@ if has('termguicolors')
   set termguicolors
 endif
 
-set background=dark
-colorscheme evolution
+colorscheme vim-material
 
 " Highlight searches
 set hlsearch
 
 " A guide column to keep the code to a maximum of 80 chars
-set colorcolumn=100
+set colorcolumn=120
 
 " add some line space for easy reading
 set linespace=2
@@ -71,9 +70,6 @@ set clipboard=unnamedplus
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='material'
-
-" Run syntax checker when reading a buffer (after 1s), and when writing.
-call neomake#configure#automake('rw', 1000)
 
 " set syntax html for handlebar files
 autocmd BufNewFile,BufRead *.hbs   set syntax=html

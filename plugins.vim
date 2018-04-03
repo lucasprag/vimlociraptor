@@ -31,25 +31,20 @@ Plugin 'airblade/vim-gitgutter'
 
 " > util
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ervandew/supertab'
-Plugin 'neomake/neomake' "async syntax checking
+Plugin 'ervandew/supertab' " to use tab to trigger completations
 Plugin 'vim-scripts/restore_view.vim'
 Plugin 'pbrisbin/vim-mkdir' " to create files without creating dirs previously
 Plugin 'tpope/vim-sensible'
 Plugin 'mileszs/ack.vim' " search with Ack
 Plugin 'tpope/vim-endwise' " helps to end certain structures
-
 Plugin 'janko-m/vim-test' " run tests
 Plugin 'benmills/vimux' " run tests on a tmux pane
+Plugin 'w0rp/ale' " Asynchronous Lint Engine
+Plugin 'AndrewRadev/vim-eco' " support for eco templates
 
 " > style
 Plugin 'godlygeek/tabular'
 Plugin 'editorconfig/editorconfig-vim'
-
-" > CSS
-Plugin 'alexlafroscia/postcss-syntax.vim' " syntax for postcss
-
-Plugin 'AndrewRadev/vim-eco'
 
 " > WOW!
 Plugin 'sheerun/vim-polyglot'
@@ -66,11 +61,9 @@ Plugin 'romgrk/winteract.vim'
 " > colors with true color support
 Plugin 'petelewis/vim-evolution'
 Plugin 'lifepillar/vim-solarized8'
-Plugin 'rakr/vim-one'
 Plugin 'romainl/Apprentice'
 Plugin 'raphamorim/lucario'
 Plugin 'hzchirs/vim-material'
-Plugin 'morhetz/gruvbox'
 
 " END PLUGINS
 call vundle#end()
