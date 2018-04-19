@@ -22,5 +22,3 @@ call LoadFile('configs.vim')
 
 call LoadFile('mappings.vim')
 
-call LoadFile('playground.vim')
-
