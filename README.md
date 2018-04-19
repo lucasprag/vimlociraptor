@@ -40,10 +40,6 @@ nvim
 
 Welcome to Vimlociraptor!
 
-# Usage
-
-(soon)
-
 # Updating
 
 ```
