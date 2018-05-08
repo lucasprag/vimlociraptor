@@ -43,7 +43,7 @@ set visualbell
 set number
 
 " ignore node_modules when running ctrlp plugin
-set wildignore+=*/node_modules/*,*.so,*.swp,*.zip
+set wildignore+=*/node_modules/*,*/public/*,*.so,*.swp,*.zip
 
 " configs stolen from https://github.com/carlosantoniodasilva/vimfiles/blob/master/vimrc#L134
 " Open new split panes to right and bottom, which feels more natural than vim’s default:
@@ -77,5 +77,5 @@ autocmd BufNewFile,BufRead *.hbs   set syntax=html
 " make the editorconfig work using the external command
 let g:EditorConfig_core_mode = 'external_command'
 
-" make vim-test use vim-tmux-runner
+" make vim-test use vim-tmux-runner to run specs in a split bellow
 let test#strategy = "vimux"
