@@ -39,8 +39,8 @@ set ruler
 " Use visual bell instead of beeping when doing something wrong
 set visualbell
 
-" Display line numbers on the left
-set number
+" Display relative line numbers to easy movement using number and direction like 20j or 50k
+set relativenumber
 
 " ignore node_modules when running ctrlp plugin
 set wildignore+=*/node_modules/*,*/public/*,*.so,*.swp,*.zip
