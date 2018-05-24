@@ -1,16 +1,13 @@
 " MAPPINGS --------------------------------------------
 
 " turn off search highlighting until the next search
-nnoremap <C-space> :nohl<CR><C-space>
+nmap <leader>h :nohl<CR>
 
-" Mapping <tab> to change navigate on tabs
+" use <tab> to change navigate on tabs
 nmap <tab> :tabnext<CR>
 
-" Mapping control + <tab> to go to the previous tab
+" use <shift> + <tab> to go to the previous tab
 nmap <S-tab> :tabprevious<CR>
-
-" Max of open tabs opened
-set tabpagemax=100
 
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -30,7 +27,7 @@ nmap <leader><space> :CleanWhiteSpaces<enter>
 vmap <C-c> :w !pbcopy<CR><CR>
 vmap <C-x> :!pbcopy<CR>
 
-nmap <space> :NERDTreeToggle<enter>
+nmap <space><space> :NERDTreeToggle<enter>
 
 " Resize of windows made easily
 nmap <leader>w :InteractiveWindow<CR>
@@ -61,9 +58,6 @@ map <Down>  :echo ":trollface:"<cr>
 
 " ACK
 map <leader>a :tabnew<enter>:Ack
-
-" Notes
-map <leader>n :vsplit ~/Dropbox/devnotes/todo.md <enter>
 
 " run tests
 nmap <silent> <leader>t :TestNearest<CR>
