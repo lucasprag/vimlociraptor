@@ -70,6 +70,9 @@ set clipboard=unnamedplus
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='material'
+let g:airline_section_b = '' " no need to see the branch name all the time
+let g:airline#extensions#tabline#enabled = 1 " enable smarter tab line
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " set syntax html for handlebar files
 autocmd BufNewFile,BufRead *.hbs   set syntax=html
@@ -79,3 +82,7 @@ let g:EditorConfig_core_mode = 'external_command'
 
 " make vim-test use vim-tmux-runner to run specs in a split bellow
 let test#strategy = "vimux"
+
+" when fixing conflicts it displays the version name of each split in the vim statusbar
+" needed for christoomey/vim-conflicted
+set stl+=%{ConflictedVersion()}
