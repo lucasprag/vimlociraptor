@@ -42,6 +42,8 @@ Plugin 'cakebaker/scss-syntax.vim'
 
 " > git
 Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'christoomey/vim-conflicted'
 
 " > util
 Plugin 'terryma/vim-multiple-cursors'
@@ -51,7 +53,7 @@ Plugin 'pbrisbin/vim-mkdir' " to create files without creating dirs previously (
 Plugin 'tpope/vim-sensible' " better defaults
 Plugin 'mileszs/ack.vim' " search with Ack
 Plugin 'tpope/vim-endwise' " helps to end certain structures
-Plugin 'janko-m/vim-test' " run tests
+Plugin 'janko-m/vim-test' " run tests using <leader>t or <leader>T see mappings.vim
 Plugin 'benmills/vimux' " run tests on a tmux pane
 Plugin 'w0rp/ale' " Asynchronous Lint Engine
 Plugin 'corntrace/bufexplorer' " easily change between buffers using <leader>be
@@ -60,7 +62,7 @@ Plugin 'corntrace/bufexplorer' " easily change between buffers using <leader>be
 Plugin 'christoomey/vim-tmux-navigator' " transparent navigator
 
 " > style
-Plugin 'godlygeek/tabular'
+Plugin 'godlygeek/tabular' " toggle autocomplete using tab
 Plugin 'editorconfig/editorconfig-vim'
 
 " > templates
@@ -71,15 +73,13 @@ Plugin 'AndrewRadev/vim-eco' " eco (backbone.js)
 Plugin 'StanAngeloff/php.vim'
 
 " > visual
-Plugin 'itchyny/lightline.vim'
-Plugin 'bling/vim-airline'
+Plugin 'bling/vim-airline' " robust statusline and tabline
 Plugin 'romgrk/winteract.vim' " resize windows using <leader> w and hjkl
 
 " > devops
 Plugin 'chr4/nginx.vim' " nginx
 Plugin 'hashivim/vim-terraform' " terraform
 Plugin 'stephpy/vim-yaml' " yml, yaml
-
 
 " > colors with true color support
 Plugin 'petelewis/vim-evolution'
