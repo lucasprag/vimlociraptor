@@ -20,5 +20,8 @@ call LoadFile('plugins.vim')
 
 call LoadFile('configs.vim')
 
+call LoadFile('commands.vim')
+
 call LoadFile('mappings.vim')
+
 

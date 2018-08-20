@@ -9,18 +9,7 @@ nmap <tab> :tabnext<CR>
 " use <shift> + <tab> to go to the previous tab
 nmap <S-tab> :tabprevious<CR>
 
-" Highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=white guibg=white
-
-" show white spaces with the red color
-match ExtraWhitespace /\s\+$/
-autocmd WinEnter * match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
-
 " Run to clean trailing whitespace
-command CleanWhiteSpaces %s/\s\+$/
 nmap <leader><space> :CleanWhiteSpaces<enter>
 
 " Copy and cut an entire line to clipboard
@@ -33,22 +22,12 @@ nmap <space> :NERDTreeToggle<enter>
 nmap <leader>w :InteractiveWindow<CR>
 
 " Run to remove debug methods
-command RemoveByebugs g/byebug/d
 nmap <leader>b :RemoveByebugs<enter>
 
 " Save with Ctrl + S, so friends can use my vim
 map <C-s> :w<enter>
 map <C-q> :q<enter>
 map <C-a> :wqa<enter>
-
-" I type so fast that :w becomes :W
-command W w
-command Q q
-command WQ wq
-command Wq wq
-command WQa wqa
-command Wqa wqa
-command WQA wqa
 
 " Disable cursor keys in normal mode
 map <Left>  :echo ":trollface:"<cr>

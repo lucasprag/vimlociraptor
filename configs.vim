@@ -75,15 +75,6 @@ let g:airline_section_b = '' " no need to see the branch name all the time
 let g:airline#extensions#tabline#enabled = 1 " enable smarter tab line
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-" set syntax html for handlebar files
-autocmd BufNewFile,BufRead *.hbs   set syntax=html
-
-" thank you @dmfay for this gem https://dev.to/dmfay/comment/4g5e
-augroup myvimrc
-  au!
-  au BufWritePost *.vim so $MYVIMRC
-augroup END
-
 " make the editorconfig work using the external command
 let g:EditorConfig_core_mode = 'external_command'
 
