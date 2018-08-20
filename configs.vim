@@ -3,6 +3,10 @@
 " TODO: describe this
 filetype indent plugin on
 
+" show line numbers
+set number
+set norelativenumber
+
 " Show partial commands in the last line of the screen
 set showcmd
 
@@ -14,7 +18,7 @@ if has('termguicolors')
   set termguicolors
 endif
 
-colorscheme vim-material
+colorscheme evolution
 
 " Highlight searches
 set hlsearch
@@ -38,9 +42,6 @@ set ruler
 
 " Use visual bell instead of beeping when doing something wrong
 set visualbell
-
-" Display relative line numbers to easy movement using number and direction like 20j or 50k
-set relativenumber
 
 " ignore node_modules when running ctrlp plugin
 set wildignore+=*/node_modules/*,*/public/*,*.so,*.swp,*.zip
@@ -69,13 +70,19 @@ set clipboard=unnamedplus
 " Airline - status bar
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='material'
+"let g:airline_theme='material'
 let g:airline_section_b = '' " no need to see the branch name all the time
 let g:airline#extensions#tabline#enabled = 1 " enable smarter tab line
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " set syntax html for handlebar files
 autocmd BufNewFile,BufRead *.hbs   set syntax=html
+
+" thank you @dmfay for this gem https://dev.to/dmfay/comment/4g5e
+augroup myvimrc
+  au!
+  au BufWritePost *.vim so $MYVIMRC
+augroup END
 
 " make the editorconfig work using the external command
 let g:EditorConfig_core_mode = 'external_command'

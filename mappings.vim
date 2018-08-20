@@ -27,7 +27,7 @@ nmap <leader><space> :CleanWhiteSpaces<enter>
 vmap <C-c> :w !pbcopy<CR><CR>
 vmap <C-x> :!pbcopy<CR>
 
-nmap <space><space> :NERDTreeToggle<enter>
+nmap <space> :NERDTreeToggle<enter>
 
 " Resize of windows made easily
 nmap <leader>w :InteractiveWindow<CR>
