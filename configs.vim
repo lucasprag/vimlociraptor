@@ -81,3 +81,6 @@ let test#strategy = "vimux"
 " when fixing conflicts it displays the version name of each split in the vim statusbar
 " needed for christoomey/vim-conflicted
 set stl+=%{ConflictedVersion()}
+
+let g:ale_sign_error = '☢'
+let g:ale_sign_warning = '⚠'
