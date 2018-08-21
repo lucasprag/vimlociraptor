@@ -56,7 +56,7 @@ Plugin 'tpope/vim-endwise' " helps to end certain structures
 Plugin 'janko-m/vim-test' " run tests using <leader>t or <leader>T see mappings.vim
 Plugin 'benmills/vimux' " run tests on a tmux pane
 Plugin 'w0rp/ale' " Asynchronous Lint Engine
-"Plugin 'corntrace/bufexplorer' " easily change between buffers using <leader>be
+Plugin 'corntrace/bufexplorer' " easily change between buffers using <leader>be
 
 " > tmux
 Plugin 'christoomey/vim-tmux-navigator' " transparent navigator

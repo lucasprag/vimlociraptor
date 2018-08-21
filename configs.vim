@@ -1,6 +1,6 @@
 " CONFIGS ---------------------------------------------
 
-" TODO: describe this
+" turns on "detection", "plugin" and "indent" at once
 filetype indent plugin on
 
 " show line numbers
@@ -13,10 +13,7 @@ set showcmd
 " Always show the light line
 set laststatus=2
 
-" true color
-if has('termguicolors')
-  set termguicolors
-endif
+set termguicolors
 
 colorscheme evolution
 
