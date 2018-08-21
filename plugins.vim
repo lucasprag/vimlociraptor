@@ -13,6 +13,7 @@ Plugin 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plugin 'Lokaltog/vim-easymotion' " makes a map to easy move the cursor
 Plugin 'ctrlpvim/ctrlp.vim' " search and open any file given a name
 Plugin 'matze/vim-move' " move lines up and down like sublime text 3
+Plugin 'terryma/vim-multiple-cursors' " multiple cursors using C-n when selecting a word
 
 " > editing tools
 Plugin 'scrooloose/nerdcommenter' " comment code using <leader> cc
@@ -44,7 +45,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'christoomey/vim-conflicted'
 
 " > util
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ervandew/supertab' " to use tab to trigger completations
 Plugin 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plugin 'pbrisbin/vim-mkdir' " to create files without creating dirs previously (aka mkdir -p)
@@ -60,7 +60,7 @@ Plugin 'corntrace/bufexplorer' " easily change between buffers using <leader>be
 Plugin 'christoomey/vim-tmux-navigator' " transparent navigator
 
 " > style
-Plugin 'godlygeek/tabular' " toggle autocomplete using tab
+Plugin 'godlygeek/tabular' " easy to align code using :Tab /:\zs for example
 Plugin 'editorconfig/editorconfig-vim'
 
 " > templates
