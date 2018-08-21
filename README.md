@@ -3,6 +3,8 @@
 
 Yet another distribution of plugins and mappings for Vim.
 
+![tmux + vim](github/tmux-vim.gif)
+
 # Installation
 
  - Install [Neovim](https://github.com/neovim/neovim)
