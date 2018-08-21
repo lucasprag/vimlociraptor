@@ -26,9 +26,7 @@ Plugin 'tpope/vim-rails' " rails support
 Plugin 'thoughtbot/vim-rspec' " rspec support
 
 " > elixir
-Plugin 'elixir-editors/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
-Plugin 'vim-erlang/vim-erlang-runtime'
 
 " > javascript
 Plugin 'pangloss/vim-javascript'
@@ -68,9 +66,6 @@ Plugin 'editorconfig/editorconfig-vim'
 " > templates
 Plugin 'sheerun/vim-haml' " haml
 Plugin 'AndrewRadev/vim-eco' " eco (backbone.js)
-
-" > php
-Plugin 'StanAngeloff/php.vim'
 
 " > visual
 Plugin 'bling/vim-airline' " robust statusline and tabline
