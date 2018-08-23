@@ -16,7 +16,8 @@ nmap <leader><space> :CleanWhiteSpaces<enter>
 vmap <C-c> :w !pbcopy<CR><CR>
 vmap <C-x> :!pbcopy<CR>
 
-nmap <space> :NERDTreeToggle<enter>
+nmap <space> :NERDTreeToggle<CR>
+nmap <M-f> :NERDTreeFind<CR>
 
 " Resize of windows made easily
 nmap <leader>w :InteractiveWindow<CR>
