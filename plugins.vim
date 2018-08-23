@@ -11,9 +11,11 @@ Plugin 'gmarik/vundle'
 " > navigation
 Plugin 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plugin 'Lokaltog/vim-easymotion' " makes a map to easy move the cursor
-Plugin 'ctrlpvim/ctrlp.vim' " search and open any file given a name
 Plugin 'matze/vim-move' " move lines up and down like sublime text 3
 Plugin 'terryma/vim-multiple-cursors' " multiple cursors using C-n when selecting a word
+
+set rtp+=/usr/local/opt/fzf
+Plugin 'junegunn/fzf.vim' " search and open any file given a name
 
 " > editing tools
 Plugin 'scrooloose/nerdcommenter' " comment code using <leader> cc
