@@ -46,5 +46,6 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 " fuzzy finder for files and buffers
 map <C-p> :GFiles<enter>
-map <C-b> :Buffers<enter>
+nmap ; :Buffers<CR>
+
 

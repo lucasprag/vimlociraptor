@@ -40,9 +40,6 @@ set ruler
 " Use visual bell instead of beeping when doing something wrong
 set visualbell
 
-" ignore node_modules when running ctrlp plugin
-set wildignore+=*/node_modules/*,*/public/*,*.so,*.swp,*.zip
-
 " configs stolen from https://github.com/carlosantoniodasilva/vimfiles/blob/master/vimrc#L134
 " Open new split panes to right and bottom, which feels more natural than vim’s default:
 set splitbelow
@@ -64,13 +61,6 @@ set autoread
 " See more details :help provider-clipboard
 set clipboard=unnamedplus
 
-" Airline - status bar
-let g:airline_powerline_fonts = 1
-"let g:airline_theme='material'
-let g:airline_section_b = '' " no need to see the branch name all the time
-let g:airline#extensions#tabline#enabled = 1 " enable smarter tab line
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
 " make the editorconfig work using the external command
 let g:EditorConfig_core_mode = 'external_command'
 
@@ -81,5 +71,55 @@ let test#strategy = "vimux"
 " needed for christoomey/vim-conflicted
 set stl+=%{ConflictedVersion()}
 
-let g:ale_sign_error = '☢'
+let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
+
+" Lightline, thanks @statico
+let g:lightline = {
+\ 'colorscheme': 'wombat',
+\ 'active': {
+\   'left': [['mode', 'paste'], ['filename', 'modified']],
+\   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
+\ },
+\ 'component_expand': {
+\   'linter_warnings': 'LightlineLinterWarnings',
+\   'linter_errors': 'LightlineLinterErrors',
+\   'linter_ok': 'LightlineLinterOK'
+\ },
+\ 'component_type': {
+\   'readonly': 'error',
+\   'linter_warnings': 'warning',
+\   'linter_errors': 'error'
+\ },
+\ }
+
+function! LightlineLinterWarnings() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ◆', all_non_errors)
+endfunction
+
+function! LightlineLinterErrors() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '' : printf('%d ✗', all_errors)
+endfunction
+
+function! LightlineLinterOK() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+  return l:counts.total == 0 ? '✓ ' : ''
+endfunction
+
+autocmd User ALELint call s:MaybeUpdateLightline()
+
+" Update and show lightline but only if it's visible (e.g., not in Goyo)
+function! s:MaybeUpdateLightline()
+  if exists('#lightline')
+    call lightline#update()
+  end
+endfunction
+
