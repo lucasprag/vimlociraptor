@@ -135,3 +135,7 @@ function! s:MaybeUpdateLightline()
   end
 endfunction
 
+" > NERDTree
+let NERDTreeDirArrows=1
+let NERDTreeMinimalUI=1
+let NERDTreeShowLineNumbers=1
