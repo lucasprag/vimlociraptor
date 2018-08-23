@@ -36,7 +36,8 @@ map <Up>    :echo ":trollface:"<cr>
 map <Down>  :echo ":trollface:"<cr>
 
 " ACK
-map <leader>a :tabnew<enter>:Ack
+map <leader>a :Ack!
+nmap <leader>k :Ack! "\b<cword>\b" <CR>
 
 " run tests
 nmap <silent> <leader>t :TestNearest<CR>
@@ -48,4 +49,5 @@ nmap <silent> <leader>g :TestVisit<CR>
 map <C-p> :GFiles<enter>
 nmap ; :Buffers<CR>
 
-
+" delete a buffer and keep the window/split intact
+map <M-w> :BD<CR>

@@ -18,6 +18,7 @@ Plugin 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 set rtp+=/usr/local/opt/fzf
 Plugin 'junegunn/fzf.vim' " search and open any file given a name
 Plugin 'mileszs/ack.vim' " search with Ack
+Plugin 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact
 
 " > editing tools
 Plugin 'scrooloose/nerdcommenter' " comment code using <leader> cc
