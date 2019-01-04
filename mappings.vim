@@ -24,6 +24,9 @@ nmap <leader>cb :RemoveDebuggers<CR>
 " remove puts, console.log(), etc
 nmap <leader>cl :RemovePuts<CR>
 
+" Delete a wrapping if-clause, try-catch block, etc. and shift left.
+nmap <leader>cd :Deleft<CR>
+
 
 " Files ----------
 
