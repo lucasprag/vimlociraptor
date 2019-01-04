@@ -1,14 +1,14 @@
 " =============================================================================
 " Name:          [Vim]lociraptor
 " File:          init.vim
-" Description:   Init file
-" Author:        Lucas Oliveira <github.com/lucasprag>
+" Description:   My personal collections of of plugins and mappings for NeoVim.
+" Author:        Lucas Arantes <github.com/lucasprag>
 " =============================================================================
 
 " absolute path to vimlociraptor dir
 let g:vimlociraptor_path = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 
-function LoadFile(file_name)
+function! LoadFile(file_name)
   let full_file_path = g:vimlociraptor_path . '/' . a:file_name
 
   if filereadable(full_file_path)
@@ -23,5 +23,4 @@ call LoadFile('configs.vim')
 call LoadFile('commands.vim')
 
 call LoadFile('mappings.vim')
-
 

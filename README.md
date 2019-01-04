@@ -1,58 +1,41 @@
 [Vim]lociraptor
 ===============
 
-Yet another distribution of plugins and mappings for Vim.
+My personal collections of of plugins and mappings for NeoVim.
+
+It works with tmux, and it's used for ruby, elixir, bash, and front-end development in JavaScript.
 
 ![tmux + vim](github/tmux-vim.gif)
 
-# Installation
+# Install
 
- - Install [Neovim](https://github.com/neovim/neovim)
+  - Install [Neovim](https://neovim.io)
+  - Clone the project `git clone git@github.com:lucasprag/vimlociraptor.git ~/.config/nvim/`
+  - Install [EditorConfig](http://editorconfig.org/)
+  - Install [fzf](https://github.com/junegunn/fzf#installation)
+  - Install [Ack](http://beyondgrep.com/install/)
+  - Install [powerline fonts](https://github.com/powerline/fonts#font-families) and set one of the powerline fonts on your terminal
+  - Install [Plug](https://github.com/junegunn/vim-plug)
+  - run 'make install'
+  - run `nvim`
 
- - Clone the project
-```
-git clone git@github.com:lucasprag/vimlociraptor.git ~/.config/nvim/
-```
+# Update
 
-- Install [EditorConfig](http://editorconfig.org/)
+ - run 'make update'
 
-- Install [fzf](https://github.com/junegunn/fzf#installation)
+# Usage
 
-- Install [Ack](http://beyondgrep.com/install/)
+It's nice to dig into other people vim files and see how they do things. Feel free to do that.
 
-- Install [powerline fonts](https://github.com/powerline/fonts#font-families) and set one of the powerline fonts on your terminal
-```
-git clone git@github.com:powerline/fonts.git ~/Downloads/fonts
-cd ~/Downloads/fonts
-./install.sh
-```
+I tried to leave comments telling what each line does.
 
-- Install [Vundle](https://github.com/VundleVim/Vundle.vim)
-```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/vundle
-```
-
- - Install the vundle plugins
-```
-nvim \+PluginInstall \+qa
-```
-
-- run neovim
-```
-nvim
-```
-
-Welcome to Vimlociraptor!
-
-# Updating
-
-```
-cd ~/.config/nvim/
-git pull
-nvim \+PluginInstall \+qa
-```
+  - [plugins](mappings.vim)
+  - [commands](mappings.vim)
+  - [configs](mappings.vim)
+  - [mappings](mappings.vim)
 
 ---
+
 Cheers,
 
-Lucas Oliveira
+Lucas Arantes
