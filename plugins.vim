@@ -66,6 +66,7 @@ Plug 'AndrewRadev/vim-eco' " eco (backbone.js)
 " > visual
 Plug 'itchyny/lightline.vim' " light statusline
 Plug 'romgrk/winteract.vim' " resize windows using <leader> w and hjkl
+Plug 'ap/vim-css-color' " show color of hexadecimal
 
 " > devops
 Plug 'chr4/nginx.vim' " nginx
@@ -74,8 +75,8 @@ Plug 'stephpy/vim-yaml' " yml, yaml
 
 " > colors with true color support
 Plug 'petelewis/vim-evolution'
-Plug 'lifepillar/vim-solarized8'
-Plug 'wesgibbs/vim-irblack'
+Plug '~/Projects/labs/simpleblack'
+"Plug 'lucasprag/simpleblack'
 
 " END PlugS
 call plug#end()

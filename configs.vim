@@ -16,7 +16,7 @@ set laststatus=2
 " enable true colors support
 set termguicolors
 
-colorscheme ir_black
+colorscheme simpleblack
 
 " Highlight searches
 set hlsearch

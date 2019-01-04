@@ -39,7 +39,3 @@ autocmd BufNewFile,BufRead *.hbs   set syntax=html
   "au BufWritePost *.vim so $MYVIMRC
 "augroup END
 
-
-" removes red column from ir_blank theme
-hi ColorColumn     guibg=#121212 ctermbg=233
-
