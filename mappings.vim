@@ -39,7 +39,7 @@ nmap <leader>fw :Ack! "\b<cword>\b" <CR>
 
 " Project ----------
 
-" fuzzy finder for files and buffers
+" closefuzzy finder for files and buffers
 map <leader>pf :GFiles<CR>
 map <C-p> :GFiles<CR>
 
@@ -52,11 +52,17 @@ nmap <leader>pl :NERDTreeFind<CR>
 
 " Tabs ----------
 
+" new
+nmap <leader><tab>n :tabnew<CR>
+
 " next tab (hjkL)
 nmap <leader><tab>l :tabnext<CR>
 
 " previous tab (Hjkl)
 nmap <leader><tab>h :tabprevious<CR>
+
+" delete
+nmap <leader><tab>d :tabclose<CR>
 
 
 " Tests ----------
