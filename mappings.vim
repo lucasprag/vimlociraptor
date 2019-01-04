@@ -80,7 +80,7 @@ nmap <silent> <leader>tg :TestVisit<CR>
 " Resize windows easily
 nmap <leader>wr :InteractiveWindow<CR>
 
-" Close window
+" save and close window
 nmap <leader>wq :q<CR>
 
 

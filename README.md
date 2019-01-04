@@ -21,17 +21,17 @@ It works with tmux, and it's used for ruby, elixir, bash, and front-end developm
 
 # Update
 
- - run 'make update'
+ - run `make update`
 
 # Usage
 
-It's nice to dig into other people vim files and see how they do things. Feel free to do that.
+It's nice to dig into other people's vim files and see how they do things. Feel free to do that.
 
-I tried to leave comments telling what each line does.
+I try to leave comments telling what each line does.
 
-  - [plugins](mappings.vim)
-  - [commands](mappings.vim)
-  - [configs](mappings.vim)
+  - [plugins](plugins.vim)
+  - [commands](commands.vim)
+  - [configs](configs.vim)
   - [mappings](mappings.vim)
 
 ---
