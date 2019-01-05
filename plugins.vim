@@ -8,7 +8,7 @@ Plug 'terryma/vim-multiple-cursors' " multiple cursors using C-n when selecting 
 
 " > finding files/buffers/etc
 Plug 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
-set rtp+=/usr/local/opt/fzf
+Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim' " search and open any file given a name
 Plug 'mileszs/ack.vim' " search with Ack
 Plug 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact
