@@ -24,6 +24,8 @@ let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer and keep the window
 let g:which_key_map.b.p = ['BB', 'previous']
 let g:which_key_map.b.n = ['BF', 'next']
 
+" ignore
+let g:which_key_map.b.u = { 'name': 'which_key_ignore' }
 let g:which_key_map.b.f = 'which_key_ignore'
 let g:which_key_map.b.w = 'which_key_ignore'
 
@@ -68,14 +70,15 @@ let g:which_key_map.x.h = ['TurnOffHighlight', 'turn off highlight'] " turn off 
 let g:which_key_map.x.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
 let g:which_key_map.x.s = ['CleanWhiteSpaces', 'clean white spaces'] " clean trailing whitespace
 
-
 " Windows ----------
 
 let g:which_key_map.w = { 'name': '+windows' }
 let g:which_key_map.w.r = ['InteractiveWindow', 'resize']
 let g:which_key_map.w.q = ['q', 'quit']
 
-
+" ignore
+let g:which_key_map.h = { 'name': 'which_key_ignore' }
+let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 " ----------------------------------------------
 
 " Copy and cut an entire line to clipboard

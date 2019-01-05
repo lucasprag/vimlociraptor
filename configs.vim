@@ -151,5 +151,11 @@ let g:gitgutter_sign_modified_removed = '⦁'
 " > make which-key faster
 set timeoutlen=500
 
-" NERDCommenter, I just need to taggle commenting
+" NERDCommenter, I just need to toggle commenting
 let g:NERDCreateDefaultMappings = 0
+
+" > hide which_key from statusline
+autocmd! FileType which_key
+autocmd  FileType which_key set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
