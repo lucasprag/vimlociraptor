@@ -1,5 +1,5 @@
 " PLUGINS ---------------------------------------------
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " > navigation
 Plug 'Lokaltog/vim-easymotion' " makes a map to easy move the cursor
@@ -14,7 +14,7 @@ Plug 'mileszs/ack.vim' " search with Ack
 Plug 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact
 
 " > editing tools
-Plug 'scrooloose/nerdcommenter' " comment code using <leader> cc
+Plug 'scrooloose/nerdcommenter' " comment code
 Plug 'tpope/vim-surround' " makes surroundings easy
 Plug 'AndrewRadev/deleft.vim' " delete wrapping if-clauses, try-catch blocks, and similar constructs
 
@@ -51,6 +51,7 @@ Plug 'janko-m/vim-test' " run tests
 Plug 'ervandew/supertab' " to use tab to trigger completations
 Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'tpope/vim-endwise' " helps to end certain structures
+Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
 
 " > style
 Plug 'w0rp/ale' " Asynchronous Lint Engine

@@ -16,7 +16,7 @@ It works with tmux, and it's used for ruby, elixir, bash, and front-end developm
   - Install [Ack](http://beyondgrep.com/install/)
   - Install [powerline fonts](https://github.com/powerline/fonts#font-families) and set one of the powerline fonts on your terminal
   - Install [Plug](https://github.com/junegunn/vim-plug)
-  - run 'make install'
+  - run `make install`
   - run `nvim`
 
 # Update

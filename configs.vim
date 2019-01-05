@@ -148,3 +148,8 @@ let g:gitgutter_sign_removed = '⦁'
 let g:gitgutter_sign_removed_first_line = '⦁'
 let g:gitgutter_sign_modified_removed = '⦁'
 
+" > make which-key faster
+set timeoutlen=700
+
+" NERDCommenter, I just need to taggle commenting
+let g:NERDCreateDefaultMappings = 0
