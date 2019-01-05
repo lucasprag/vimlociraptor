@@ -17,11 +17,15 @@ let g:which_key_map = {}
 " Buffers ----------
 
 let g:which_key_map.b = { 'name': '+buffers' }
+let g:which_key_map.b.a = ['BA', 'alternate']
 let g:which_key_map.b.b = ['Buffers', 'buffers'] " list buffers
 map ; :Buffers<CR>
 let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer and keep the window/split intact
 let g:which_key_map.b.p = ['BB', 'previous']
 let g:which_key_map.b.n = ['BF', 'next']
+
+let g:which_key_map.b.f = 'which_key_ignore'
+let g:which_key_map.b.w = 'which_key_ignore'
 
 " Files ----------
 
