@@ -74,8 +74,7 @@ Plug 'stephpy/vim-yaml' " yml, yaml
 
 " > colors with true color support
 Plug 'petelewis/vim-evolution'
-Plug '~/Projects/labs/simpleblack'
-"Plug 'lucasprag/simpleblack'
+Plug 'lucasprag/simpleblack'
 
 " END PlugS
 call plug#end()
