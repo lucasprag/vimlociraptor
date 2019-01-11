@@ -91,8 +91,8 @@ map <C-q> :q<CR>
 map <C-a> :wqa<CR>
 
 " Disable cursor keys in normal mode, no idea how to use emojis
-map <Left>  :echo ":trollface:"<cr>
-map <Right> :echo ":trollface:"<cr>
-map <Up>    :echo ":trollface:"<cr>
-map <Down>  :echo ":trollface:"<cr>
+map <Left>  :echo "use h instead (hjkl)"<CR>
+map <Right> :echo "use l instead (hjkl)"<CR>
+map <Up>    :echo "use k instead (hjkl)"<CR>
+map <Down>  :echo "use j instead (hjkl)"<CR>
 

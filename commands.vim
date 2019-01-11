@@ -18,8 +18,11 @@ command! Wq wq
 command! WQa wqa
 command! Wqa wqa
 command! WQA wqa
+command! Q q
+command! Qa qa
+command! QA qa
 
-" Remove byebug, debugger, binding.pry, the _ is needed to avoid that waste of time
+" Remove byebug, debugger, binding.pry, the _ is needed to avoid some waste of time
 " @see http://vim.wikia.com/wiki/Power_of_g
 command! RemoveDebuggers global/byebug\|debugger\|pry/delete_
 

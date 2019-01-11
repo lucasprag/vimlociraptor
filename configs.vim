@@ -49,7 +49,7 @@ set splitright
 " IDENTATION ----------------------------------------
 
 " Indentation settings for using 2 spaces instead of tabs.
-" " Do not change 'tabstop' from its default value of 8 with this setup.
+" Do not change 'tabstop' from its default value of 8 with this setup.
 set ts=2 sw=2 sts=2
 set expandtab
 
@@ -67,10 +67,6 @@ let g:EditorConfig_core_mode = 'external_command'
 
 " make vim-test use vim-tmux-runner to run specs in a split bellow
 let test#strategy = "vimux"
-
-" when fixing conflicts it displays the version name of each split in the vim statusbar
-" needed for christoomey/vim-conflicted
-set stl+=%{ConflictedVersion()}
 
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
