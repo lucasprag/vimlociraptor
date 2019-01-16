@@ -1,7 +1,7 @@
 [Vim]lociraptor
 ===============
 
-My personal collections of of plugins and mappings for NeoVim.
+My personal collections of plugins and mappings for vim|neovim.
 
 It works with tmux, and it's used for ruby, elixir, bash, and front-end development in JavaScript.
 
