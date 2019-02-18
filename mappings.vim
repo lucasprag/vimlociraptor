@@ -46,6 +46,7 @@ let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on ne
 
 " Tabs ----------
 
+nmap <Tab><Tab> :tabnext<CR>
 let g:which_key_map['<Tab>'] = { 'name': '+tabs' }
 let g:which_key_map['<Tab>'].n = ['tabnew', 'new']
 let g:which_key_map['<Tab>'].l = ['tabnext', 'next'] " next tab (hjkL)
