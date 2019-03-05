@@ -14,7 +14,6 @@ It works with tmux, and it's used for ruby, elixir, bash, and JavaScript.
   - Install [EditorConfig](http://editorconfig.org/)
   - Install [fzf](https://github.com/junegunn/fzf#installation)
   - Install [Ack](http://beyondgrep.com/install/)
-  - Install [powerline fonts](https://github.com/powerline/fonts#font-families) and set one of the powerline fonts on your terminal
   - Install [Plug](https://github.com/junegunn/vim-plug)
   - run `nvim`
 

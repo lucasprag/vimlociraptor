@@ -73,7 +73,7 @@ let g:ale_sign_warning = '⚠'
 
 " Lightline, thanks @statico
 let g:lightline = {
-\ 'colorscheme': 'srcery_drk',
+\ 'colorscheme': 'nord',
 \ 'active': {
 \   'left': [['mode', 'paste'], ['filename', 'modified']],
 \   'right': [['lineinfo'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
