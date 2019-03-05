@@ -3,7 +3,7 @@
 
 My personal collections of plugins and mappings for vim|neovim.
 
-It works with tmux, and it's used for ruby, elixir, bash, and front-end development in JavaScript.
+It works with tmux, and it's used for ruby, elixir, bash, and JavaScript.
 
 ![tmux + vim](github/tmux-vim.gif)
 
@@ -16,7 +16,6 @@ It works with tmux, and it's used for ruby, elixir, bash, and front-end developm
   - Install [Ack](http://beyondgrep.com/install/)
   - Install [powerline fonts](https://github.com/powerline/fonts#font-families) and set one of the powerline fonts on your terminal
   - Install [Plug](https://github.com/junegunn/vim-plug)
-  - run `make install`
   - run `nvim`
 
 # Update
@@ -34,8 +33,5 @@ I try to leave comments telling what each line does.
   - [configs](configs.vim)
   - [mappings](mappings.vim)
 
----
 
-Cheers,
 
-Lucas Arantes

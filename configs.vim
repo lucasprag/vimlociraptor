@@ -73,10 +73,14 @@ let g:ale_sign_warning = '⚠'
 
 " Lightline, thanks @statico
 let g:lightline = {
-\ 'colorscheme': 'wombat',
+\ 'colorscheme': 'srcery_drk',
 \ 'active': {
 \   'left': [['mode', 'paste'], ['filename', 'modified']],
-\   'right': [['lineinfo'], ['percent'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
+\   'right': [['lineinfo'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
+\ },
+\ 'inactive': {
+\   'left': [['filename']],
+\   'right': [['lineinfo']]
 \ },
 \ 'component_expand': {
 \   'linter_warnings': 'LightlineLinterWarnings',
