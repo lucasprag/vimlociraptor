@@ -17,10 +17,6 @@ It works with tmux, and it's used for ruby, elixir, bash, and JavaScript.
   - Install [Plug](https://github.com/junegunn/vim-plug)
   - run `nvim`
 
-# Update
-
- - run `make update`
-
 # Usage
 
 It's nice to dig into other people's vim files and see how they do things. Feel free to do that.

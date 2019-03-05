@@ -16,13 +16,15 @@ let g:which_key_map = {}
 
 " Buffers ----------
 
+nmap ; :Buffers<CR>
 let g:which_key_map.b = { 'name': '+buffers' }
 let g:which_key_map.b.a = ['BA', 'alternate']
 let g:which_key_map.b.b = ['Buffers', 'buffers'] " list buffers
-map ; :Buffers<CR>
 let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer and keep the window/split intact
-let g:which_key_map.b.p = ['BB', 'previous']
+let g:which_key_map.b.h = ['CloseHiddenBuffers', 'close hidden'] " close all buffers not visible in any window
 let g:which_key_map.b.n = ['BF', 'next']
+let g:which_key_map.b.o = ['CloseOtherBuffers', 'close others'] " close all buffers except buffer in current window
+let g:which_key_map.b.p = ['BB', 'previous']
 
 " ignore
 let g:which_key_map.b.u = { 'name': 'which_key_ignore' }
@@ -31,22 +33,22 @@ let g:which_key_map.b.w = 'which_key_ignore'
 
 " Files ----------
 
+nmap <leader>fa :Ack!
 let g:which_key_map.f = { 'name': '+files' }
 let g:which_key_map.f.s = ['w', 'save'] " Save file
-nmap <leader>fa :Ack!
 let g:which_key_map.f.w = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
 
 " Project ----------
 
+map <C-p> :GFiles<CR>
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.f = ['GFiles', 'find'] " closefuzzy finder for files and buffers
-map <C-p> :GFiles<CR>
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
 
 " Tabs ----------
 
-nmap <Tab><Tab> :tabnext<CR>
+nmap <Tab> :tabnext<CR>
 let g:which_key_map['<Tab>'] = { 'name': '+tabs' }
 let g:which_key_map['<Tab>'].n = ['tabnew', 'new']
 let g:which_key_map['<Tab>'].l = ['tabnext', 'next'] " next tab (hjkL)

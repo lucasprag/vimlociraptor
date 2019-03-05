@@ -12,6 +12,7 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim' " search and open any file given a name
 Plug 'mileszs/ack.vim' " search with Ack
 Plug 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact
+Plug 'Asheq/close-buffers.vim' " provides :CloseHiddenBuffers and :CloseOtherBuffers
 
 " > editing tools
 Plug 'scrooloose/nerdcommenter' " comment code
