@@ -5,7 +5,7 @@ My personal collections of plugins and mappings for vim|neovim.
 
 It works with tmux, and it's used for ruby, elixir, bash, and JavaScript.
 
-![tmux + vim](github/tmux-vim.gif)
+![tmux + vim](github/tmux-nvim.png)
 
 # Install
 
