@@ -46,6 +46,8 @@ set visualbell
 set splitbelow
 set splitright
 
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.gif,*.png,*.jpg,*.jpeg
+
 " IDENTATION ----------------------------------------
 
 " Indentation settings for using 2 spaces instead of tabs.
@@ -72,8 +74,9 @@ let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
 
 " Lightline, thanks @statico
+" colorschemes I like the most are jellybeans and seoul256
 let g:lightline = {
-\ 'colorscheme': 'nord',
+\ 'colorscheme': 'jellybeans',
 \ 'active': {
 \   'left': [['mode', 'paste'], ['filename', 'modified']],
 \   'right': [['lineinfo'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
