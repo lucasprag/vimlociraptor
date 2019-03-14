@@ -145,11 +145,11 @@ let NERDTreeMinimalUI=1
 let NERDTreeShowLineNumbers=1
 
 " > smaller git gutter
-let g:gitgutter_sign_added = '⦁'
-let g:gitgutter_sign_modified = '⦁'
-let g:gitgutter_sign_removed = '⦁'
-let g:gitgutter_sign_removed_first_line = '⦁'
-let g:gitgutter_sign_modified_removed = '⦁'
+let g:gitgutter_sign_added = '•'
+let g:gitgutter_sign_modified = '•'
+let g:gitgutter_sign_removed = '•'
+let g:gitgutter_sign_removed_first_line = '•'
+let g:gitgutter_sign_modified_removed = '•'
 
 " > make which-key faster
 set timeoutlen=500
