@@ -31,6 +31,14 @@ let g:which_key_map.b.u = { 'name': 'which_key_ignore' }
 let g:which_key_map.b.f = 'which_key_ignore'
 let g:which_key_map.b.w = 'which_key_ignore'
 
+" Commands ----------
+let g:which_key_map.c = { 'name': '+commands' }
+let g:which_key_map.c.b = ['RemoveDebuggers', 'remove byebug|debugger|binding.pry'] " remove byebug, debugger, etc
+let g:which_key_map.c.d = ['Deleft', 'delete wrapping block'] " Delete a wrapping if-clause, try-catch block, etc. and shift left.
+let g:which_key_map.c.s = ['CleanWhiteSpaces', 'clean white spaces'] " clean trailing whitespace
+let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
+
+
 " Files ----------
 
 nmap <leader>fa :Ack!
@@ -55,23 +63,21 @@ let g:which_key_map['<Tab>'].l = ['tabnext', 'next'] " next tab (hjkL)
 let g:which_key_map['<Tab>'].h = ['tabprevious', 'previous'] " previous tab (Hjkl)
 let g:which_key_map['<Tab>'].d = ['tabclose', 'delete']
 
-" Tests ----------
+" tEsts ----------
 
-let g:which_key_map.t = { 'name': '+tests' }
-let g:which_key_map.t.t = ['TestNearest', 'nearest']
-let g:which_key_map.t.f = ['TestFile', 'file']
-let g:which_key_map.t.l = ['TestLast', 'last']
-let g:which_key_map.t.g = ['TestVisit', 'visit']
+let g:which_key_map.e = { 'name': '+tests' }
+let g:which_key_map.e.t = ['TestNearest', 'nearest']
+let g:which_key_map.e.f = ['TestFile', 'file']
+let g:which_key_map.e.l = ['TestLast', 'last']
+let g:which_key_map.e.g = ['TestVisit', 'visit']
 
-" Text ----------
 
-let g:which_key_map.x = { 'name': '+text' }
-let g:which_key_map.x.b = ['RemoveDebuggers', 'remove byebug|debugger|binding.pry'] " remove byebug, debugger, etc
-let g:which_key_map.x.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
-let g:which_key_map.x.d = ['Deleft', 'delete wrapping block'] " Delete a wrapping if-clause, try-catch block, etc. and shift left.
-let g:which_key_map.x.h = ['TurnOffHighlight', 'turn off highlight'] " turn off search highlighting until the next search <- DOESN'T WORK, NO IDEA WHY
-let g:which_key_map.x.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
-let g:which_key_map.x.s = ['CleanWhiteSpaces', 'clean white spaces'] " clean trailing whitespace
+" Toggles ----------
+let g:which_key_map.t = { 'name': '+toggles' }
+let g:which_key_map.t.a = ['<plug>ALEToggle', 'ALE'] " toggle linting
+let g:which_key_map.t.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
+let g:which_key_map.t.h = ['TurnOffHighlight', 'turn off highlight'] " turn off search highlighting until the next search <- DOESN'T WORK, NO IDEA WHY
+
 
 " Windows ----------
 
