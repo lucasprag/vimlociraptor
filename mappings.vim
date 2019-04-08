@@ -34,6 +34,7 @@ let g:which_key_map.b.w = 'which_key_ignore'
 " Commands ----------
 let g:which_key_map.c = { 'name': '+commands' }
 let g:which_key_map.c.b = ['RemoveDebuggers', 'remove byebug|debugger|binding.pry'] " remove byebug, debugger, etc
+let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
 let g:which_key_map.c.d = ['Deleft', 'delete wrapping block'] " Delete a wrapping if-clause, try-catch block, etc. and shift left.
 let g:which_key_map.c.s = ['CleanWhiteSpaces', 'clean white spaces'] " clean trailing whitespace
 let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
@@ -74,8 +75,7 @@ let g:which_key_map.e.g = ['TestVisit', 'visit']
 
 " Toggles ----------
 let g:which_key_map.t = { 'name': '+toggles' }
-let g:which_key_map.t.a = ['<plug>ALEToggle', 'ALE'] " toggle linting
-let g:which_key_map.t.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
+let g:which_key_map.t.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.t.h = ['TurnOffHighlight', 'turn off highlight'] " turn off search highlighting until the next search <- DOESN'T WORK, NO IDEA WHY
 
 
