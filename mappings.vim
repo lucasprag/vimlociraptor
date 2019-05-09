@@ -31,13 +31,13 @@ let g:which_key_map.b.u = { 'name': 'which_key_ignore' }
 let g:which_key_map.b.f = 'which_key_ignore'
 let g:which_key_map.b.w = 'which_key_ignore'
 
-" Commands ----------
-let g:which_key_map.c = { 'name': '+commands' }
+" Code ----------
+let g:which_key_map.c = { 'name': '+code' }
 let g:which_key_map.c.b = ['RemoveDebuggers', 'remove byebug|debugger|binding.pry'] " remove byebug, debugger, etc
-let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
 let g:which_key_map.c.d = ['Deleft', 'delete wrapping block'] " Delete a wrapping if-clause, try-catch block, etc. and shift left.
 let g:which_key_map.c.s = ['CleanWhiteSpaces', 'clean white spaces'] " clean trailing whitespace
 let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
+let g:which_key_map.c['\'] = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
 
 
 " Files ----------
@@ -79,11 +79,16 @@ let g:which_key_map.t.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.t.h = ['TurnOffHighlight', 'turn off highlight'] " turn off search highlighting until the next search <- DOESN'T WORK, NO IDEA WHY
 
 
+" Snippets ----------
+
+let g:which_key_map.s = { 'name': '+snippets ' }
+
+
 " Windows ----------
 
 let g:which_key_map.w = { 'name': '+windows' }
+let g:which_key_map.w.d = ['q', 'delete']
 let g:which_key_map.w.r = ['InteractiveWindow', 'resize']
-let g:which_key_map.w.q = ['q', 'quit']
 
 " ignore
 let g:which_key_map.h = { 'name': 'which_key_ignore' }
@@ -105,3 +110,15 @@ map <Right> :echo "use l instead (hjkl)"<CR>
 map <Up>    :echo "use k instead (hjkl)"<CR>
 map <Down>  :echo "use j instead (hjkl)"<CR>
 
+
+" use Alt + hjkl instead of Ctrl + hjkl
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
+
+" use Ctrl + hj to move lines
+let g:move_key_modifier = 'C'

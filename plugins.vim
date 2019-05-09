@@ -3,7 +3,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " > navigation
 Plug 'easymotion/vim-easymotion' " makes a map to easy move the cursor
-Plug 'matze/vim-move' " move lines up and down like sublime text 3
+Plug 'matze/vim-move' " move lines up and down
 Plug 'terryma/vim-multiple-cursors' " multiple cursors using C-n when selecting a word
 
 " > finding files/buffers/etc
