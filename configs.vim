@@ -96,4 +96,6 @@ let g:gitgutter_sign_modified_removed = '•'
 " NERDCommenter, I just need to toggle it
 let g:NERDCreateDefaultMappings = 0
 
+" make vim-test use foreman
+let test#ruby#rspec#executable = 'foreman run rspec'
 

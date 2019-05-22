@@ -17,13 +17,11 @@ Plug 'Asheq/close-buffers.vim' " provides :CloseHiddenBuffers and :CloseOtherBuf
 " > editing tools
 Plug 'scrooloose/nerdcommenter' " comment code
 Plug 'tpope/vim-surround' " makes surroundings easy
-Plug 'AndrewRadev/deleft.vim' " delete wrapping if-clauses, try-catch blocks, and similar constructs
 
 " > ruby
 Plug 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
 Plug 'vim-ruby/vim-ruby' " ruby support
 Plug 'tpope/vim-rails' " rails support
-Plug 'thoughtbot/vim-rspec' " rspec support
 
 " > elixir
 Plug 'slashmili/alchemist.vim'
@@ -46,10 +44,12 @@ Plug 'airblade/vim-gitgutter'
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test
 Plug 'christoomey/vim-tmux-navigator' " transparent navigator
 
+" > specs
+Plug 'janko-m/vim-test' " run tests on different granularities.
+
 " > util
 Plug 'pbrisbin/vim-mkdir' " to create files without creating dirs previously (aka mkdir -p)
 Plug 'tpope/vim-sensible' " better defaults
-Plug 'janko-m/vim-test' " run tests
 Plug 'ervandew/supertab' " to use tab to trigger completations
 Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'tpope/vim-endwise' " helps to end certain structures

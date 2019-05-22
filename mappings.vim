@@ -67,7 +67,7 @@ let g:which_key_map['<Tab>'].h = ['tabprevious', 'previous'] " previous tab (Hjk
 let g:which_key_map['<Tab>'].d = ['tabclose', 'delete']
 
 
-" e => specs ----------
+" e => tests ----------
 
 let g:which_key_map.e = { 'name': '+tests' }
 let g:which_key_map.e.t = ['TestNearest', 'nearest']
@@ -100,6 +100,7 @@ let g:which_key_map.w.v = ['vsplit', 'split vertically']
 let g:which_key_map.h = { 'name': 'which_key_ignore' }
 let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 " ----------------------------------------------
+"
 
 " r => ruby (only show for ruby files) ----------
 function s:MapRuby()
