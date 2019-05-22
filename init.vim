@@ -2,7 +2,7 @@
 " Name:          [Vim]lociraptor
 " File:          init.vim
 " Description:   My personal collections of of plugins and mappings for NeoVim.
-" Author:        Lucas Arantes <github.com/lucasprag>
+" Author:        Lucas Arantes <lucasprag.com>
 " =============================================================================
 
 " absolute path to vimlociraptor dir
@@ -18,9 +18,11 @@ endfunction
 
 call LoadFile('plugins.vim')
 
-call LoadFile('configs.vim')
-
 call LoadFile('commands.vim')
 
+call LoadFile('configs.vim')
+
 call LoadFile('mappings.vim')
+
+call LoadFile('statusline.vim')
 

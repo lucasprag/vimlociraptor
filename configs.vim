@@ -21,6 +21,9 @@ colorscheme simpleblack
 " Highlight searches
 set hlsearch
 
+" highlight dynamically as pattern is typed
+set incsearch
+
 " A guide column to keep the code to a maximum of 80 chars
 set colorcolumn=120
 
@@ -48,7 +51,12 @@ set splitright
 
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.gif,*.png,*.jpg,*.jpeg
 
-" IDENTATION ----------------------------------------
+" > make which-key faster
+set timeoutlen=500
+
+" enable mouse, it's usuful sometimes
+set mouse=a
+
 
 " Indentation settings for using 2 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
@@ -73,72 +81,6 @@ let test#strategy = "vimux"
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
 
-" Lightline, thanks @statico
-" colorschemes I like the most are jellybeans and seoul256
-let g:lightline = {
-\ 'colorscheme': 'jellybeans',
-\ 'active': {
-\   'left': [['mode', 'paste'], ['filename', 'modified']],
-\   'right': [['lineinfo'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
-\ },
-\ 'inactive': {
-\   'left': [['filename']],
-\   'right': [['lineinfo']]
-\ },
-\ 'component_expand': {
-\   'linter_warnings': 'LightlineLinterWarnings',
-\   'linter_errors': 'LightlineLinterErrors',
-\   'linter_ok': 'LightlineLinterOK'
-\ },
-\ 'component_type': {
-\   'readonly': 'error',
-\   'linter_warnings': 'warning',
-\   'linter_errors': 'error'
-\ },
-\ 'component_function': {
-\   'filename': 'LightlineFilename',
-\ },
-\ }
-
-function! LightlineLinterWarnings() abort
-  let l:counts = ale#statusline#Count(bufnr(''))
-  let l:all_errors = l:counts.error + l:counts.style_error
-  let l:all_non_errors = l:counts.total - l:all_errors
-  return l:counts.total == 0 ? '' : printf('%d ⚠', all_non_errors)
-endfunction
-
-function! LightlineLinterErrors() abort
-  let l:counts = ale#statusline#Count(bufnr(''))
-  let l:all_errors = l:counts.error + l:counts.style_error
-  let l:all_non_errors = l:counts.total - l:all_errors
-  return l:counts.total == 0 ? '' : printf('%d ✖'', all_errors)
-endfunction
-
-function! LightlineLinterOK() abort
-  let l:counts = ale#statusline#Count(bufnr(''))
-  let l:all_errors = l:counts.error + l:counts.style_error
-  let l:all_non_errors = l:counts.total - l:all_errors
-  return l:counts.total == 0 ? '✓ ' : ''
-endfunction
-
-function! LightlineFilename()
-  let root = fnamemodify(get(b:, 'git_dir'), ':h')
-  let path = expand('%:p')
-  if path[:len(root)-1] ==# root
-    return path[len(root)+1:]
-  endif
-  return expand('%')
-endfunction
-
-autocmd User ALELint call s:MaybeUpdateLightline()
-
-" Update and show lightline but only if it's visible (e.g., not in Goyo)
-function! s:MaybeUpdateLightline()
-  if exists('#lightline')
-    call lightline#update()
-  end
-endfunction
-
 " > NERDTree
 let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
@@ -151,19 +93,7 @@ let g:gitgutter_sign_removed = '•'
 let g:gitgutter_sign_removed_first_line = '•'
 let g:gitgutter_sign_modified_removed = '•'
 
-" > make which-key faster
-set timeoutlen=500
-
-" NERDCommenter, I just need to toggle commenting
+" NERDCommenter, I just need to toggle it
 let g:NERDCreateDefaultMappings = 0
 
-" > hide which_key from statusline
-autocmd! FileType which_key
-autocmd  FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-
-" > hide fxf from statusline
-autocmd! FileType fzf
-autocmd  FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 

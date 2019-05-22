@@ -14,13 +14,13 @@ let g:which_key_map = {}
 "   The line bellow maps <leader>bb to execute :Buffers<CR>
 "   let g:which_key_map.b.b = ['Buffers', 'buffers']
 
-" Buffers ----------
+" b => buffers ----------
 
 nmap ; :Buffers<CR>
 let g:which_key_map.b = { 'name': '+buffers' }
 let g:which_key_map.b.a = ['BA', 'alternate']
 let g:which_key_map.b.b = ['Buffers', 'buffers'] " list buffers
-let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer and keep the window/split intact
+let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer but keep the window/split intact
 let g:which_key_map.b.h = ['CloseHiddenBuffers', 'close hidden'] " close all buffers not visible in any window
 let g:which_key_map.b.n = ['BF', 'next']
 let g:which_key_map.b.o = ['CloseOtherBuffers', 'close others'] " close all buffers except buffer in current window
@@ -31,31 +31,33 @@ let g:which_key_map.b.u = { 'name': 'which_key_ignore' }
 let g:which_key_map.b.f = 'which_key_ignore'
 let g:which_key_map.b.w = 'which_key_ignore'
 
-" Code ----------
+
+" c => code ----------
 let g:which_key_map.c = { 'name': '+code' }
 let g:which_key_map.c.b = ['RemoveDebuggers', 'remove byebug|debugger|binding.pry'] " remove byebug, debugger, etc
-let g:which_key_map.c.d = ['Deleft', 'delete wrapping block'] " Delete a wrapping if-clause, try-catch block, etc. and shift left.
+let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
 let g:which_key_map.c.s = ['CleanWhiteSpaces', 'clean white spaces'] " clean trailing whitespace
 let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
-let g:which_key_map.c['\'] = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
 
 
-" Files ----------
+" f => files ----------
 
 nmap <leader>fa :Ack!
 let g:which_key_map.f = { 'name': '+files' }
 let g:which_key_map.f.s = ['w', 'save'] " Save file
-let g:which_key_map.f.w = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
 
-" Project ----------
+
+" p => project ----------
 
 map <C-p> :GFiles<CR>
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.f = ['GFiles', 'find'] " closefuzzy finder for files and buffers
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
+let g:which_key_map.p.s = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
 
-" Tabs ----------
+
+" TAB => tabs ----------
 
 nmap <Tab> :tabnext<CR>
 let g:which_key_map['<Tab>'] = { 'name': '+tabs' }
@@ -64,7 +66,8 @@ let g:which_key_map['<Tab>'].l = ['tabnext', 'next'] " next tab (hjkL)
 let g:which_key_map['<Tab>'].h = ['tabprevious', 'previous'] " previous tab (Hjkl)
 let g:which_key_map['<Tab>'].d = ['tabclose', 'delete']
 
-" tEsts ----------
+
+" e => specs ----------
 
 let g:which_key_map.e = { 'name': '+tests' }
 let g:which_key_map.e.t = ['TestNearest', 'nearest']
@@ -73,33 +76,56 @@ let g:which_key_map.e.l = ['TestLast', 'last']
 let g:which_key_map.e.g = ['TestVisit', 'visit']
 
 
-" Toggles ----------
+" t => toggles ----------
 let g:which_key_map.t = { 'name': '+toggles' }
 let g:which_key_map.t.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.t.h = ['TurnOffHighlight', 'turn off highlight'] " turn off search highlighting until the next search <- DOESN'T WORK, NO IDEA WHY
 
 
-" Snippets ----------
+" s => Snippets ----------
 
 let g:which_key_map.s = { 'name': '+snippets ' }
 
 
-" Windows ----------
+" w => windows ----------
 
 let g:which_key_map.w = { 'name': '+windows' }
-let g:which_key_map.w.d = ['q', 'delete']
+let g:which_key_map.w.q = ['q', 'quit']
 let g:which_key_map.w.r = ['InteractiveWindow', 'resize']
+let g:which_key_map.w.h = ['split', 'split horizontally']
+nmap <C-\> :vsplit<CR>
+let g:which_key_map.w.v = ['vsplit', 'split vertically']
 
 " ignore
 let g:which_key_map.h = { 'name': 'which_key_ignore' }
 let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 " ----------------------------------------------
 
+" r => ruby (only show for ruby files) ----------
+function s:MapRuby()
+  let g:which_key_map.r = { 'name': '+ruby' }
+  let g:which_key_map.r.a = ['A', 'alternate']
+  let g:which_key_map.r.r = ['R', 'related']
+endfunction
+
+autocmd  FileType ruby call s:MapRuby()
+
+" r => javascript (only show for js files) ----------
+function s:MapJavaScript()
+  let g:which_key_map.r = { 'name': '+javascript' }
+  let g:which_key_map.r.d = [':call ReactGotoDef()', 'definition'] " go to definition
+endfunction
+
+autocmd  FileType javascript call s:MapJavaScript()
+
+
+" ----------------------------------------------
+
 " Copy and cut an entire line to clipboard
 vmap <C-c> :w !pbcopy<CR><CR>
 vmap <C-x> :!pbcopy<CR>
 
-" Save with Ctrl + s, so friends can use my vim
+" Save using Ctrl + s, ¯\_(ツ)_/¯
 map <C-s> :w<CR>
 map <C-q> :q<CR>
 map <C-a> :wqa<CR>
@@ -122,3 +148,5 @@ nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
 
 " use Ctrl + hj to move lines
 let g:move_key_modifier = 'C'
+
+

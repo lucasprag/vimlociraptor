@@ -31,6 +31,7 @@ Plug 'slashmili/alchemist.vim'
 " > javascript
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'Ivo-Donchev/vim-react-goto-definition'
 
 " > coffeescript
 Plug 'kchmck/vim-coffee-script'
