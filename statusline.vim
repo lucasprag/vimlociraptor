@@ -43,7 +43,7 @@ autocmd User ALELint call g:MaybeUpdateLightline()
 " Lightline, thanks @statico
 " colorschemes I like the most are jellybeans and seoul256
 let g:lightline = {
-\ 'colorscheme': 'jellybeans',
+\ 'colorscheme': 'seoul256',
 \ 'active': {
 \   'left': [['mode', 'paste'], ['filename', 'modified']],
 \   'right': [['lineinfo'], ['filetype'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]

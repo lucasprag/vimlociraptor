@@ -33,7 +33,7 @@ command! RemovePuts global/puts\|console.log/delete_
 command! CleanWhiteSpaces %s/\s\+$/
 
 " set syntax html for handlebar files
-autocmd BufNewFile,BufRead *.hbs   set syntax=html
+autocmd! BufNewFile,BufRead *.hbs set syntax=html
 
 " thank you @dmfay for this gem https://dev.to/dmfay/comment/4g5e
 " but it doesn't work that well
@@ -46,11 +46,15 @@ autocmd BufNewFile,BufRead *.hbs   set syntax=html
 
 " > hide which_key from statusline
 autocmd! FileType which_key
-autocmd  FileType which_key set laststatus=0 noshowmode noruler
+autocmd! FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " > hide fxf from statusline
 autocmd! FileType fzf
-autocmd  FileType fzf set laststatus=0 noshowmode noruler
+autocmd! FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
+
+" set syntax/filetype tmux for tmux.conf files (no dot)
+autocmd BufNewFile,BufRead tmux.conf set syntax=tmux filetype=tmux
 
