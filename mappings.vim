@@ -98,31 +98,44 @@ let g:which_key_map.w.q = ['q', 'quit']
 let g:which_key_map.w.r = ['InteractiveWindow', 'resize interactively']
 
 let g:which_key_map.w.h = ['split', 'split horizontally']
-nmap <C-\> :vsplit<CR>
 let g:which_key_map.w.v = ['vsplit', 'split vertically']
+nmap <C-\> :vsplit<CR>
 
 " ignore
 let g:which_key_map.h = { 'name': 'which_key_ignore' }
 let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 " ----------------------------------------------
-"
 
-" r => ruby (only show for ruby files) ----------
+
+" language specific mappings ----------
+"
+" l => ruby (only show for ruby files) ----------
 function! s:MapRuby()
-  let g:which_key_map.r = { 'name': '+ruby' }
-  let g:which_key_map.r.a = ['A', 'alternate']
-  let g:which_key_map.r.r = ['R', 'related']
+  let g:which_key_map.l = { 'name': '+ruby' }
+  let g:which_key_map.l.a = ['A', 'alternate']
+  let g:which_key_map.l.r = ['R', 'related']
 endfunction
 
 autocmd! FileType ruby call s:MapRuby()
 
-" r => javascript (only show for js files) ----------
+" l => javascript (only show for js files) ----------
 function! s:MapJavaScript()
-  let g:which_key_map.r = { 'name': '+javascript' }
-  let g:which_key_map.r.d = [':call ReactGotoDef()', 'definition'] " go to definition
+  let g:which_key_map.l = { 'name': '+javascript' }
+  let g:which_key_map.l.d = [':call ReactGotoDef()', 'definition'] " go to definition
 endfunction
 
 autocmd! FileType javascript call s:MapJavaScript()
+
+" l => vim (only show for vim files) ----------
+function! s:MapVim()
+  let g:which_key_map.l = { 'name': '+vim' }
+  let g:which_key_map.l.r = [':ReloadVimConfig', 'reload config']
+  let g:which_key_map.l.i = [':PlugInstall', 'install plugins']
+  let g:which_key_map.l.u = [':PlugUpdate', 'update plugins']
+  let g:which_key_map.l.c = [':PlugClean', 'clean plugins']
+endfunction
+
+autocmd! FileType vim call s:MapVim()
 
 
 " ----------------------------------------------
