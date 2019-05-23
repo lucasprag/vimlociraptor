@@ -15,7 +15,6 @@ let g:which_key_map = {}
 "   let g:which_key_map.b.b = ['Buffers', 'buffers']
 
 " b => buffers ----------
-
 nmap ; :Buffers<CR>
 let g:which_key_map.b = { 'name': '+buffers' }
 let g:which_key_map.b.a = ['BA', 'alternate']
@@ -41,14 +40,20 @@ let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove p
 
 
 " f => files ----------
-
 nmap <leader>fa :Ack!
 let g:which_key_map.f = { 'name': '+files' }
 let g:which_key_map.f.s = ['w', 'save'] " Save file
 
+" j => jump ----------
+let g:which_key_map.j = { 'name': '+jump' }
+
+let g:which_key_map.j.h = ['<Plug>(easymotion-linebackward)', 'jump backward']
+let g:which_key_map.j.j = ['<Plug>(easymotion-j)', 'jump down']
+let g:which_key_map.j.k = ['<Plug>(easymotion-k)', 'jump up']
+let g:which_key_map.j.l = ['<Plug>(easymotion-lineforward)', 'jump forward']
+
 
 " p => project ----------
-
 map <C-p> :GFiles<CR>
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.f = ['GFiles', 'find'] " closefuzzy finder for files and buffers
@@ -58,7 +63,6 @@ let g:which_key_map.p.s = [':Ack! "\b<cword>\b"', 'search word'] " search word u
 
 
 " TAB => tabs ----------
-
 nmap <Tab> :tabnext<CR>
 let g:which_key_map['<Tab>'] = { 'name': '+tabs' }
 let g:which_key_map['<Tab>'].n = ['tabnew', 'new']
@@ -68,7 +72,6 @@ let g:which_key_map['<Tab>'].d = ['tabclose', 'delete']
 
 
 " e => tests ----------
-
 let g:which_key_map.e = { 'name': '+tests' }
 let g:which_key_map.e.t = ['TestNearest', 'nearest']
 let g:which_key_map.e.f = ['TestFile', 'file']
@@ -83,15 +86,17 @@ let g:which_key_map.t.h = ['TurnOffHighlight', 'turn off highlight'] " turn off 
 
 
 " s => Snippets ----------
-
 let g:which_key_map.s = { 'name': '+snippets ' }
+
+" check it later
+" https://github.com/Shougo/neosnippet.vim
 
 
 " w => windows ----------
-
 let g:which_key_map.w = { 'name': '+windows' }
 let g:which_key_map.w.q = ['q', 'quit']
-let g:which_key_map.w.r = ['InteractiveWindow', 'resize']
+let g:which_key_map.w.r = ['InteractiveWindow', 'resize interactively']
+
 let g:which_key_map.w.h = ['split', 'split horizontally']
 nmap <C-\> :vsplit<CR>
 let g:which_key_map.w.v = ['vsplit', 'split vertically']
@@ -103,21 +108,21 @@ let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 "
 
 " r => ruby (only show for ruby files) ----------
-function s:MapRuby()
+function! s:MapRuby()
   let g:which_key_map.r = { 'name': '+ruby' }
   let g:which_key_map.r.a = ['A', 'alternate']
   let g:which_key_map.r.r = ['R', 'related']
 endfunction
 
-autocmd  FileType ruby call s:MapRuby()
+autocmd! FileType ruby call s:MapRuby()
 
 " r => javascript (only show for js files) ----------
-function s:MapJavaScript()
+function! s:MapJavaScript()
   let g:which_key_map.r = { 'name': '+javascript' }
   let g:which_key_map.r.d = [':call ReactGotoDef()', 'definition'] " go to definition
 endfunction
 
-autocmd  FileType javascript call s:MapJavaScript()
+autocmd! FileType javascript call s:MapJavaScript()
 
 
 " ----------------------------------------------

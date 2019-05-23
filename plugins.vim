@@ -65,7 +65,7 @@ Plug 'sheerun/vim-haml' " haml
 Plug 'AndrewRadev/vim-eco' " eco (backbone.js) ¯\_(ツ)_/¯
 
 " > visual
-Plug 'itchyny/lightline.vim' " light statusline
+Plug 'itchyny/lightline.vim' " really light and fast status line
 Plug 'romgrk/winteract.vim' " resize windows interactively
 Plug 'ap/vim-css-color' " show color of hexadecimals
 
