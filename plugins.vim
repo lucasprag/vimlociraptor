@@ -54,6 +54,7 @@ Plug 'ervandew/supertab' " to use tab to trigger completations
 Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'tpope/vim-endwise' " helps to end certain structures
 Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
+Plug 'majutsushi/tagbar' " panel to see a summary/map of available methods/attributes, :TagbarToggle
 
 " > style
 Plug 'w0rp/ale' " Asynchronous Lint Engine
@@ -77,6 +78,7 @@ Plug 'stephpy/vim-yaml' " yml, yaml
 " > colors with true color support
 Plug 'petelewis/vim-evolution'
 Plug 'lucasprag/simpleblack'
+
 
 " END PlugS
 call plug#end()

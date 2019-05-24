@@ -99,3 +99,5 @@ let g:NERDCreateDefaultMappings = 0
 " make vim-test use foreman
 let test#ruby#rspec#executable = 'foreman run rspec'
 
+" explorer
+let g:netrw_liststyle=3

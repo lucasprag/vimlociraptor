@@ -15,7 +15,9 @@ It works with tmux, and it's used for ruby, elixir, bash, and JavaScript.
   - Install [fzf](https://github.com/junegunn/fzf#installation)
   - Install [Ack](http://beyondgrep.com/install/)
   - Install [Plug](https://github.com/junegunn/vim-plug)
+  - Install [ctags](https://github.com/universal-ctags/homebrew-universal-ctags)
   - run `nvim`
+  - press `SPC`
 
 # Usage
 

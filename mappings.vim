@@ -33,16 +33,16 @@ let g:which_key_map.b.w = 'which_key_ignore'
 
 " c => code ----------
 let g:which_key_map.c = { 'name': '+code' }
-let g:which_key_map.c.b = ['RemoveDebuggers', 'remove byebug|debugger|binding.pry'] " remove byebug, debugger, etc
+let g:which_key_map.c.d = ['RemoveDebuggers', 'remove byebug|debugger|binding.pry'] " remove byebug, debugger, etc
 let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
 let g:which_key_map.c.s = ['CleanWhiteSpaces', 'clean white spaces'] " clean trailing whitespace
 let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
+let g:which_key_map.c.m = ['TagbarToggle', 'summary']
 
 
 " f => files ----------
-nmap <leader>fa :Ack!
-let g:which_key_map.f = { 'name': '+files' }
-let g:which_key_map.f.s = ['w', 'save'] " Save file
+"let g:which_key_map.f = { 'name': '+files' }
+"let g:which_key_map.f.s = ['w', 'save'] " Save file
 
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
@@ -59,10 +59,13 @@ let g:which_key_map.j.f = ['<Plug>(easymotion-lineforward)', 'inline forward']
 " p => project ----------
 map <C-p> :GFiles<CR>
 let g:which_key_map.p = { 'name': '+project' }
-let g:which_key_map.p.f = ['GFiles', 'find'] " closefuzzy finder for files and buffers
+let g:which_key_map.p.e = ['Explore', 'explore'] " open explore
+let g:which_key_map.p.f = ['GFiles', 'find files'] " closefuzzy finder for files
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
-let g:which_key_map.p.s = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
+
+nmap <leader>ps :Ack!
+let g:which_key_map.p.w = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
 
 
 " TAB => tabs ----------
@@ -85,7 +88,7 @@ let g:which_key_map.e.g = ['TestVisit', 'visit']
 " t => toggles ----------
 let g:which_key_map.t = { 'name': '+toggles' }
 let g:which_key_map.t.a = ['ALEToggle', 'ALE'] " toggle linting
-let g:which_key_map.t.h = ['TurnOffHighlight', 'turn off highlight'] " turn off search highlighting until the next search <- DOESN'T WORK, NO IDEA WHY
+let g:which_key_map.t.n = ['nohlsearch', 'turn off highlight']
 
 
 " s => Snippets ----------
@@ -111,6 +114,7 @@ let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 
 
 " language specific mappings ----------
+" (not using ftplugin because I want all my mappings to live in one file)
 "
 " l => ruby (only show for ruby files) ----------
 function! s:MapRuby()
@@ -132,10 +136,10 @@ autocmd! FileType javascript call s:MapJavaScript()
 " l => vim (only show for vim files) ----------
 function! s:MapVim()
   let g:which_key_map.l = { 'name': '+vim' }
-  let g:which_key_map.l.r = [':ReloadVimConfig', 'reload config']
-  let g:which_key_map.l.i = [':PlugInstall', 'install plugins']
-  let g:which_key_map.l.u = [':PlugUpdate', 'update plugins']
-  let g:which_key_map.l.c = [':PlugClean', 'clean plugins']
+  let g:which_key_map.l.r = ['ReloadVimConfig', 'reload config']
+  let g:which_key_map.l.i = ['PlugInstall', 'install plugins']
+  let g:which_key_map.l.u = ['PlugUpdate', 'update plugins']
+  let g:which_key_map.l.c = ['PlugClean', 'clean plugins']
 endfunction
 
 autocmd! FileType vim call s:MapVim()

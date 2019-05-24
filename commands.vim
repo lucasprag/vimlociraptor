@@ -59,7 +59,7 @@ autocmd! FileType fzf set laststatus=0 noshowmode noruler
 autocmd BufNewFile,BufRead tmux.conf set syntax=tmux filetype=tmux
 
 " reload vim configuration (aka vimrc)
-" :e reloads buffer to trigger the FileType event if you don't want to put files into ftplugin
+" :e reloads buffer to trigger the FileType event, useful if you don't want to put files into ftplugin
 command! ReloadVimConfig so $MYVIMRC
   \| execute 'e'
   \| echo 'config reloaded!'
