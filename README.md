@@ -5,7 +5,7 @@ My personal collections of plugins and mappings for vim|neovim.
 
 It works with tmux, and it's used for ruby, elixir, bash, and JavaScript.
 
-![tmux + vim](github/tmux-nvim.png)
+![tmux + vim](github/vimlociraptor.png)
 
 # Install
 
@@ -29,6 +29,14 @@ I try to leave comments telling what each line does.
   - [commands](commands.vim)
   - [configs](configs.vim)
   - [mappings](mappings.vim)
+  - [statusline](statusline.vim)
+
+
+# Inspiration
+
+  - [Spacemacs](http://spacemacs.org/)
+  - [SpaceVim](https://spacevim.org/)
+  - [Doom emacs](https://github.com/hlissner/doom-emacs)
 
 
 
