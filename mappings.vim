@@ -47,10 +47,13 @@ let g:which_key_map.f.s = ['w', 'save'] " Save file
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
 
-let g:which_key_map.j.h = ['<Plug>(easymotion-linebackward)', 'jump backward']
-let g:which_key_map.j.j = ['<Plug>(easymotion-j)', 'jump down']
-let g:which_key_map.j.k = ['<Plug>(easymotion-k)', 'jump up']
-let g:which_key_map.j.l = ['<Plug>(easymotion-lineforward)', 'jump forward']
+let g:which_key_map.j.h = ['<Plug>(easymotion-b)', 'backward']
+let g:which_key_map.j.j = ['<Plug>(easymotion-j)', 'down']
+let g:which_key_map.j.k = ['<Plug>(easymotion-k)', 'up']
+let g:which_key_map.j.l = ['<Plug>(easymotion-w)', 'forward']
+
+let g:which_key_map.j.b = ['<Plug>(easymotion-linebackward)', 'inline backward']
+let g:which_key_map.j.f = ['<Plug>(easymotion-lineforward)', 'inline forward']
 
 
 " p => project ----------
