@@ -105,3 +105,5 @@ let g:netrw_liststyle=3
  " disable default mappings
 let g:EasyMotion_do_mapping = 0
 
+" prevent default bindings from vim-windowswap
+let g:windowswap_map_keys = 0

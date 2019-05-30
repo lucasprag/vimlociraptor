@@ -89,6 +89,7 @@ let g:which_key_map.t.g = ['TestVisit', 'visit']
 let g:which_key_map.T = { 'name': '+toggles' }
 let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.T.h = [':setlocal nohlsearch', 'turn off highlight']
+let g:which_key_map.T.t = [':TableModeToggle', 'table mode']
 
 " w => windows ----------
 let g:which_key_map.w = { 'name': '+windows' }
@@ -98,6 +99,8 @@ let g:which_key_map.w.r = ['InteractiveWindow', 'resize interactively']
 let g:which_key_map.w.h = ['split', 'split horizontally']
 let g:which_key_map.w.v = ['vsplit', 'split vertically']
 nmap <C-\> :vsplit<CR>
+
+let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap']
 
 " ignore
 let g:which_key_map.h = { 'name': 'which_key_ignore' }
@@ -166,5 +169,4 @@ nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
 
 " use Ctrl + hj to move lines
 let g:move_key_modifier = 'C'
-
 

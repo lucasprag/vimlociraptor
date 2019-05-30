@@ -17,6 +17,7 @@ Plug 'Asheq/close-buffers.vim' " provides :CloseHiddenBuffers and :CloseOtherBuf
 " > editing tools
 Plug 'scrooloose/nerdcommenter' " comment code
 Plug 'tpope/vim-surround' " makes surroundings easy
+Plug 'dhruvasagar/vim-table-mode' " table creator & formatter allowing one to create neat tables as you type
 
 " > ruby
 Plug 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
@@ -55,10 +56,10 @@ Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'tpope/vim-endwise' " helps to end certain structures
 Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
 Plug 'majutsushi/tagbar' " panel to see a summary/map of available methods/attributes, :TagbarToggle
+Plug 'rhysd/committia.vim' " more pleasant editing on commit message
 
 " > style
 Plug 'w0rp/ale' " Asynchronous Lint Engine
-Plug 'godlygeek/tabular' " easy to align code using :Tab /:\zs for example
 Plug 'editorconfig/editorconfig-vim'
 
 " > templates
@@ -69,6 +70,7 @@ Plug 'AndrewRadev/vim-eco' " eco (backbone.js) ¯\_(ツ)_/¯
 Plug 'itchyny/lightline.vim' " really light and fast status line
 Plug 'romgrk/winteract.vim' " resize windows interactively
 Plug 'ap/vim-css-color' " show color of hexadecimals
+Plug 'wesQ3/vim-windowswap' " swap windows
 
 " > devops
 Plug 'chr4/nginx.vim' " nginx
@@ -77,7 +79,13 @@ Plug 'stephpy/vim-yaml' " yml, yaml
 
 " > colors with true color support
 Plug 'petelewis/vim-evolution'
+Plug 'romainl/Apprentice'
 Plug 'lucasprag/simpleblack'
+
+
+" > to take a look
+" https://github.com/haya14busa/incsearch.vim
+" https://github.com/jreybert/vimagit
 
 " END Plugs
 call plug#end()
