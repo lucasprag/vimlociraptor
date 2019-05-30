@@ -101,3 +101,7 @@ let test#ruby#rspec#executable = 'foreman run rspec'
 
 " explorer
 let g:netrw_liststyle=3
+
+ " disable default mappings
+let g:EasyMotion_do_mapping = 0
+

@@ -79,6 +79,5 @@ Plug 'stephpy/vim-yaml' " yml, yaml
 Plug 'petelewis/vim-evolution'
 Plug 'lucasprag/simpleblack'
 
-
-" END PlugS
+" END Plugs
 call plug#end()

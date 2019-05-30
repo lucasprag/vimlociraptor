@@ -77,26 +77,18 @@ let g:which_key_map['<Tab>'].h = ['tabprevious', 'previous'] " previous tab (Hjk
 let g:which_key_map['<Tab>'].d = ['tabclose', 'delete']
 
 
-" e => tests ----------
-let g:which_key_map.e = { 'name': '+tests' }
-let g:which_key_map.e.t = ['TestNearest', 'nearest']
-let g:which_key_map.e.f = ['TestFile', 'file']
-let g:which_key_map.e.l = ['TestLast', 'last']
-let g:which_key_map.e.g = ['TestVisit', 'visit']
+" t => tests ----------
+let g:which_key_map.t = { 'name': '+tests' }
+let g:which_key_map.t.t = ['TestNearest', 'nearest']
+let g:which_key_map.t.f = ['TestFile', 'file']
+let g:which_key_map.t.l = ['TestLast', 'last']
+let g:which_key_map.t.g = ['TestVisit', 'visit']
 
 
-" t => toggles ----------
-let g:which_key_map.t = { 'name': '+toggles' }
-let g:which_key_map.t.a = ['ALEToggle', 'ALE'] " toggle linting
-let g:which_key_map.t.n = ['nohlsearch', 'turn off highlight']
-
-
-" s => Snippets ----------
-let g:which_key_map.s = { 'name': '+snippets ' }
-
-" check it later
-" https://github.com/Shougo/neosnippet.vim
-
+" T => toggles ----------
+let g:which_key_map.T = { 'name': '+toggles' }
+let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
+let g:which_key_map.T.h = [':setlocal nohlsearch', 'turn off highlight']
 
 " w => windows ----------
 let g:which_key_map.w = { 'name': '+windows' }
