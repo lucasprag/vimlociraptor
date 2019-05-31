@@ -7,6 +7,17 @@ It works with tmux, and it's used for ruby, elixir, bash, and JavaScript.
 
 ![nvim](github/vimlociraptor.png)
 
+It's nice to dig into other people's vim files and see how they do things. Feel free to do that.
+
+I try to leave comments telling what each line does:
+
+  - [configs](configs.vim)
+  - [plugins](plugins.vim)
+  - [mappings](mappings.vim)
+  - [commands](commands.vim)
+  - [statusline](statusline.vim)
+
+
 # Install
 
   - Install [Neovim](https://neovim.io)
@@ -19,24 +30,10 @@ It works with tmux, and it's used for ruby, elixir, bash, and JavaScript.
   - run `nvim`
   - press `SPC`
 
-# Usage
-
-It's nice to dig into other people's vim files and see how they do things. Feel free to do that.
-
-I try to leave comments telling what each line does.
-
-  - [plugins](plugins.vim)
-  - [commands](commands.vim)
-  - [configs](configs.vim)
-  - [mappings](mappings.vim)
-  - [statusline](statusline.vim)
-
 
 # Inspiration
 
   - [Spacemacs](http://spacemacs.org/)
   - [SpaceVim](https://spacevim.org/)
   - [Doom emacs](https://github.com/hlissner/doom-emacs)
-
-
 
