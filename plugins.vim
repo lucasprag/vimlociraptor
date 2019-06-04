@@ -25,7 +25,8 @@ Plug 'vim-ruby/vim-ruby' " ruby support
 Plug 'tpope/vim-rails' " rails support
 
 " > elixir
-Plug 'slashmili/alchemist.vim'
+Plug 'elixir-editors/vim-elixir' " syntax highlighting and filetype detection
+Plug 'slashmili/alchemist.vim' " all the other things like go to definition and format
 
 " > javascript
 Plug 'pangloss/vim-javascript'
@@ -77,9 +78,9 @@ Plug 'chr4/nginx.vim' " nginx
 Plug 'hashivim/vim-terraform' " terraform
 Plug 'stephpy/vim-yaml' " yml, yaml
 
-" > colors with true color support
+" > colorschemes
 Plug 'petelewis/vim-evolution'
-Plug 'romainl/Apprentice'
+Plug 'jaredgorski/SpaceCamp'
 Plug 'lucasprag/simpleblack'
 
 

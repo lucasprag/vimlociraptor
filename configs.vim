@@ -52,7 +52,7 @@ set splitright
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.gif,*.png,*.jpg,*.jpeg
 
 " > make which-key faster
-set timeoutlen=500
+set timeoutlen=300
 
 " enable mouse, it's usuful sometimes
 set mouse=a
@@ -86,14 +86,14 @@ let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
 let NERDTreeShowLineNumbers=1
 
-" > smaller git gutter
+" > smaller git gutter icons
 let g:gitgutter_sign_added = '•'
 let g:gitgutter_sign_modified = '•'
 let g:gitgutter_sign_removed = '•'
 let g:gitgutter_sign_removed_first_line = '•'
 let g:gitgutter_sign_modified_removed = '•'
 
-" NERDCommenter, I just need to toggle it
+" disable default mappings from NERDCommenter, I just need to toggle it
 let g:NERDCreateDefaultMappings = 0
 
 " make vim-test use foreman
@@ -102,8 +102,12 @@ let test#ruby#rspec#executable = 'foreman run rspec'
 " explorer
 let g:netrw_liststyle=3
 
- " disable default mappings
+ " disable default mappings from easymotion
 let g:EasyMotion_do_mapping = 0
 
-" prevent default bindings from vim-windowswap
+" disable default bindings from vim-windowswap
 let g:windowswap_map_keys = 0
+
+" disable default mappings from vim-alchemist
+let g:alchemist_mappings_disable = 1
+let g:alchemist_tag_disable = 1

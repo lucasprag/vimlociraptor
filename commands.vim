@@ -35,15 +35,6 @@ command! CleanWhiteSpaces %s/\s\+$/
 " set syntax html for handlebar files
 autocmd! BufNewFile,BufRead *.hbs set syntax=html
 
-" thank you @dmfay for this gem https://dev.to/dmfay/comment/4g5e
-" but it doesn't work that well
-"augroup myvimrc
-  "au!
-  "au BufWritePost *.vim so $MYVIMRC
-"augroup END
-
-
-
 " > hide which_key from statusline
 autocmd! FileType which_key
 autocmd! FileType which_key set laststatus=0 noshowmode noruler
@@ -64,3 +55,10 @@ command! ReloadVimConfig so $MYVIMRC
   \| execute 'e'
   \| echo 'config reloaded!'
 
+
+" open the vimlociraptor configs files from anywhere
+command! OpenMappingsVim execute 'e ' g:vimlociraptor_path . '/mappings.vim'
+command! OpenPluginsVim execute 'e ' g:vimlociraptor_path . '/plugings.vim'
+command! OpenCommandsVim execute 'e ' g:vimlociraptor_path . '/commands.vim'
+command! OpenConfigsVim execute 'e ' g:vimlociraptor_path . '/configs.vim'
+command! OpenStatusLineVim execute 'e ' g:vimlociraptor_path . '/statusline.vim'

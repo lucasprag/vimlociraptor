@@ -91,6 +91,20 @@ let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.T.h = [':setlocal nohlsearch', 'turn off highlight']
 let g:which_key_map.T.t = [':TableModeToggle', 'table mode']
 
+" v => vimlociraptor ----------
+let g:which_key_map.v = { 'name': '+vimlociraptor' }
+
+let g:which_key_map.v.m = ['OpenMappingsVim', 'mappings.vim']
+let g:which_key_map.v.p = ['OpenPluginsVim', 'plugins.vim']
+let g:which_key_map.v.c = ['OpenCommandsVim', 'commands.vim']
+let g:which_key_map.v.f = ['OpenConfigsVim', 'configs.vim']
+let g:which_key_map.v.s = ['OpenStatusLineVim', 'statusline.vim']
+
+let g:which_key_map.v.r = ['ReloadVimConfig', 'reload']
+let g:which_key_map.v.i = ['PlugInstall', 'install']
+let g:which_key_map.v.u = ['PlugUpdate', 'update']
+let g:which_key_map.v.k = ['PlugClean', 'clean']
+
 " w => windows ----------
 let g:which_key_map.w = { 'name': '+windows' }
 let g:which_key_map.w.q = ['q', 'quit']
@@ -120,6 +134,17 @@ endfunction
 
 autocmd! FileType ruby call s:MapRuby()
 
+" l => elixir (only show for elixir files) ----------
+function! s:MapElixir()
+  let g:which_key_map.l = { 'name': '+elixir' }
+  let g:which_key_map.l.d = [':call alchemist#exdef()', 'definition']
+  let g:which_key_map.l.s = [':call alchemist#jump_tag_stack()', 'stack']
+  let g:which_key_map.l.e = [':call alchemist#exdoc()', 'ExDocs']
+endfunction
+
+autocmd! FileType elixir call s:MapElixir()
+
+
 " l => javascript (only show for js files) ----------
 function! s:MapJavaScript()
   let g:which_key_map.l = { 'name': '+javascript' }
@@ -127,17 +152,6 @@ function! s:MapJavaScript()
 endfunction
 
 autocmd! FileType javascript call s:MapJavaScript()
-
-" l => vim (only show for vim files) ----------
-function! s:MapVim()
-  let g:which_key_map.l = { 'name': '+vim' }
-  let g:which_key_map.l.r = ['ReloadVimConfig', 'reload config']
-  let g:which_key_map.l.i = ['PlugInstall', 'install plugins']
-  let g:which_key_map.l.u = ['PlugUpdate', 'update plugins']
-  let g:which_key_map.l.c = ['PlugClean', 'clean plugins']
-endfunction
-
-autocmd! FileType vim call s:MapVim()
 
 
 " ----------------------------------------------
