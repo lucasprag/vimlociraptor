@@ -41,6 +41,7 @@ Plug 'cakebaker/scss-syntax.vim'
 
 " > git
 Plug 'airblade/vim-gitgutter'
+Plug 'tonchis/vim-to-github'
 
 " > tmux
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test

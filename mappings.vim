@@ -40,9 +40,9 @@ let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove p
 let g:which_key_map.c.m = ['TagbarToggle', 'summary']
 
 
-" f => files ----------
-"let g:which_key_map.f = { 'name': '+files' }
-"let g:which_key_map.f.s = ['w', 'save'] " Save file
+" g => git ----------
+let g:which_key_map.g = { 'name': '+git' }
+let g:which_key_map.g.o = [':ToGithub', 'open on github']
 
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
