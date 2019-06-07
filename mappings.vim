@@ -42,18 +42,22 @@ let g:which_key_map.c.m = ['TagbarToggle', 'summary']
 
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
-let g:which_key_map.g.o = [':ToGithub', 'open on github']
+let g:which_key_map.g.b = [':Gblame', 'blame']
+let g:which_key_map.g.c = [':Gcommit', 'commit']
+let g:which_key_map.g.s = [':Gstatus', 'status']
+let g:which_key_map.g.o = [':Gbrowse', 'open on browser']
+
 
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
 
-let g:which_key_map.j.h = ['<Plug>(easymotion-b)', 'backward']
+let g:which_key_map.j.l = ['<Plug>(easymotion-lineforward)', 'forward']
 let g:which_key_map.j.j = ['<Plug>(easymotion-j)', 'down']
 let g:which_key_map.j.k = ['<Plug>(easymotion-k)', 'up']
-let g:which_key_map.j.l = ['<Plug>(easymotion-w)', 'forward']
+let g:which_key_map.j.h = ['<Plug>(easymotion-linebackward)', 'backward']
 
-let g:which_key_map.j.b = ['<Plug>(easymotion-linebackward)', 'inline backward']
-let g:which_key_map.j.f = ['<Plug>(easymotion-lineforward)', 'inline forward']
+let g:which_key_map.j.f = ['<Plug>(easymotion-w)', 'forward/down']
+let g:which_key_map.j.b = ['<Plug>(easymotion-b)', 'backward/up']
 
 
 " p => project ----------
@@ -166,7 +170,7 @@ vmap <C-x> :!pbcopy<CR>
 " Save using Ctrl + s, ¯\_(ツ)_/¯
 map <C-s> :w<CR>
 map <C-q> :q<CR>
-map <C-a> :wqa<C>
+map <C-a> :wqa<CR>
 
 " Disable cursor keys in normal mode, no idea how to use emojis
 map <Left>  :echo "use h instead (hjkl)"<CR>
@@ -181,8 +185,8 @@ let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
 nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
 nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <M-\> :TmuxNavigatePrevious<cr>
+nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 
 " use Ctrl + hj to move lines
 let g:move_key_modifier = 'C'

@@ -40,9 +40,9 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'cakebaker/scss-syntax.vim'
 
 " > git
-Plug 'airblade/vim-gitgutter'
-Plug 'tonchis/vim-to-github'
+Plug 'airblade/vim-gitgutter' " add gutter icons to lines with changes
 Plug 'tpope/vim-fugitive' " gives :Gstatus and more commands to do git stuff
+Plug 'tpope/vim-rhubarb' " enabled :Gbrowse from vim-fugitive
 
 " > tmux
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test
