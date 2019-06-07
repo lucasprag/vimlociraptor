@@ -107,7 +107,7 @@ let g:which_key_map.v.k = ['PlugClean', 'clean']
 
 " w => windows ----------
 let g:which_key_map.w = { 'name': '+windows' }
-let g:which_key_map.w.q = ['q', 'quit']
+let g:which_key_map.w.d = ['q', 'delete']
 let g:which_key_map.w.r = ['InteractiveWindow', 'resize interactively']
 
 let g:which_key_map.w.h = ['split', 'split horizontally']
@@ -125,7 +125,7 @@ let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 " language specific mappings ----------
 " (not using ftplugin because I want all my mappings to live in one file)
 "
-" l => ruby (only show for ruby files) ----------
+" l => ruby ----------
 function! s:MapRuby()
   let g:which_key_map.l = { 'name': '+ruby' }
   let g:which_key_map.l.a = ['A', 'alternate']
@@ -134,18 +134,21 @@ endfunction
 
 autocmd! FileType ruby call s:MapRuby()
 
-" l => elixir (only show for elixir files) ----------
+
+" l => elixir ----------
 function! s:MapElixir()
   let g:which_key_map.l = { 'name': '+elixir' }
   let g:which_key_map.l.d = [':call alchemist#exdef()', 'definition']
-  let g:which_key_map.l.s = [':call alchemist#jump_tag_stack()', 'stack']
   let g:which_key_map.l.e = [':call alchemist#exdoc()', 'ExDocs']
+  let g:which_key_map.l.f = [':FormatElixirFile', 'format']
+  let g:which_key_map.l.i = [':IEx', 'IEx']
+  let g:which_key_map.l.s = [':call alchemist#jump_tag_stack()', 'stack']
 endfunction
 
 autocmd! FileType elixir call s:MapElixir()
 
 
-" l => javascript (only show for js files) ----------
+" l => javascript ----------
 function! s:MapJavaScript()
   let g:which_key_map.l = { 'name': '+javascript' }
   let g:which_key_map.l.d = [':call ReactGotoDef()', 'definition'] " go to definition

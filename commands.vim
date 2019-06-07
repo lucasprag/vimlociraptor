@@ -62,3 +62,5 @@ command! OpenPluginsVim execute 'e ' g:vimlociraptor_path . '/plugings.vim'
 command! OpenCommandsVim execute 'e ' g:vimlociraptor_path . '/commands.vim'
 command! OpenConfigsVim execute 'e ' g:vimlociraptor_path . '/configs.vim'
 command! OpenStatusLineVim execute 'e ' g:vimlociraptor_path . '/statusline.vim'
+
+command! FormatElixirFile silent :!mix format %
