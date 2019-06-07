@@ -58,7 +58,7 @@ command! ReloadVimConfig so $MYVIMRC
 
 " open the vimlociraptor configs files from anywhere
 command! OpenMappingsVim execute 'e ' g:vimlociraptor_path . '/mappings.vim'
-command! OpenPluginsVim execute 'e ' g:vimlociraptor_path . '/plugings.vim'
+command! OpenPluginsVim execute 'e ' g:vimlociraptor_path . '/plugins.vim'
 command! OpenCommandsVim execute 'e ' g:vimlociraptor_path . '/commands.vim'
 command! OpenConfigsVim execute 'e ' g:vimlociraptor_path . '/configs.vim'
 command! OpenStatusLineVim execute 'e ' g:vimlociraptor_path . '/statusline.vim'
