@@ -42,6 +42,7 @@ Plug 'cakebaker/scss-syntax.vim'
 " > git
 Plug 'airblade/vim-gitgutter'
 Plug 'tonchis/vim-to-github'
+Plug 'tpope/vim-fugitive' " gives :Gstatus and more commands to do git stuff
 
 " > tmux
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test

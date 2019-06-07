@@ -166,7 +166,7 @@ vmap <C-x> :!pbcopy<CR>
 " Save using Ctrl + s, ¯\_(ツ)_/¯
 map <C-s> :w<CR>
 map <C-q> :q<CR>
-map <C-a> :wqa<CR>
+map <C-a> :wqa<C>
 
 " Disable cursor keys in normal mode, no idea how to use emojis
 map <Left>  :echo "use h instead (hjkl)"<CR>
