@@ -43,6 +43,7 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'airblade/vim-gitgutter' " add gutter icons to lines with changes
 Plug 'tpope/vim-fugitive' " gives :Gstatus and more commands to do git stuff
 Plug 'tpope/vim-rhubarb' " enabled :Gbrowse from vim-fugitive
+Plug 'rhysd/committia.vim' " more pleasant editing on commit message
 
 " > tmux
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test
@@ -51,15 +52,16 @@ Plug 'christoomey/vim-tmux-navigator' " transparent navigator
 " > specs
 Plug 'janko-m/vim-test' " run tests on different granularities.
 
-" > util
+" > misc
 Plug 'pbrisbin/vim-mkdir' " to create files without creating dirs previously (aka mkdir -p)
 Plug 'tpope/vim-sensible' " better defaults
-Plug 'ervandew/supertab' " to use tab to trigger completations
 Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
-Plug 'tpope/vim-endwise' " helps to end certain structures
 Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
 Plug 'majutsushi/tagbar' " panel to see a summary/map of available methods/attributes, :TagbarToggle
-Plug 'rhysd/committia.vim' " more pleasant editing on commit message
+
+" > autocompletation & snippets
+Plug 'tpope/vim-endwise' " helps to end certain structures
+Plug 'ervandew/supertab' " to use tab to trigger completations
 
 " > style
 Plug 'w0rp/ale' " Asynchronous Lint Engine
@@ -71,8 +73,10 @@ Plug 'AndrewRadev/vim-eco' " eco (backbone.js) ¯\_(ツ)_/¯
 
 " > visual
 Plug 'itchyny/lightline.vim' " really light and fast status line
-Plug 'romgrk/winteract.vim' " resize windows interactively
 Plug 'ap/vim-css-color' " show color of hexadecimals
+
+" > windows
+Plug 'romgrk/winteract.vim' " resize windows interactively
 Plug 'wesQ3/vim-windowswap' " swap windows
 
 " > devops
@@ -84,7 +88,6 @@ Plug 'stephpy/vim-yaml' " yml, yaml
 Plug 'petelewis/vim-evolution'
 Plug 'jaredgorski/SpaceCamp'
 Plug 'lucasprag/simpleblack'
-
 
 " > to take a look
 " https://github.com/haya14busa/incsearch.vim
