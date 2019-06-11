@@ -40,11 +40,10 @@ autocmd! FileType which_key
 autocmd! FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
-" > hide fxf from statusline
+" > hide fzf from statusline
 autocmd! FileType fzf
 autocmd! FileType fzf set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-
 
 " set syntax/filetype tmux for tmux.conf files (no dot)
 autocmd BufNewFile,BufRead tmux.conf set syntax=tmux filetype=tmux

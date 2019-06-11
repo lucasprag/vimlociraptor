@@ -25,11 +25,13 @@ let g:which_key_map.b.n = ['BF', 'next']
 let g:which_key_map.b.o = ['CloseOtherBuffers', 'close others'] " close all buffers except buffer in current window
 let g:which_key_map.b.p = ['BB', 'previous']
 
+let g:which_key_map.b.L = ['Lines', 'lines']
+let g:which_key_map.b.l = ['BLines', 'lines']
+
 " ignore
 let g:which_key_map.b.u = { 'name': 'which_key_ignore' }
 let g:which_key_map.b.f = 'which_key_ignore'
 let g:which_key_map.b.w = 'which_key_ignore'
-
 
 " c => code ----------
 let g:which_key_map.c = { 'name': '+code' }
@@ -39,12 +41,11 @@ let g:which_key_map.c.s = ['CleanWhiteSpaces', 'clean white spaces'] " clean tra
 let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
 let g:which_key_map.c.m = ['TagbarToggle', 'summary']
 
-
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
 let g:which_key_map.g.m = [':Magit', 'magit']
 let g:which_key_map.g.o = [':OpenGithub', 'open on github']
-
+let g:which_key_map.g.s = [':GFiles?', 'status']
 
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
@@ -57,18 +58,21 @@ let g:which_key_map.j.h = ['<Plug>(easymotion-linebackward)', 'backward']
 let g:which_key_map.j.f = ['<Plug>(easymotion-w)', 'forward/down']
 let g:which_key_map.j.b = ['<Plug>(easymotion-b)', 'backward/up']
 
-
 " p => project ----------
 map <C-p> :GFiles<CR>
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.e = ['Explore', 'explore'] " open explore
-let g:which_key_map.p.f = ['GFiles', 'find files'] " closefuzzy finder for files
+let g:which_key_map.p.f = ['GFiles', 'find files'] " fuzzy find files
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
 
 nmap <leader>ps :Ack!
 let g:which_key_map.p.w = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
 
+" s => snippets ----------
+let g:which_key_map.s = { 'name': '+snippets' }
+let g:which_key_map.s.f = ['Snippets', 'find'] " fuzzy find for snippets
+let g:which_key_map.s.e = ['UltiSnipsEdit', 'edit']
 
 " TAB => tabs ----------
 nmap <Tab> :tabnext<CR>
@@ -86,10 +90,10 @@ let g:which_key_map.t.f = ['TestFile', 'file']
 let g:which_key_map.t.l = ['TestLast', 'last']
 let g:which_key_map.t.g = ['TestVisit', 'visit']
 
-
 " T => toggles ----------
 let g:which_key_map.T = { 'name': '+toggles' }
 let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
+let g:which_key_map.T.c = [':Colors', 'colorschemes']
 let g:which_key_map.T.h = [':setlocal nohlsearch', 'turn off highlight']
 let g:which_key_map.T.t = [':TableModeToggle', 'table mode']
 
@@ -111,6 +115,7 @@ let g:which_key_map.v.k = ['PlugClean', 'clean']
 let g:which_key_map.w = { 'name': '+windows' }
 let g:which_key_map.w.d = ['q', 'delete']
 let g:which_key_map.w.r = ['InteractiveWindow', 'resize interactively']
+let g:which_key_map.w.f = ['Windows', 'find']
 
 let g:which_key_map.w.h = ['split', 'split horizontally']
 let g:which_key_map.w.v = ['vsplit', 'split vertically']
@@ -188,4 +193,6 @@ nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 
 " use Ctrl + hj to move lines
 let g:move_key_modifier = 'C'
+
+map r :History<cr>
 

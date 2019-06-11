@@ -84,6 +84,10 @@ Plug 'chr4/nginx.vim' " nginx
 Plug 'hashivim/vim-terraform' " terraform
 Plug 'stephpy/vim-yaml' " yml, yaml
 
+" snippets.
+Plug 'SirVer/ultisnips' " snippets engine
+Plug 'honza/vim-snippets' " snippets files
+
 " > colorschemes
 Plug 'petelewis/vim-evolution'
 Plug 'jaredgorski/SpaceCamp'
