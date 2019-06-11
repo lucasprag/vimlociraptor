@@ -111,3 +111,7 @@ let g:windowswap_map_keys = 0
 " disable default mappings from vim-alchemist
 let g:alchemist_mappings_disable = 1
 let g:alchemist_tag_disable = 1
+
+
+" change the default mapping for magit
+let g:magit_show_magit_mapping = '<leader>gm'

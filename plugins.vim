@@ -41,9 +41,9 @@ Plug 'cakebaker/scss-syntax.vim'
 
 " > git
 Plug 'airblade/vim-gitgutter' " add gutter icons to lines with changes
-Plug 'tpope/vim-fugitive' " gives :Gstatus and more commands to do git stuff
-Plug 'tpope/vim-rhubarb' " enabled :Gbrowse from vim-fugitive
 Plug 'rhysd/committia.vim' " more pleasant editing on commit message
+Plug 'jreybert/vimagit' " amazing port of emacs magit to vim
+Plug 'k0kubun/vim-open-github' " open current file on github
 
 " > tmux
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test

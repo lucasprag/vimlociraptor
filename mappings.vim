@@ -42,10 +42,8 @@ let g:which_key_map.c.m = ['TagbarToggle', 'summary']
 
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
-let g:which_key_map.g.b = [':Gblame', 'blame']
-let g:which_key_map.g.c = [':Gcommit', 'commit']
-let g:which_key_map.g.s = [':Gstatus', 'status']
-let g:which_key_map.g.o = [':Gbrowse', 'open on browser']
+let g:which_key_map.g.m = [':Magit', 'magit']
+let g:which_key_map.g.o = [':OpenGithub', 'open on github']
 
 
 " j => jump ----------
