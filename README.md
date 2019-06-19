@@ -22,8 +22,6 @@ I try to leave comments telling what each line does:
 
   - Install [Neovim](https://neovim.io)
   - Clone the project `git clone git@github.com:lucasprag/vimlociraptor.git ~/.config/nvim/`
-  - Install [EditorConfig](http://editorconfig.org/)
-  - Install [fzf](https://github.com/junegunn/fzf#installation)
   - Install [Ack](http://beyondgrep.com/install/)
   - Install [Plug](https://github.com/junegunn/vim-plug)
   - Install [ctags](https://github.com/universal-ctags/homebrew-universal-ctags)

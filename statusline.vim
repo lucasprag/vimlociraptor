@@ -40,7 +40,6 @@ endfunction
 
 autocmd User ALELint call g:MaybeUpdateLightline()
 
-" Lightline, thanks @statico
 " colorschemes I like the most are jellybeans and seoul256
 let g:lightline = {
 \ 'colorscheme': 'jellybeans',

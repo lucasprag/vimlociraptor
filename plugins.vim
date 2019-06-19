@@ -8,7 +8,7 @@ Plug 'terryma/vim-multiple-cursors' " multiple cursors using C-n when selecting 
 
 " > finding files/buffers/etc
 Plug 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " don't need to install fzf separately
 Plug 'junegunn/fzf.vim' " search and open any file given a name
 Plug 'mileszs/ack.vim' " search with Ack
 Plug 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact
@@ -73,7 +73,7 @@ Plug 'AndrewRadev/vim-eco' " eco (backbone.js) ¯\_(ツ)_/¯
 
 " > visual
 Plug 'itchyny/lightline.vim' " really light and fast status line
-Plug 'ap/vim-css-color' " show color of hexadecimals
+Plug 'chrisbra/Colorizer' " show boxes next to hexadecimal numbers with their colors
 
 " > windows
 Plug 'romgrk/winteract.vim' " resize windows interactively
@@ -91,11 +91,13 @@ Plug 'honza/vim-snippets' " snippets files
 " > colorschemes
 Plug 'petelewis/vim-evolution'
 Plug 'jaredgorski/SpaceCamp'
+Plug 'tomasiser/vim-code-dark'
 Plug 'lucasprag/simpleblack'
 
 " > to take a look
 " https://github.com/haya14busa/incsearch.vim
-" https://github.com/jreybert/vimagit
+" https://github.com/tpope/vim-dadbod
+" https://github.com/avdgaag/vim-phoenix
 
 " END Plugs
 call plug#end()

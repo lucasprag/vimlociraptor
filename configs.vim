@@ -78,8 +78,9 @@ let g:EditorConfig_core_mode = 'external_command'
 " make vim-test use vim-tmux-runner to run specs in a split bellow
 let test#strategy = "vimux"
 
-let g:ale_sign_error = '✖'
-let g:ale_sign_warning = '⚠'
+" change icons of the asynchronous linting engine
+let g:ale_sign_error = '◉'
+let g:ale_sign_warning = '◉'
 
 " > NERDTree
 let NERDTreeDirArrows=1
@@ -121,3 +122,6 @@ let g:UltiSnipsExpandTrigger="<M-p>"
 " make :UltiSnipsEdit open on a split
 let g:UltiSnipsEditSplit="vertical"
 
+" make Colorizer work on neovim
+let g:colorizer_use_virtual_text = 1
+let g:colorizer_auto_filetype='scss,css,html,vim,jsx,coffee,js'
