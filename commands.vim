@@ -63,3 +63,13 @@ command! OpenConfigsVim execute 'e ' g:vimlociraptor_path . '/configs.vim'
 command! OpenStatusLineVim execute 'e ' g:vimlociraptor_path . '/statusline.vim'
 
 command! FormatElixirFile silent :!mix format %
+
+
+" ask for a name and rename the current tab
+function! RenameTab()
+  call inputsave()
+  let name = input('Enter name: ')
+  call inputrestore()
+
+  execute 'TabulousRename ' . name
+endfunction

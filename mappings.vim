@@ -40,6 +40,7 @@ let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comm
 let g:which_key_map.c.s = ['CleanWhiteSpaces', 'clean white spaces'] " clean trailing whitespace
 let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
 let g:which_key_map.c.m = ['TagbarToggle', 'summary']
+let g:which_key_map.c.h = [':setlocal nohlsearch', 'turn off highlight']
 
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
@@ -59,20 +60,17 @@ let g:which_key_map.j.f = ['<Plug>(easymotion-w)', 'forward/down']
 let g:which_key_map.j.b = ['<Plug>(easymotion-b)', 'backward/up']
 
 " p => project ----------
-map <C-p> :GFiles<CR>
+map <C-p> :Files<CR>
+map <C-o> :GFiles<CR>
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.e = ['Explore', 'explore'] " open explore
-let g:which_key_map.p.f = ['GFiles', 'find files'] " fuzzy find files
+let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
+let g:which_key_map.p.g = ['GFiles', 'GFiles'] " fuzzy find files
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
 
 nmap <leader>ps :Ack!
 let g:which_key_map.p.w = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
-
-" s => snippets ----------
-let g:which_key_map.s = { 'name': '+snippets' }
-let g:which_key_map.s.f = ['Snippets', 'find'] " fuzzy find for snippets
-let g:which_key_map.s.e = ['UltiSnipsEdit', 'edit']
 
 " TAB => tabs ----------
 nmap <Tab> :tabnext<CR>
@@ -81,7 +79,7 @@ let g:which_key_map['<Tab>'].n = ['tabnew', 'new']
 let g:which_key_map['<Tab>'].l = ['tabnext', 'next'] " next tab (hjkL)
 let g:which_key_map['<Tab>'].h = ['tabprevious', 'previous'] " previous tab (Hjkl)
 let g:which_key_map['<Tab>'].d = ['tabclose', 'delete']
-
+let g:which_key_map['<Tab>'].r = [':call RenameTab()', 'rename']
 
 " t => tests ----------
 let g:which_key_map.t = { 'name': '+tests' }
@@ -94,7 +92,6 @@ let g:which_key_map.t.g = ['TestVisit', 'visit']
 let g:which_key_map.T = { 'name': '+toggles' }
 let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.T.c = [':Colors', 'colorschemes']
-let g:which_key_map.T.h = [':setlocal nohlsearch', 'turn off highlight']
 let g:which_key_map.T.t = [':TableModeToggle', 'table mode']
 
 " v => vimlociraptor ----------
@@ -136,7 +133,10 @@ let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 function! s:MapRuby()
   let g:which_key_map.l = { 'name': '+ruby' }
   let g:which_key_map.l.a = ['A', 'alternate']
+  let g:which_key_map.l.d = ['ALEGoToDefinition', 'definition']
+  let g:which_key_map.l.u = ['ALEFindReferences -relative', 'usages']
   let g:which_key_map.l.r = ['R', 'related']
+  let g:which_key_map.l.e = ['<Plug>(ale_next_wrap)', 'errors']
 endfunction
 
 autocmd! FileType ruby call s:MapRuby()
@@ -194,5 +194,12 @@ nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 " use Ctrl + hj to move lines
 let g:move_key_modifier = 'C'
 
+" open window to find recent files
 map r :History<cr>
+
+" change the default mapping for magit
+let g:magit_show_magit_mapping = '<leader>gm'
+
+" trigger snippets
+let g:UltiSnipsExpandTrigger="<C-s>"
 

@@ -58,10 +58,13 @@ Plug 'tpope/vim-sensible' " better defaults
 Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
 Plug 'majutsushi/tagbar' " panel to see a summary/map of available methods/attributes, :TagbarToggle
+Plug 'webdevel/tabulous' " rename tabs
 
 " > autocompletation & snippets
 Plug 'tpope/vim-endwise' " helps to end certain structures
 Plug 'ervandew/supertab' " to use tab to trigger completations
+Plug 'SirVer/ultisnips' " snippets engine
+Plug 'honza/vim-snippets' " snippets files
 
 " > style
 Plug 'w0rp/ale' " Asynchronous Lint Engine
@@ -84,10 +87,6 @@ Plug 'chr4/nginx.vim' " nginx
 Plug 'hashivim/vim-terraform' " terraform
 Plug 'stephpy/vim-yaml' " yml, yaml
 
-" snippets.
-Plug 'SirVer/ultisnips' " snippets engine
-Plug 'honza/vim-snippets' " snippets files
-
 " > colorschemes
 Plug 'petelewis/vim-evolution'
 Plug 'jaredgorski/SpaceCamp'
@@ -98,6 +97,7 @@ Plug 'lucasprag/simpleblack'
 " https://github.com/haya14busa/incsearch.vim
 " https://github.com/tpope/vim-dadbod
 " https://github.com/avdgaag/vim-phoenix
+" https://github.com/Shougo/deoplete.nvim
 
 " END Plugs
 call plug#end()

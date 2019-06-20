@@ -113,15 +113,12 @@ let g:windowswap_map_keys = 0
 let g:alchemist_mappings_disable = 1
 let g:alchemist_tag_disable = 1
 
-" change the default mapping for magit
-let g:magit_show_magit_mapping = '<leader>gm'
-
-" trigger snippets
-let g:UltiSnipsExpandTrigger="<M-p>"
-
 " make :UltiSnipsEdit open on a split
 let g:UltiSnipsEditSplit="vertical"
 
 " make Colorizer work on neovim
 let g:colorizer_use_virtual_text = 1
 let g:colorizer_auto_filetype='scss,css,html,vim,jsx,coffee,js'
+
+" change tab names to include both file name and extension
+let tabulousLabelNameOptions = ':t:e'
