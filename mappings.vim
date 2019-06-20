@@ -37,10 +37,10 @@ let g:which_key_map.b.w = 'which_key_ignore'
 let g:which_key_map.c = { 'name': '+code' }
 let g:which_key_map.c.d = ['RemoveDebuggers', 'remove byebug|debugger|binding.pry'] " remove byebug, debugger, etc
 let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
-let g:which_key_map.c.s = ['CleanWhiteSpaces', 'clean white spaces'] " clean trailing whitespace
+let g:which_key_map.c.s = [':call ClearWhitespace()', 'clean white spaces'] " clean trailing whitespace
 let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
 let g:which_key_map.c.m = ['TagbarToggle', 'summary']
-let g:which_key_map.c.h = [':setlocal nohlsearch', 'turn off highlight']
+let g:which_key_map.c.h = [':setglobal nohlsearch', 'turn off highlight']
 
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
@@ -79,7 +79,7 @@ let g:which_key_map['<Tab>'].n = ['tabnew', 'new']
 let g:which_key_map['<Tab>'].l = ['tabnext', 'next'] " next tab (hjkL)
 let g:which_key_map['<Tab>'].h = ['tabprevious', 'previous'] " previous tab (Hjkl)
 let g:which_key_map['<Tab>'].d = ['tabclose', 'delete']
-let g:which_key_map['<Tab>'].r = [':call RenameTab()', 'rename']
+let g:which_key_map['<Tab>'].r = [':call g:tabulous#renameTab()', 'rename']
 
 " t => tests ----------
 let g:which_key_map.t = { 'name': '+tests' }

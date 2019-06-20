@@ -30,7 +30,13 @@ command! RemoveDebuggers global/byebug\|debugger\|pry/delete_
 command! RemovePuts global/puts\|console.log/delete_
 
 " Replace whitespace for nothing
-command! CleanWhiteSpaces %s/\s\+$/
+function! ClearWhitespace()
+	let save_cursor = getpos(".")
+	let old_query = getreg('/')
+	:%s/\s\+$//e
+	call setpos('.', save_cursor)
+	call setreg('/', old_query)
+endfunction
 
 " set syntax html for handlebar files
 autocmd! BufNewFile,BufRead *.hbs set syntax=html
@@ -64,12 +70,3 @@ command! OpenStatusLineVim execute 'e ' g:vimlociraptor_path . '/statusline.vim'
 
 command! FormatElixirFile silent :!mix format %
 
-
-" ask for a name and rename the current tab
-function! RenameTab()
-  call inputsave()
-  let name = input('Enter name: ')
-  call inputrestore()
-
-  execute 'TabulousRename ' . name
-endfunction

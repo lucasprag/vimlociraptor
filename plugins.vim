@@ -58,7 +58,10 @@ Plug 'tpope/vim-sensible' " better defaults
 Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
 Plug 'majutsushi/tagbar' " panel to see a summary/map of available methods/attributes, :TagbarToggle
-Plug 'webdevel/tabulous' " rename tabs
+
+" TODO: remove it after https://github.com/webdevel/tabulous/pull/2
+Plug 'lucasprag/tabulous', { 'branch': 'feature/rename-interactively' }
+"Plug 'webdevel/tabulous' " rename tabs
 
 " > autocompletation & snippets
 Plug 'tpope/vim-endwise' " helps to end certain structures
