@@ -1,10 +1,8 @@
 " COMMANDS --------------------------------------------
 
-" Highlight trailing whitespace
+" highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=white guibg=white
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=white guibg=white
-
-" show white spaces with the red color
 match ExtraWhitespace /\s\+$/
 autocmd WinEnter * match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
@@ -22,20 +20,20 @@ command! Q q
 command! Qa qa
 command! QA qa
 
-" Remove byebug, debugger, binding.pry
+" remove byebug, debugger, binding.pry
 " the _ is needed to avoid some waste of time http://vim.wikia.com/wiki/Power_of_g
 command! RemoveDebuggers global/byebug\|debugger\|pry/delete_
 
-" Remove puts, console.log, the _ is needed to avoid that waste of time
+" remove puts, console.log, the _ is needed to avoid that waste of time
 command! RemovePuts global/puts\|console.log/delete_
 
-" Replace whitespace for nothing
+" remove trailing whitespace
 function! ClearWhitespace()
-	let save_cursor = getpos(".")
-	let old_query = getreg('/')
-	:%s/\s\+$//e
-	call setpos('.', save_cursor)
-	call setreg('/', old_query)
+  let save_cursor = getpos(".")
+  let old_query = getreg('/')
+  :%s/\s\+$//e
+  call setpos('.', save_cursor)
+  call setreg('/', old_query)
 endfunction
 
 " set syntax html for handlebar files
@@ -61,7 +59,7 @@ command! ReloadVimConfig so $MYVIMRC
   \| echo 'config reloaded!'
 
 
-" open the vimlociraptor configs files from anywhere
+" open vimlociraptor's config files from anywhere
 command! OpenMappingsVim execute 'e ' g:vimlociraptor_path . '/mappings.vim'
 command! OpenPluginsVim execute 'e ' g:vimlociraptor_path . '/plugins.vim'
 command! OpenCommandsVim execute 'e ' g:vimlociraptor_path . '/commands.vim'

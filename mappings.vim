@@ -114,11 +114,10 @@ let g:which_key_map.w.d = ['q', 'delete']
 let g:which_key_map.w.r = ['InteractiveWindow', 'resize interactively']
 let g:which_key_map.w.f = ['Windows', 'find']
 
-let g:which_key_map.w.h = ['split', 'split horizontally']
-let g:which_key_map.w.v = ['vsplit', 'split vertically']
+let g:which_key_map.w['-']  = ['split', 'split horizontally']
+let g:which_key_map.w['/'] = ['vsplit', 'split vertically']
 nmap <C-\> :vsplit<CR>
-
-let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap']
+let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
 
 " ignore
 let g:which_key_map.h = { 'name': 'which_key_ignore' }
@@ -174,6 +173,7 @@ vmap <C-x> :!pbcopy<CR>
 map <C-s> :w<CR>
 map <C-q> :q<CR>
 map <C-a> :wqa<CR>
+
 
 " Disable cursor keys in normal mode, no idea how to use emojis
 map <Left>  :echo "use h instead (hjkl)"<CR>

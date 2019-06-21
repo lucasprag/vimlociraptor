@@ -94,6 +94,7 @@ Plug 'tomasiser/vim-code-dark'
 Plug 'lucasprag/simpleblack'
 
 " > to take a look
+" https://github.com/autozimu/LanguageClient-neovim
 " https://github.com/haya14busa/incsearch.vim
 " https://github.com/tpope/vim-dadbod
 " https://github.com/avdgaag/vim-phoenix
