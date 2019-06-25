@@ -136,6 +136,7 @@ function! s:MapRuby()
   let g:which_key_map.l.u = ['ALEFindReferences -relative', 'usages']
   let g:which_key_map.l.r = ['R', 'related']
   let g:which_key_map.l.e = ['<Plug>(ale_next_wrap)', 'errors']
+  let g:which_key_map.l.f = ['ALEFix', 'format']
 endfunction
 
 autocmd! FileType ruby call s:MapRuby()

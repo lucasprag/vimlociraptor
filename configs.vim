@@ -78,9 +78,16 @@ let g:EditorConfig_core_mode = 'external_command'
 " make vim-test use vim-tmux-runner to run specs in a split bellow
 let test#strategy = "vimux"
 
+" give more height to the split for running specs
+let g:VimuxHeight = "40"
+
 " change icons of the asynchronous linting engine
 let g:ale_sign_error = '◉'
 let g:ale_sign_warning = '◉'
+
+" add standardrb to ruby
+let g:ale_linters = {'ruby': ['standardrb']}
+let g:ale_fixers = {'ruby': ['standardrb']}
 
 " > NERDTree
 let NERDTreeDirArrows=1
@@ -98,7 +105,7 @@ let g:gitgutter_sign_modified_removed = '•'
 let g:NERDCreateDefaultMappings = 0
 
 " make vim-test use foreman
-let test#ruby#rspec#executable = 'foreman run rspec'
+let test#ruby#rspec#executable = 'foreman run bundle exec rspec'
 
 " explorer
 let g:netrw_liststyle=3

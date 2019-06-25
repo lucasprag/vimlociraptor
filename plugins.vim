@@ -59,6 +59,7 @@ Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
 Plug 'majutsushi/tagbar' " panel to see a summary/map of available methods/attributes, :TagbarToggle
 Plug 'webdevel/tabulous' " rename tabs
+Plug 'EinfachToll/DidYouMean' " asks for the right file to open
 
 " > autocompletation & snippets
 Plug 'tpope/vim-endwise' " helps to end certain structures
@@ -75,7 +76,7 @@ Plug 'sheerun/vim-haml' " haml
 Plug 'AndrewRadev/vim-eco' " eco (backbone.js) ¯\_(ツ)_/¯
 
 " > visual
-Plug 'itchyny/lightline.vim' " really light and fast status line
+Plug 'lucasprag/lightline.vim', { 'branch': 'simpleblack' } " really light and fast status line
 Plug 'chrisbra/Colorizer' " show boxes next to hexadecimal numbers with their colors
 
 " > windows
