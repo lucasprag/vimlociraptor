@@ -93,6 +93,7 @@ let g:which_key_map.T = { 'name': '+toggles' }
 let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.T.c = [':Colors', 'colorschemes']
 let g:which_key_map.T.t = [':TableModeToggle', 'table mode']
+let g:which_key_map.T.T = [':Ctrl0', 'train']
 
 " v => vimlociraptor ----------
 let g:which_key_map.v = { 'name': '+vimlociraptor' }

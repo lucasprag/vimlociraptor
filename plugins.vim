@@ -73,7 +73,8 @@ Plug 'editorconfig/editorconfig-vim'
 
 " > templates
 Plug 'sheerun/vim-haml' " haml
-Plug 'AndrewRadev/vim-eco' " eco (backbone.js) ¯\_(ツ)_/¯
+Plug 'AndrewRadev/vim-eco' " eco (backbone.js)
+Plug 'joukevandermaas/vim-ember-hbs' " handlebars
 
 " > visual
 Plug 'lucasprag/lightline.vim', { 'branch': 'simpleblack' } " really light and fast status line
@@ -87,12 +88,16 @@ Plug 'wesQ3/vim-windowswap' " swap windows
 Plug 'chr4/nginx.vim' " nginx
 Plug 'hashivim/vim-terraform' " terraform
 Plug 'stephpy/vim-yaml' " yml, yaml
+Plug 'dag/vim-fish' " support for fish
 
 " > colorschemes
 Plug 'petelewis/vim-evolution'
 Plug 'jaredgorski/SpaceCamp'
 Plug 'tomasiser/vim-code-dark'
 Plug 'lucasprag/simpleblack'
+
+" > fun
+Plug 'mattn/vim-sl'
 
 " > to take a look
 " https://github.com/autozimu/LanguageClient-neovim

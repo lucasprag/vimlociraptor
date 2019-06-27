@@ -68,3 +68,5 @@ command! OpenStatusLineVim execute 'e ' g:vimlociraptor_path . '/statusline.vim'
 
 command! FormatElixirFile silent :!mix format %
 
+" sure why ftdetect doesn't work for vim-ember-hbs
+au BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=handlebars
