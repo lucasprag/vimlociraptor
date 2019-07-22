@@ -34,4 +34,5 @@ I try to leave comments telling what each line does:
   - [Spacemacs](http://spacemacs.org/)
   - [SpaceVim](https://spacevim.org/)
   - [Doom emacs](https://github.com/hlissner/doom-emacs)
+  - [VimKO](https://github.com/AlexVKO/VimKO)
 

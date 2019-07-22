@@ -23,6 +23,7 @@ Plug 'dhruvasagar/vim-table-mode' " table creator & formatter allowing one to cr
 Plug 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
 Plug 'vim-ruby/vim-ruby' " ruby support
 Plug 'tpope/vim-rails' " rails support
+Plug 'tpope/vim-bundler' " very usefull when generating ctags for gems and more
 
 " > elixir
 Plug 'elixir-editors/vim-elixir' " syntax highlighting and filetype detection
@@ -91,13 +92,10 @@ Plug 'stephpy/vim-yaml' " yml, yaml
 Plug 'dag/vim-fish' " support for fish
 
 " > colorschemes
-Plug 'petelewis/vim-evolution'
 Plug 'jaredgorski/SpaceCamp'
+Plug 'ayu-theme/ayu-vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'lucasprag/simpleblack'
-
-" > fun
-Plug 'mattn/vim-sl'
 
 " > to take a look
 " https://github.com/autozimu/LanguageClient-neovim
@@ -105,6 +103,7 @@ Plug 'mattn/vim-sl'
 " https://github.com/tpope/vim-dadbod
 " https://github.com/avdgaag/vim-phoenix
 " https://github.com/Shougo/deoplete.nvim
+" https://github.com/junegunn/vim-easy-align
 
 " END Plugs
 call plug#end()

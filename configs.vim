@@ -3,8 +3,8 @@
 " turns on "detection", "plugin" and "indent" at once
 filetype indent plugin on
 
-" show line numbers
-set number
+" don't show line numbers
+set nonumber
 set norelativenumber
 
 " Show partial commands in the last line of the screen
@@ -89,10 +89,20 @@ let g:ale_sign_warning = '◉'
 let g:ale_linters = {'ruby': ['standardrb']}
 let g:ale_fixers = {'ruby': ['standardrb']}
 
+" keep sign column always open
+let g:ale_sign_column_always = 1
+
+" don't lint on enter
+let g:ale_lint_on_enter = 0
+
+" disable ALE's highlighs
+let g:ale_set_highlights = 0
+
 " > NERDTree
 let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
 let NERDTreeShowLineNumbers=1
+let g:NERDTreeWinSize=50
 
 " > smaller git gutter icons
 let g:gitgutter_sign_added = '•'
@@ -100,6 +110,7 @@ let g:gitgutter_sign_modified = '•'
 let g:gitgutter_sign_removed = '•'
 let g:gitgutter_sign_removed_first_line = '•'
 let g:gitgutter_sign_modified_removed = '•'
+set signcolumn=yes
 
 " disable default mappings from NERDCommenter, I just need to toggle it
 let g:NERDCreateDefaultMappings = 0
