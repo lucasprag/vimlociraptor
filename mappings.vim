@@ -61,15 +61,16 @@ let g:which_key_map.j.b = ['<Plug>(easymotion-b)', 'backward/up']
 
 " p => project ----------
 map <C-p> :Files<CR>
-map <C-o> :GFiles<CR>
+map <C-g> :GFiles<CR>
+map <C-o> :Tags<CR>
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.e = ['Explore', 'explore'] " open explore
 let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
-let g:which_key_map.p.g = ['GFiles', 'GFiles'] " fuzzy find files
+let g:which_key_map.p.g = ['GFiles', 'files on git'] " fuzzy find files
+let g:which_key_map.p.o = ['Tags', 'tags'] " fuzzy find classes
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
-
-nmap <leader>ps :Ack!
+nmap <leader>pa :Ack!
 let g:which_key_map.p.w = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
 
 " TAB => tabs ----------
@@ -93,11 +94,11 @@ let g:which_key_map.T = { 'name': '+toggles' }
 let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.T.c = [':Colors', 'colorschemes']
 let g:which_key_map.T.t = [':TableModeToggle', 'table mode']
-let g:which_key_map.T.T = [':Ctrl0', 'train']
+let g:which_key_map.T.l = [':call ToggleLineNumbers()', 'line numbers']
+
 
 " v => vimlociraptor ----------
 let g:which_key_map.v = { 'name': '+vimlociraptor' }
-
 let g:which_key_map.v.m = ['OpenMappingsVim', 'mappings.vim']
 let g:which_key_map.v.p = ['OpenPluginsVim', 'plugins.vim']
 let g:which_key_map.v.c = ['OpenCommandsVim', 'commands.vim']
@@ -125,7 +126,6 @@ let g:which_key_map.h = { 'name': 'which_key_ignore' }
 let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 " ----------------------------------------------
 
-
 " language specific mappings ----------
 " (not using ftplugin because I want all my mappings to live in one file)
 "
@@ -133,8 +133,8 @@ let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 function! s:MapRuby()
   let g:which_key_map.l = { 'name': '+ruby' }
   let g:which_key_map.l.a = ['A', 'alternate']
-  let g:which_key_map.l.d = ['ALEGoToDefinition', 'definition']
-  let g:which_key_map.l.u = ['ALEFindReferences -relative', 'usages']
+  let g:which_key_map.l.d = [':ALEGoToDefinition', 'definition']
+  let g:which_key_map.l.u = [':ALEFindReferences -relative', 'usages']
   let g:which_key_map.l.r = ['R', 'related']
   let g:which_key_map.l.e = ['<Plug>(ale_next_wrap)', 'errors']
   let g:which_key_map.l.f = ['ALEFix', 'format']
@@ -204,4 +204,3 @@ let g:magit_show_magit_mapping = '<leader>gm'
 
 " trigger snippets
 let g:UltiSnipsExpandTrigger="<C-s>"
-

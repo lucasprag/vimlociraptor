@@ -70,3 +70,11 @@ command! FormatElixirFile silent :!mix format %
 
 " sure why ftdetect doesn't work for vim-ember-hbs
 au BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=handlebars
+
+function ToggleLineNumbers()
+  if &number == 1
+    set nonumber
+  else
+    set number
+  endif
+endfunction
