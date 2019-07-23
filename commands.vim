@@ -71,10 +71,14 @@ command! FormatElixirFile silent :!mix format %
 " sure why ftdetect doesn't work for vim-ember-hbs
 au BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=handlebars
 
-function ToggleLineNumbers()
+function! ToggleLineNumbers()
   if &number == 1
     set nonumber
   else
     set number
   endif
 endfunction
+
+
+" go to definition using ctags, requires "ctargs -R ." to be ran before
+command! GoToDefinitionUsingCTags execute ':tag ' . expand("<cword>")

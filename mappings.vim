@@ -35,12 +35,14 @@ let g:which_key_map.b.w = 'which_key_ignore'
 
 " c => code ----------
 let g:which_key_map.c = { 'name': '+code' }
-let g:which_key_map.c.d = ['RemoveDebuggers', 'remove byebug|debugger|binding.pry'] " remove byebug, debugger, etc
 let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
+let g:which_key_map.c.d = [':GoToDefinitionUsingCTags', 'definition']
 let g:which_key_map.c.s = [':call ClearWhitespace()', 'clean white spaces'] " clean trailing whitespace
-let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
 let g:which_key_map.c.m = ['TagbarToggle', 'summary']
 let g:which_key_map.c.h = [':setglobal nohlsearch', 'turn off highlight']
+
+"let g:which_key_map.c.d = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
+"let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
 
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
@@ -50,7 +52,6 @@ let g:which_key_map.g.s = [':GFiles?', 'status']
 
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
-
 let g:which_key_map.j.l = ['<Plug>(easymotion-lineforward)', 'forward']
 let g:which_key_map.j.j = ['<Plug>(easymotion-j)', 'down']
 let g:which_key_map.j.k = ['<Plug>(easymotion-k)', 'up']
@@ -133,7 +134,7 @@ let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 function! s:MapRuby()
   let g:which_key_map.l = { 'name': '+ruby' }
   let g:which_key_map.l.a = ['A', 'alternate']
-  let g:which_key_map.l.d = [':ALEGoToDefinition', 'definition']
+  let g:which_key_map.l.d = [':GoToDefinitionUsingCTags', 'definition']
   let g:which_key_map.l.u = [':ALEFindReferences -relative', 'usages']
   let g:which_key_map.l.r = ['R', 'related']
   let g:which_key_map.l.e = ['<Plug>(ale_next_wrap)', 'errors']
