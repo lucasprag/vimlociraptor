@@ -63,7 +63,6 @@ let g:which_key_map.j.b = ['<Plug>(easymotion-b)', 'backward/up']
 " p => project ----------
 map <C-p> :Files<CR>
 map <C-g> :GFiles<CR>
-map <C-o> :Tags<CR>
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.e = ['Explore', 'explore'] " open explore
 let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
