@@ -5,7 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'easymotion/vim-easymotion' " makes a map to easy move the cursor
 Plug 'matze/vim-move' " move lines up and down
 Plug 'terryma/vim-multiple-cursors' " multiple cursors using C-n when selecting a word
-Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying completely out of your way
+"Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying completely out of your way
 
 " > finding files/buffers/etc
 Plug 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
@@ -70,7 +70,7 @@ Plug 'SirVer/ultisnips' " snippets engine
 Plug 'honza/vim-snippets' " snippets files
 
 " > style
-Plug 'w0rp/ale' " Asynchronous Lint Engine
+Plug 'dense-analysis/ale' " Asynchronous Lint Engine
 Plug 'editorconfig/editorconfig-vim'
 
 " > templates
@@ -80,6 +80,7 @@ Plug 'joukevandermaas/vim-ember-hbs' " handlebars
 
 " > visual
 Plug 'lucasprag/lightline.vim', { 'branch': 'simpleblack' } " really light and fast status line
+Plug 'maximbaz/lightline-ale' " integrates ALE and Lightline
 Plug 'chrisbra/Colorizer' " show boxes next to hexadecimal numbers with their colors
 
 " > windows
@@ -105,6 +106,7 @@ Plug 'lucasprag/simpleblack'
 " https://github.com/avdgaag/vim-phoenix
 " https://github.com/Shougo/deoplete.nvim
 " https://github.com/junegunn/vim-easy-align
+" https://github.com/reedes/vim-pencil
 
 " END Plugs
 call plug#end()

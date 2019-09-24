@@ -26,7 +26,7 @@ I try to leave comments telling what each line does:
   - Install [Plug](https://github.com/junegunn/vim-plug)
   - Install [ctags](https://github.com/universal-ctags/homebrew-universal-ctags)
   - run `nvim \+PlugInstall \+q`
-  - press `SPC`
+  - run `nvim` and press `SPC`
 
 
 # Inspiration

@@ -57,7 +57,6 @@ set timeoutlen=300
 " enable mouse, it's usuful sometimes
 set mouse=a
 
-
 " Indentation settings for using 2 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
 set ts=2 sw=2 sts=2
@@ -81,9 +80,9 @@ let test#strategy = "vimux"
 " give more height to the split for running specs
 let g:VimuxHeight = "40"
 
-" change icons of the asynchronous linting engine
-let g:ale_sign_error = '◉'
-let g:ale_sign_warning = '◉'
+" change icons of the asynchronous linting engine '◉'
+let g:ale_sign_error = '•'
+let g:ale_sign_warning = '•'
 
 " add standardrb to ruby
 let g:ale_linters = {'ruby': ['standardrb']}
@@ -92,17 +91,14 @@ let g:ale_fixers = {'ruby': ['standardrb']}
 " keep sign column always open
 let g:ale_sign_column_always = 1
 
-" don't lint on enter
-let g:ale_lint_on_enter = 0
-
 " disable ALE's highlighs
 let g:ale_set_highlights = 0
 
 " > NERDTree
 let NERDTreeDirArrows=1
 let NERDTreeMinimalUI=1
-let NERDTreeShowLineNumbers=1
-let g:NERDTreeWinSize=50
+let NERDTreeShowLineNumbers=0
+let NERDTreeWinSize=40
 
 " > smaller git gutter icons
 let g:gitgutter_sign_added = '•'
