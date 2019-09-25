@@ -36,9 +36,6 @@ function! ClearWhitespace()
   call setreg('/', old_query)
 endfunction
 
-" set syntax html for handlebar files
-autocmd! BufNewFile,BufRead *.hbs set syntax=html
-
 " > hide which_key from statusline
 autocmd! FileType which_key
 autocmd! FileType which_key set laststatus=0 noshowmode noruler
@@ -68,7 +65,7 @@ command! OpenStatusLineVim execute 'e ' g:vimlociraptor_path . '/statusline.vim'
 
 command! FormatElixirFile silent :!mix format %
 
-" sure why ftdetect doesn't work for vim-ember-hbs
+" not sure why ftdetect doesn't work for vim-ember-hbs
 au BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=handlebars
 
 function! ToggleLineNumbers()

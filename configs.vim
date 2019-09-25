@@ -3,6 +3,9 @@
 " turns on "detection", "plugin" and "indent" at once
 filetype indent plugin on
 
+" break lines automaticaly when the reach the end of the window
+set wrap
+
 " don't show line numbers
 set nonumber
 set norelativenumber

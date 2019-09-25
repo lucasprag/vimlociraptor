@@ -5,7 +5,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'easymotion/vim-easymotion' " makes a map to easy move the cursor
 Plug 'matze/vim-move' " move lines up and down
 Plug 'terryma/vim-multiple-cursors' " multiple cursors using C-n when selecting a word
-"Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying completely out of your way
+Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying completely out of your way
 
 " > finding files/buffers/etc
 Plug 'scrooloose/nerdtree' " presents the filesystem in the form of a tree

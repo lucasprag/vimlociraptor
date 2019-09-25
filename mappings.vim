@@ -7,13 +7,6 @@ vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 
 let g:which_key_map = {}
 
-" This config uses which_key to map keys following this pattern:
-" let g:which_key_map.b.b = ['command', 'description']
-"
-" Example:
-"   The line bellow maps <leader>bb to execute :Buffers<CR>
-"   let g:which_key_map.b.b = ['Buffers', 'buffers']
-
 " b => buffers ----------
 nmap ; :Buffers<CR>
 let g:which_key_map.b = { 'name': '+buffers' }
@@ -203,4 +196,4 @@ map r :History<cr>
 let g:magit_show_magit_mapping = '<leader>gm'
 
 " trigger snippets
-let g:UltiSnipsExpandTrigger="<C-s>"
+let g:UltiSnipsExpandTrigger = "<C-s>"
