@@ -4,9 +4,7 @@
 highlight ExtraWhitespace ctermbg=white guibg=white
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=white guibg=white
 match ExtraWhitespace /\s\+$/
-autocmd WinEnter * match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+autocmd WinEnter,BufWinEnter * match ExtraWhitespace /\s\+$/
 
 " I type so fast that :w becomes :W
 command! W w
@@ -20,21 +18,20 @@ command! Q q
 command! Qa qa
 command! QA qa
 
-" remove byebug, debugger, binding.pry
+" remove byebug, debugger, binding.pry, puts, console.log
 " the _ is needed to avoid some waste of time http://vim.wikia.com/wiki/Power_of_g
-command! RemoveDebuggers global/byebug\|debugger\|pry/delete_
+command! RemoveDebuggers global/byebug\|debugger\|pry\|puts\|console.log/delete_
 
-" remove puts, console.log, the _ is needed to avoid that waste of time
-command! RemovePuts global/puts\|console.log/delete_
-
-" remove trailing whitespace
-function! ClearWhitespace()
+" remove trailing spaces
+function! RemoveTrailingSpaces()
   let save_cursor = getpos(".")
   let old_query = getreg('/')
   :%s/\s\+$//e
   call setpos('.', save_cursor)
   call setreg('/', old_query)
 endfunction
+
+command! RemoveTrailingSpaces :call RemoveTrailingSpaces()
 
 " > hide which_key from statusline
 autocmd! FileType which_key
@@ -76,6 +73,17 @@ function! ToggleLineNumbers()
   endif
 endfunction
 
+command! ToggleLineNumbers :call ToggleLineNumbers()
 
 " go to definition using ctags, requires "ctargs -R ." to be ran before
 command! GoToDefinitionUsingCTags execute ':tag ' . expand("<cword>")
+
+command! CopyFullPath let @+ = expand("%:p")
+command! CopyRelativePath let @+ = expand("%")
+command! CopyFileName let @+ = expand("%:t")
+
+command! TurnOffSearchHighlight :set nohlsearch
+
+" comment highlighting to json
+autocmd FileType json syntax match Comment +\/\/.\+$+
+

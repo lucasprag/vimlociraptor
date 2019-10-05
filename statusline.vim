@@ -24,7 +24,7 @@ let g:lightline = {
 \ 'colorscheme': 'simpleblack',
 \ 'active': {
 \   'left': [['mode', 'paste'], ['filename', 'modified']],
-\   'right': [['lineinfo'], ['filetype'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok']]
+\   'right': [['lineinfo'], ['filetype'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok', 'gutentags']]
 \ },
 \ 'inactive': {
 \   'left': [['filename']],
@@ -34,7 +34,8 @@ let g:lightline = {
 \   'linter_checking': 'lightline#ale#checking',
 \   'linter_warnings': 'lightline#ale#warnings',
 \   'linter_errors': 'lightline#ale#errors',
-\   'linter_ok': 'lightline#ale#ok'
+\   'linter_ok': 'lightline#ale#ok',
+\   'gutentags': 'gutentags#statusline()'
 \ },
 \ 'component_type': {
 \   'readonly': 'error',
@@ -43,6 +44,6 @@ let g:lightline = {
 \ },
 \ 'component_function': {
 \   'filename': 'LightlineFilename',
-\ },
+\ }
 \ }
 

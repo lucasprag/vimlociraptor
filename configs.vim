@@ -81,7 +81,7 @@ let g:EditorConfig_core_mode = 'external_command'
 let test#strategy = "vimux"
 
 " give more height to the split for running specs
-let g:VimuxHeight = "40"
+let g:VimuxHeight = "20"
 
 " change icons of the asynchronous linting engine '◉'
 let g:ale_sign_error = '•'
@@ -139,3 +139,6 @@ let g:colorizer_auto_filetype='scss,css,html,vim,jsx,coffee,js'
 
 " change tab names to include both file name and extension
 let tabulousLabelNameOptions = ':t:e'
+
+" enable fenced code block syntax highlighting in markdown files
+let g:markdown_fenced_languages = ['ruby', 'elixir', 'javascript', 'html', 'python', 'bash=sh', 'vim', 'help']

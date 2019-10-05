@@ -11,6 +11,7 @@ Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying compl
 Plug 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " don't need to install fzf separately
 Plug 'junegunn/fzf.vim' " search and open any file given a name
+Plug 'dogfooter/FIP.vim' " RubyMine like finder
 Plug 'mileszs/ack.vim' " search with Ack
 Plug 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact
 Plug 'Asheq/close-buffers.vim' " provides :CloseHiddenBuffers and :CloseOtherBuffers
@@ -61,13 +62,20 @@ Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
 Plug 'majutsushi/tagbar' " panel to see a summary/map of available methods/attributes, :TagbarToggle
 Plug 'webdevel/tabulous' " rename tabs
-Plug 'EinfachToll/DidYouMean' " asks for the right file to open
+"Plug 'EinfachToll/DidYouMean' " asks for the right file to open, conflict with coc-explorer
+Plug 'tpope/vim-endwise' " helps to end certain structures
+Plug 'vim-utils/vim-troll-stopper' " adds a different bg to Unicode troll characters
 
 " > autocompletation & snippets
-Plug 'tpope/vim-endwise' " helps to end certain structures
-Plug 'ervandew/supertab' " to use tab to trigger completations
-Plug 'SirVer/ultisnips' " snippets engine
-Plug 'honza/vim-snippets' " snippets files
+"Plug 'ervandew/supertab' " to use tab to trigger completations
+"Plug 'SirVer/ultisnips' " snippets engine
+"Plug 'honza/vim-snippets' " snippets files
+
+" completion framework and more
+Plug 'neoclide/coc.nvim', {
+      \ 'branch': 'release',
+      \ 'do': ':CocInstall coc-git coc-solargraph coc-elixir coc-vimlsp coc-json coc-css coc-explorer'
+      \ }
 
 " > style
 Plug 'dense-analysis/ale' " Asynchronous Lint Engine
@@ -77,9 +85,11 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'sheerun/vim-haml' " haml
 Plug 'AndrewRadev/vim-eco' " eco (backbone.js)
 Plug 'joukevandermaas/vim-ember-hbs' " handlebars
+Plug 'M4R7iNP/vim-inky' " inky, most used on emails
 
 " > visual
 Plug 'lucasprag/lightline.vim', { 'branch': 'simpleblack' } " really light and fast status line
+Plug 'tpope/vim-markdown' " add syntax highlighting to code block on markdown files
 Plug 'maximbaz/lightline-ale' " integrates ALE and Lightline
 Plug 'chrisbra/Colorizer' " show boxes next to hexadecimal numbers with their colors
 
@@ -107,6 +117,9 @@ Plug 'lucasprag/simpleblack'
 " https://github.com/Shougo/deoplete.nvim
 " https://github.com/junegunn/vim-easy-align
 " https://github.com/reedes/vim-pencil
+"
+" > keep an eye
+" https://github.com/hardcoreplayers/spaceline.vim, cool, but not customizable
 
 " END Plugs
 call plug#end()

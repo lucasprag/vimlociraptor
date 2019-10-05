@@ -10,13 +10,18 @@ let g:which_key_map = {}
 " b => buffers ----------
 nmap ; :Buffers<CR>
 let g:which_key_map.b = { 'name': '+buffers' }
-let g:which_key_map.b.a = ['BA', 'alternate']
+let g:which_key_map.b.a = ['CloseAllBuffers', 'close all']
 let g:which_key_map.b.b = ['Buffers', 'buffers'] " list buffers
 let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer but keep the window/split intact
 let g:which_key_map.b.h = ['CloseHiddenBuffers', 'close hidden'] " close all buffers not visible in any window
 let g:which_key_map.b.n = ['BF', 'next']
 let g:which_key_map.b.o = ['CloseOtherBuffers', 'close others'] " close all buffers except buffer in current window
 let g:which_key_map.b.p = ['BB', 'previous']
+let g:which_key_map.b.s = ['BA', 'switch']
+
+" goes to the previous/next buffer
+nmap <S-h> :BB<CR>
+nmap <S-l> :BF<CR>
 
 let g:which_key_map.b.L = ['Lines', 'lines']
 let g:which_key_map.b.l = ['BLines', 'lines']
@@ -29,13 +34,17 @@ let g:which_key_map.b.w = 'which_key_ignore'
 " c => code ----------
 let g:which_key_map.c = { 'name': '+code' }
 let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
+let g:which_key_map.c.b = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
 let g:which_key_map.c.d = [':GoToDefinitionUsingCTags', 'definition']
-let g:which_key_map.c.s = [':call ClearWhitespace()', 'clean white spaces'] " clean trailing whitespace
+let g:which_key_map.c.s = ['RemoveTrailingSpaces', 'remove trailing spaces']
 let g:which_key_map.c.m = ['TagbarToggle', 'summary']
-let g:which_key_map.c.h = [':setglobal nohlsearch', 'turn off highlight']
+let g:which_key_map.c.h = ['TurnOffSearchHighlight', 'turn off highlight']
 
-"let g:which_key_map.c.d = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
-"let g:which_key_map.c.p = ['RemovePuts', 'remove puts|console.log()'] " remove puts, console.log(), etc
+" f => file ----------
+let g:which_key_map.f = { 'name': '+file' }
+let g:which_key_map.f.f = ['CopyFullPath', 'copy full path']
+let g:which_key_map.f.r = ['CopyRelativePath', 'copy relative path']
+let g:which_key_map.f.n = ['CopyFileName', 'copy file name']
 
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
@@ -55,19 +64,24 @@ let g:which_key_map.j.b = ['<Plug>(easymotion-b)', 'backward/up']
 
 " p => project ----------
 map <C-p> :Files<CR>
-map <C-g> :GFiles<CR>
 let g:which_key_map.p = { 'name': '+project' }
-let g:which_key_map.p.e = ['Explore', 'explore'] " open explore
+let g:which_key_map.p.e = [':CocCommand explorer --toggle', 'explorer'] " open explore
+"let g:which_key_map.p.e = ['Explore', 'explore'] " open explore
 let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
-let g:which_key_map.p.g = ['GFiles', 'files on git'] " fuzzy find files
-let g:which_key_map.p.o = ['Tags', 'tags'] " fuzzy find classes
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
+let g:which_key_map.p.s = ['Rg', 'search']
+
+" deprecated
+map <C-g> :GFiles<CR>
+let g:which_key_map.p.g = ['GFiles', 'files on git'] " fuzzy find files
+let g:which_key_map.p.o = ['Tags', 'tags'] " fuzzy find classes
 nmap <leader>pa :Ack!
 let g:which_key_map.p.w = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
 
 " TAB => tabs ----------
 nmap <Tab> :tabnext<CR>
+nmap <S-Tab> :tabprevious<CR>
 let g:which_key_map['<Tab>'] = { 'name': '+tabs' }
 let g:which_key_map['<Tab>'].n = ['tabnew', 'new']
 let g:which_key_map['<Tab>'].l = ['tabnext', 'next'] " next tab (hjkL)
@@ -81,14 +95,14 @@ let g:which_key_map.t.t = ['TestNearest', 'nearest']
 let g:which_key_map.t.f = ['TestFile', 'file']
 let g:which_key_map.t.l = ['TestLast', 'last']
 let g:which_key_map.t.g = ['TestVisit', 'visit']
+let g:which_key_map.t.m = 'which_key_ignore'
 
 " T => toggles ----------
 let g:which_key_map.T = { 'name': '+toggles' }
 let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.T.c = [':Colors', 'colorschemes']
 let g:which_key_map.T.t = [':TableModeToggle', 'table mode']
-let g:which_key_map.T.n = [':call ToggleLineNumbers()', 'numbers']
-
+let g:which_key_map.T.n = [':ToggleLineNumbers', 'numbers']
 
 " v => vimlociraptor ----------
 let g:which_key_map.v = { 'name': '+vimlociraptor' }
@@ -190,7 +204,7 @@ nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 let g:move_key_modifier = 'C'
 
 " open window to find recent files
-map r :History<cr>
+map r :History<CR>
 
 " change the default mapping for magit
 let g:magit_show_magit_mapping = '<leader>gm'

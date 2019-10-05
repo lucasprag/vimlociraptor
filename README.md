@@ -31,6 +31,7 @@ I try to leave comments telling what each line does:
 
 # Inspiration
 
+  - Phils' [Venci](https://github.com/philss/venci)
   - [Spacemacs](http://spacemacs.org/)
   - [SpaceVim](https://spacevim.org/)
   - [Doom emacs](https://github.com/hlissner/doom-emacs)
