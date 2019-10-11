@@ -37,18 +37,17 @@ let g:which_key_map.c = { 'name': '+code' }
 let g:which_key_map.c.d = [':GoToTag', 'tag definition']
 let g:which_key_map.c.f = ['<Plug>(coc-definition)', 'coc definition']
 let g:which_key_map.c.r = ['<Plug>(coc-references)', 'references']
-let g:which_key_map.c.l = [':GoToTagOnVsplit', 'vsplit tag definition']
-let g:which_key_map.c.j = [':GoToTagOnSplit', 'split tag definition']
 
-" h => helpers ----------
-let g:which_key_map.h = { 'name': '+helpers' }
-let g:which_key_map.h.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
-let g:which_key_map.h.f = ['CopyFullPath', 'copy full path']
-let g:which_key_map.h.h = ['TurnOffSearchHighlight', 'turn off highlight']
-let g:which_key_map.h.n = ['CopyFileName', 'copy file name']
-let g:which_key_map.h.p = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
-let g:which_key_map.h.r = ['CopyRelativePath', 'copy relative path']
-let g:which_key_map.h.s = ['RemoveTrailingSpaces', 'remove trailing spaces']
+let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
+let g:which_key_map.c.h = ['TurnOffSearchHighlight', 'turn off highlight']
+let g:which_key_map.c.s = ['RemoveTrailingSpaces', 'remove trailing spaces']
+let g:which_key_map.c.p = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
+
+" f => file ----------
+let g:which_key_map.f = { 'name': '+file' }
+let g:which_key_map.f.f = ['CopyFullPath', 'copy full path']
+let g:which_key_map.f.n = ['CopyFileName', 'copy file name']
+let g:which_key_map.f.r = ['CopyRelativePath', 'copy relative path']
 
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
@@ -136,6 +135,7 @@ nmap <C-\> :vsplit<CR>
 let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
 
 " ignore
+let g:which_key_map.h = { 'name': 'which_key_ignore' }
 let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 " ----------------------------------------------
 
