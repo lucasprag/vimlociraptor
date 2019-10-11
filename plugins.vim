@@ -83,7 +83,6 @@ Plug 'M4R7iNP/vim-inky' " inky, most used on emails
 " > visual
 Plug 'lucasprag/lightline.vim', { 'branch': 'simpleblack' } " really light and fast status line
 Plug 'maximbaz/lightline-ale' " integrates ALE and Lightline
-Plug 'chrisbra/Colorizer' " show boxes next to hexadecimal numbers with their colors
 
 " > windows
 Plug 'romgrk/winteract.vim' " resize windows interactively
