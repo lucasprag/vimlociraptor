@@ -3,7 +3,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " > navigation
 Plug 'easymotion/vim-easymotion' " makes a map to easy move the cursor
-Plug 'matze/vim-move' " move lines up and down
 Plug 'terryma/vim-multiple-cursors' " multiple cursors using C-n when selecting a word
 Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying completely out of your way
 
@@ -11,7 +10,6 @@ Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying compl
 Plug 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " don't need to install fzf separately
 Plug 'junegunn/fzf.vim' " search and open any file given a name
-Plug 'dogfooter/FIP.vim' " RubyMine like finder
 Plug 'mileszs/ack.vim' " search with Ack
 Plug 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact
 Plug 'Asheq/close-buffers.vim' " provides :CloseHiddenBuffers and :CloseOtherBuffers
@@ -42,11 +40,12 @@ Plug 'kchmck/vim-coffee-script'
 " css
 Plug 'cakebaker/scss-syntax.vim'
 
+" markdown
+Plug 'tpope/vim-markdown' " add syntax highlighting to code block on markdown files
+
 " > git
-Plug 'airblade/vim-gitgutter' " add gutter icons to lines with changes
 Plug 'rhysd/committia.vim' " more pleasant editing on commit message
 Plug 'jreybert/vimagit' " amazing port of emacs magit to vim
-Plug 'k0kubun/vim-open-github' " open current file on github
 
 " > tmux
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test
@@ -60,18 +59,12 @@ Plug 'pbrisbin/vim-mkdir' " to create files without creating dirs previously (ak
 Plug 'tpope/vim-sensible' " better defaults
 Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
-Plug 'majutsushi/tagbar' " panel to see a summary/map of available methods/attributes, :TagbarToggle
 Plug 'webdevel/tabulous' " rename tabs
-"Plug 'EinfachToll/DidYouMean' " asks for the right file to open, conflict with coc-explorer
 Plug 'tpope/vim-endwise' " helps to end certain structures
 Plug 'vim-utils/vim-troll-stopper' " adds a different bg to Unicode troll characters
+Plug 'RRethy/vim-illuminate' " automatically highlight other uses of the current word under the cursor
 
-" > autocompletation & snippets
-"Plug 'ervandew/supertab' " to use tab to trigger completations
-"Plug 'SirVer/ultisnips' " snippets engine
-"Plug 'honza/vim-snippets' " snippets files
-
-" completion framework and more
+" completion framework and much more
 Plug 'neoclide/coc.nvim', {
       \ 'branch': 'release',
       \ 'do': ':CocInstall coc-git coc-solargraph coc-elixir coc-vimlsp coc-json coc-css coc-explorer'
@@ -89,7 +82,6 @@ Plug 'M4R7iNP/vim-inky' " inky, most used on emails
 
 " > visual
 Plug 'lucasprag/lightline.vim', { 'branch': 'simpleblack' } " really light and fast status line
-Plug 'tpope/vim-markdown' " add syntax highlighting to code block on markdown files
 Plug 'maximbaz/lightline-ale' " integrates ALE and Lightline
 Plug 'chrisbra/Colorizer' " show boxes next to hexadecimal numbers with their colors
 
@@ -111,12 +103,9 @@ Plug 'lucasprag/simpleblack'
 
 " > to take a look
 " https://github.com/autozimu/LanguageClient-neovim
-" https://github.com/haya14busa/incsearch.vim
-" https://github.com/tpope/vim-dadbod
 " https://github.com/avdgaag/vim-phoenix
 " https://github.com/Shougo/deoplete.nvim
 " https://github.com/junegunn/vim-easy-align
-" https://github.com/reedes/vim-pencil
 "
 " > keep an eye
 " https://github.com/hardcoreplayers/spaceline.vim, cool, but not customizable

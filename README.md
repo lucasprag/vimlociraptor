@@ -22,7 +22,7 @@ I try to leave comments telling what each line does:
 
   - Install [Neovim](https://neovim.io)
   - Clone the project `git clone git@github.com:lucasprag/vimlociraptor.git ~/.config/nvim/`
-  - Install [Ack](http://beyondgrep.com/install/)
+  - Install [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
   - Install [Plug](https://github.com/junegunn/vim-plug)
   - Install [ctags](https://github.com/universal-ctags/homebrew-universal-ctags)
   - run `nvim \+PlugInstall \+q`

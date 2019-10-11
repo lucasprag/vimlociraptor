@@ -1,0 +1,8 @@
+{
+  "diagnostic.signOffset": 9999999,
+  "git.changedSign.text": "•",
+  "git.addedSign.text": "•",
+  "git.removedSign.text": "•",
+  "git.topRemovedSign.text": "•",
+  "git.changeRemovedSign.text": "•"
+}

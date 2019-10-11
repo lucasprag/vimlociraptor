@@ -76,7 +76,14 @@ endfunction
 command! ToggleLineNumbers :call ToggleLineNumbers()
 
 " go to definition using ctags, requires "ctargs -R ." to be ran before
-command! GoToDefinitionUsingCTags execute ':tag ' . expand("<cword>")
+command! GoToTag execute ':tag ' . expand("<cword>")
+
+command! GoToTagOnVsplit :vsplit
+      \| execute ':tag ' . expand("<cword>")
+
+command! GoToTagOnSplit :split
+      \| execute ':tag ' . expand("<cword>")
+
 
 command! CopyFullPath let @+ = expand("%:p")
 command! CopyRelativePath let @+ = expand("%")

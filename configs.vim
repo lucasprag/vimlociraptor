@@ -103,16 +103,11 @@ let NERDTreeMinimalUI=1
 let NERDTreeShowLineNumbers=0
 let NERDTreeWinSize=40
 
-" > smaller git gutter icons
-let g:gitgutter_sign_added = '•'
-let g:gitgutter_sign_modified = '•'
-let g:gitgutter_sign_removed = '•'
-let g:gitgutter_sign_removed_first_line = '•'
-let g:gitgutter_sign_modified_removed = '•'
-set signcolumn=yes
-
 " disable default mappings from NERDCommenter, I just need to toggle it
 let g:NERDCreateDefaultMappings = 0
+
+" Align line-wise comment delimiters flush left instead of following code indentatio
+let g:NERDDefaultAlign = 'left'
 
 " make vim-test use foreman
 let test#ruby#rspec#executable = 'foreman run bundle exec rspec'
@@ -142,3 +137,24 @@ let tabulousLabelNameOptions = ':t:e'
 
 " enable fenced code block syntax highlighting in markdown files
 let g:markdown_fenced_languages = ['ruby', 'elixir', 'javascript', 'html', 'python', 'bash=sh', 'vim', 'help']
+
+
+" if hidden is not set, TextEdit might fail, neeed for CoC
+set hidden
+
+" Some servers have issues with backup files, neeed for CoC
+set nobackup
+set nowritebackup
+
+" Better display for messages, neeed for CoC
+set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000., neeed for CoC
+set updatetime=300
+
+" don't give |ins-completion-menu| messages., neeed for CoC
+set shortmess+=c
+
+" always show signcolumns, neeed for CoC
+set signcolumn=yes
+

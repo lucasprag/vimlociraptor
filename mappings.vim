@@ -8,20 +8,21 @@ vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 let g:which_key_map = {}
 
 " b => buffers ----------
-nmap ; :Buffers<CR>
 let g:which_key_map.b = { 'name': '+buffers' }
 let g:which_key_map.b.a = ['CloseAllBuffers', 'close all']
+
+nmap ; :Buffers<CR>
 let g:which_key_map.b.b = ['Buffers', 'buffers'] " list buffers
+
 let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer but keep the window/split intact
 let g:which_key_map.b.h = ['CloseHiddenBuffers', 'close hidden'] " close all buffers not visible in any window
-let g:which_key_map.b.n = ['BF', 'next']
 let g:which_key_map.b.o = ['CloseOtherBuffers', 'close others'] " close all buffers except buffer in current window
-let g:which_key_map.b.p = ['BB', 'previous']
-let g:which_key_map.b.s = ['BA', 'switch']
 
 " goes to the previous/next buffer
 nmap <S-h> :BB<CR>
 nmap <S-l> :BF<CR>
+let g:which_key_map.b.p = ['BB', 'previous']
+let g:which_key_map.b.n = ['BF', 'next']
 
 let g:which_key_map.b.L = ['Lines', 'lines']
 let g:which_key_map.b.l = ['BLines', 'lines']
@@ -33,23 +34,30 @@ let g:which_key_map.b.w = 'which_key_ignore'
 
 " c => code ----------
 let g:which_key_map.c = { 'name': '+code' }
-let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
-let g:which_key_map.c.b = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
-let g:which_key_map.c.d = [':GoToDefinitionUsingCTags', 'definition']
-let g:which_key_map.c.s = ['RemoveTrailingSpaces', 'remove trailing spaces']
-let g:which_key_map.c.m = ['TagbarToggle', 'summary']
-let g:which_key_map.c.h = ['TurnOffSearchHighlight', 'turn off highlight']
+let g:which_key_map.c.d = [':GoToTag', 'tag definition']
+let g:which_key_map.c.f = ['<Plug>(coc-definition)', 'coc definition']
+let g:which_key_map.c.r = ['<Plug>(coc-references)', 'references']
+let g:which_key_map.c.l = [':GoToTagOnVsplit', 'vsplit tag definition']
+let g:which_key_map.c.j = [':GoToTagOnSplit', 'split tag definition']
 
-" f => file ----------
-let g:which_key_map.f = { 'name': '+file' }
-let g:which_key_map.f.f = ['CopyFullPath', 'copy full path']
-let g:which_key_map.f.r = ['CopyRelativePath', 'copy relative path']
-let g:which_key_map.f.n = ['CopyFileName', 'copy file name']
+" h => helpers ----------
+let g:which_key_map.h = { 'name': '+helpers' }
+let g:which_key_map.h.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
+let g:which_key_map.h.f = ['CopyFullPath', 'copy full path']
+let g:which_key_map.h.h = ['TurnOffSearchHighlight', 'turn off highlight']
+let g:which_key_map.h.n = ['CopyFileName', 'copy file name']
+let g:which_key_map.h.p = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
+let g:which_key_map.h.r = ['CopyRelativePath', 'copy relative path']
+let g:which_key_map.h.s = ['RemoveTrailingSpaces', 'remove trailing spaces']
 
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
+
+" change the default mapping for magit
+let g:magit_show_magit_mapping = '<leader>gm'
+
 let g:which_key_map.g.m = [':Magit', 'magit']
-let g:which_key_map.g.o = [':OpenGithub', 'open on github']
+let g:which_key_map.g.o = [':CocCommand git.browserOpen', 'open on github']
 let g:which_key_map.g.s = [':GFiles?', 'status']
 
 " j => jump ----------
@@ -73,9 +81,6 @@ let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on ne
 let g:which_key_map.p.s = ['Rg', 'search']
 
 " deprecated
-map <C-g> :GFiles<CR>
-let g:which_key_map.p.g = ['GFiles', 'files on git'] " fuzzy find files
-let g:which_key_map.p.o = ['Tags', 'tags'] " fuzzy find classes
 nmap <leader>pa :Ack!
 let g:which_key_map.p.w = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
 
@@ -117,6 +122,8 @@ let g:which_key_map.v.i = ['PlugInstall', 'install']
 let g:which_key_map.v.u = ['PlugUpdate', 'update']
 let g:which_key_map.v.k = ['PlugClean', 'clean']
 
+let g:which_key_map.v.o = [':call coc#refresh()', 'refresh coc']
+
 " w => windows ----------
 let g:which_key_map.w = { 'name': '+windows' }
 let g:which_key_map.w.d = ['q', 'delete']
@@ -129,7 +136,6 @@ nmap <C-\> :vsplit<CR>
 let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
 
 " ignore
-let g:which_key_map.h = { 'name': 'which_key_ignore' }
 let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 " ----------------------------------------------
 
@@ -140,7 +146,6 @@ let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 function! s:MapRuby()
   let g:which_key_map.l = { 'name': '+ruby' }
   let g:which_key_map.l.a = ['A', 'alternate']
-  let g:which_key_map.l.d = [':GoToDefinitionUsingCTags', 'definition']
   let g:which_key_map.l.u = [':ALEFindReferences -relative', 'usages']
   let g:which_key_map.l.r = ['R', 'related']
   let g:which_key_map.l.e = ['<Plug>(ale_next_wrap)', 'errors']
@@ -206,8 +211,25 @@ let g:move_key_modifier = 'C'
 " open window to find recent files
 map r :History<CR>
 
-" change the default mapping for magit
-let g:magit_show_magit_mapping = '<leader>gm'
 
-" trigger snippets
-let g:UltiSnipsExpandTrigger = "<C-s>"
+" Use tab for trigger completion with characters ahead and navigate.
+" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+
+" jump arround easily even if there are no empty lines
+" this is an altenative to <S-[> and <S-]>
+nmap <C-j> 10j
+nmap <C-k> 10k
+
+" move this away since I can't remove it, TODO: remove this plugin?
+let g:table_mode_map_prefix = "<leader>C"
