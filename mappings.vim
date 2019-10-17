@@ -39,7 +39,6 @@ let g:which_key_map.c.f = ['<Plug>(coc-definition)', 'coc definition']
 let g:which_key_map.c.r = ['<Plug>(coc-references)', 'references']
 
 let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
-let g:which_key_map.c.h = ['TurnOffSearchHighlight', 'turn off highlight']
 let g:which_key_map.c.s = ['RemoveTrailingSpaces', 'remove trailing spaces']
 let g:which_key_map.c.p = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
 
@@ -73,15 +72,15 @@ let g:which_key_map.j.b = ['<Plug>(easymotion-b)', 'backward/up']
 map <C-p> :Files<CR>
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.e = [':CocCommand explorer --toggle', 'explorer'] " open explore
-"let g:which_key_map.p.e = ['Explore', 'explore'] " open explore
 let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
-let g:which_key_map.p.s = ['Rg', 'search']
 
-" deprecated
-nmap <leader>pa :Ack!
-let g:which_key_map.p.w = [':Ack! "\b<cword>\b"', 'search word'] " search word using ACK
+" s => search ----------
+let g:which_key_map.s = { 'name': '+search' }
+let g:which_key_map.s.s = ['Rg', 'search'] " ALT-A + enter to copy everything to quickfix
+let g:which_key_map.s.l = ['RunLastRg', 'last search']
+let g:which_key_map.s.h = ['TurnOffSearchHighlight', 'turn off highlight']
 
 " TAB => tabs ----------
 nmap <Tab> :tabnext<CR>
@@ -135,6 +134,7 @@ nmap <C-\> :vsplit<CR>
 let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
 
 " ignore
+let g:which_key_map.C = { 'name': 'which_key_ignore' }
 let g:which_key_map.h = { 'name': 'which_key_ignore' }
 let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
 " ----------------------------------------------
@@ -152,7 +152,7 @@ function! s:MapRuby()
   let g:which_key_map.l.f = ['ALEFix', 'format']
 endfunction
 
-autocmd! FileType ruby call s:MapRuby()
+autocmd! FileType ruby,erubyjremmen/vim-ripgrep call s:MapRuby()
 
 
 " l => elixir ----------

@@ -10,7 +10,6 @@ Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying compl
 Plug 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " don't need to install fzf separately
 Plug 'junegunn/fzf.vim' " search and open any file given a name
-Plug 'mileszs/ack.vim' " search with Ack
 Plug 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact
 Plug 'Asheq/close-buffers.vim' " provides :CloseHiddenBuffers and :CloseOtherBuffers
 

@@ -25,6 +25,7 @@ I try to leave comments telling what each line does:
   - Install [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
   - Install [Plug](https://github.com/junegunn/vim-plug)
   - Install [ctags](https://github.com/universal-ctags/homebrew-universal-ctags)
+  - Install [bat](https://github.com/sharkdp/bat#installation) for syntax highlighting when fuzzy finding
   - run `nvim \+PlugInstall \+q`
   - run `nvim` and press `SPC`
 
