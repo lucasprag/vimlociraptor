@@ -17,6 +17,8 @@ Plug 'Asheq/close-buffers.vim' " provides :CloseHiddenBuffers and :CloseOtherBuf
 Plug 'scrooloose/nerdcommenter' " comment code
 Plug 'tpope/vim-surround' " makes surroundings easy
 Plug 'dhruvasagar/vim-table-mode' " table creator & formatter allowing one to create neat tables as you type
+Plug 'junegunn/vim-easy-align' " select text, run :EasyAlign, choose a char to align, press enter
+Plug 'junegunn/goyo.vim' " toggle RFC mode
 
 " > ruby
 Plug 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
@@ -58,10 +60,11 @@ Plug 'pbrisbin/vim-mkdir' " to create files without creating dirs previously (ak
 Plug 'tpope/vim-sensible' " better defaults
 Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
-Plug 'webdevel/tabulous' " rename tabs
+Plug 'lucasprag/tabulous', { 'branch': 'fixed-tab-name' } " rename tabs
 Plug 'tpope/vim-endwise' " helps to end certain structures
 Plug 'vim-utils/vim-troll-stopper' " adds a different bg to Unicode troll characters
 Plug 'RRethy/vim-illuminate' " automatically highlight other uses of the current word under the cursor
+Plug 'dhruvasagar/vim-zoom'
 
 " completion framework and much more
 Plug 'neoclide/coc.nvim', {
@@ -96,15 +99,9 @@ Plug 'dag/vim-fish' " support for fish
 " > colorschemes
 Plug 'jaredgorski/SpaceCamp'
 Plug 'ayu-theme/ayu-vim'
-Plug 'tomasiser/vim-code-dark'
+Plug 'morhetz/gruvbox'
 Plug 'lucasprag/simpleblack'
 
-" > to take a look
-" https://github.com/autozimu/LanguageClient-neovim
-" https://github.com/avdgaag/vim-phoenix
-" https://github.com/Shougo/deoplete.nvim
-" https://github.com/junegunn/vim-easy-align
-"
 " > keep an eye
 " https://github.com/hardcoreplayers/spaceline.vim, cool, but not customizable
 

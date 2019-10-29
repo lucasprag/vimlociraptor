@@ -16,6 +16,9 @@ set showcmd
 " Always show the light line
 set laststatus=2
 
+" Don't need to show mode since status line also shows it
+set noshowmode
+
 " enable true colors support
 set termguicolors
 
@@ -133,7 +136,8 @@ let g:colorizer_use_virtual_text = 1
 let g:colorizer_auto_filetype='scss,css,html,vim,jsx,coffee,js'
 
 " change tab names to include both file name and extension
-let tabulousLabelNameOptions = ':t:e'
+let g:tabulousLabelNameOptions = ':t'
+let g:tabulousTabLabelRenameFixed = 1
 
 " enable fenced code block syntax highlighting in markdown files
 let g:markdown_fenced_languages = ['ruby', 'elixir', 'javascript', 'html', 'python', 'bash=sh', 'vim', 'help']
@@ -158,3 +162,8 @@ set shortmess+=c
 " always show signcolumns, neeed for CoC
 set signcolumn=yes
 
+" for goyo mode for writing RFCs, docs, etc
+let g:goyo_width = 180
+
+" Don't let gutentags run ctags -R . when editing git files
+let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']

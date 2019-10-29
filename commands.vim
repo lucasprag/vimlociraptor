@@ -75,6 +75,16 @@ endfunction
 
 command! ToggleLineNumbers :call ToggleLineNumbers()
 
+function! ToggleRelativeLineNumbers()
+  if &relativenumber == 1
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunction
+
+command! ToggleRelativeLineNumbers :call ToggleRelativeLineNumbers()
+
 " go to definition using ctags, requires "ctargs -R ." to be ran before
 command! GoToTag execute ':tag ' . expand("<cword>")
 

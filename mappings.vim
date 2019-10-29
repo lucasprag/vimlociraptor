@@ -70,9 +70,11 @@ let g:which_key_map.j.b = ['<Plug>(easymotion-b)', 'backward/up']
 
 " p => project ----------
 map <C-p> :Files<CR>
+map <C-g> :Tags<CR>
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.e = [':CocCommand explorer --toggle', 'explorer'] " open explore
 let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
+let g:which_key_map.p.g = ['Tags', 'tags'] " fuzzy find files
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
 
@@ -106,6 +108,9 @@ let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.T.c = [':Colors', 'colorschemes']
 let g:which_key_map.T.t = [':TableModeToggle', 'table mode']
 let g:which_key_map.T.n = [':ToggleLineNumbers', 'numbers']
+let g:which_key_map.T.r = [':ToggleRelativeLineNumbers', 'relative numbers']
+let g:which_key_map.T.w = [':Goyo', 'writing mode']
+let g:which_key_map.T.m = [':messages', 'messages']
 
 " v => vimlociraptor ----------
 let g:which_key_map.v = { 'name': '+vimlociraptor' }
@@ -132,6 +137,7 @@ let g:which_key_map.w['-']  = ['split', 'split horizontally']
 let g:which_key_map.w['/'] = ['vsplit', 'split vertically']
 nmap <C-\> :vsplit<CR>
 let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
+let g:which_key_map.w.z = ['<Plug>(zoom-toggle)', 'zoom']
 
 " ignore
 let g:which_key_map.C = { 'name': 'which_key_ignore' }
