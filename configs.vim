@@ -55,7 +55,7 @@ set visualbell
 set splitbelow
 set splitright
 
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.gif,*.png,*.jpg,*.jpeg
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.gif,*.png,*.jpg,*.jpeg,*.lock,*.temp
 
 " > make which-key faster
 set timeoutlen=300

@@ -64,7 +64,7 @@ Plug 'lucasprag/tabulous', { 'branch': 'fixed-tab-name' } " rename tabs
 Plug 'tpope/vim-endwise' " helps to end certain structures
 Plug 'vim-utils/vim-troll-stopper' " adds a different bg to Unicode troll characters
 Plug 'RRethy/vim-illuminate' " automatically highlight other uses of the current word under the cursor
-Plug 'dhruvasagar/vim-zoom'
+Plug 'dhruvasagar/vim-zoom' " zoom into a split
 
 " completion framework and much more
 Plug 'neoclide/coc.nvim', {

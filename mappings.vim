@@ -136,7 +136,13 @@ let g:which_key_map.w.f = ['Windows', 'find']
 let g:which_key_map.w['-']  = ['split', 'split horizontally']
 let g:which_key_map.w['/'] = ['vsplit', 'split vertically']
 nmap <C-\> :vsplit<CR>
-let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
+
+" w s => windows > sessions----------
+let g:which_key_map.w.s = { 'name': '+sessions' }
+let g:which_key_map.w.s.s = [':call g:SaveSession()', 'save']
+let g:which_key_map.w.s.r = [':call g:RestoreSession()', 'restore']
+
+let g:which_key_map.w.S = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
 let g:which_key_map.w.z = ['<Plug>(zoom-toggle)', 'zoom']
 
 " ignore

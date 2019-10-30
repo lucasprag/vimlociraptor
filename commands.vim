@@ -120,3 +120,23 @@ command! -bang -nargs=* Rg
 command! RunLastRg :History: Rg<CR>
 
 
+" ask for a name to name the session and save it
+function! g:SaveSession()
+  call inputsave()
+  let name = input('Enter name for this session: ')
+  call inputrestore()
+  execute ':mks! '. g:vimlociraptor_path . '/sessions/' . name . '.vim'
+endfunction
+
+
+" TODO: find a way of fzfing sessions and press enter to restore
+function! g:RestoreSession()
+  call inputsave()
+  let name = input('Enter session name to restore: ')
+  call inputrestore()
+  execute ':source '. g:vimlociraptor_path . '/sessions/' . name . '.vim'
+endfunction
+
+function! g:ListSessions()
+  execute ':!ls '. g:vimlociraptor_path . '/sessions/'
+endfunction
