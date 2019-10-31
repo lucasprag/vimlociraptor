@@ -83,7 +83,7 @@ Plug 'joukevandermaas/vim-ember-hbs' " handlebars
 Plug 'M4R7iNP/vim-inky' " inky, most used on emails
 
 " > visual
-Plug 'lucasprag/lightline.vim', { 'branch': 'simpleblack' } " really light and fast status line
+Plug 'itchyny/lightline.vim' " really light and fast status line
 Plug 'maximbaz/lightline-ale' " integrates ALE and Lightline
 
 " > windows
