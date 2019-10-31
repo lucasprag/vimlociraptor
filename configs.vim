@@ -167,3 +167,6 @@ let g:goyo_width = 180
 
 " Don't let gutentags run ctags -R . when editing git files
 let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
+
+" Don't let UltiSnip map keys and break coc autocomplete
+let g:UltiSnipsEnableMapping = 0

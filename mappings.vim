@@ -41,6 +41,7 @@ let g:which_key_map.c.r = ['<Plug>(coc-references)', 'references']
 let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
 let g:which_key_map.c.s = ['RemoveTrailingSpaces', 'remove trailing spaces']
 let g:which_key_map.c.p = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
+let g:which_key_map.c.u = ['Snippets', 'UltiSnips']
 
 " f => file ----------
 let g:which_key_map.f = { 'name': '+file' }
