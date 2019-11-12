@@ -47,6 +47,7 @@ Plug 'tpope/vim-markdown' " add syntax highlighting to code block on markdown fi
 " > git
 Plug 'rhysd/committia.vim' " more pleasant editing on commit message
 Plug 'jreybert/vimagit' " amazing port of emacs magit to vim
+Plug 'cohama/agit.vim' " great git log
 
 " > tmux
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test
@@ -104,7 +105,8 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
 Plug 'lucasprag/simpleblack'
 
-" > keep an eye
+" > take a look
+" https://github.com/m00qek/nvim-contabs
 " https://github.com/hardcoreplayers/spaceline.vim, cool, but not customizable
 
 " END Plugs

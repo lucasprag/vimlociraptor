@@ -1,11 +1,5 @@
 " COMMANDS --------------------------------------------
 
-" highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=white guibg=white
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=white guibg=white
-match ExtraWhitespace /\s\+$/
-autocmd WinEnter,BufWinEnter * match ExtraWhitespace /\s\+$/
-
 " I type so fast that :w becomes :W
 command! W w
 command! Q q
@@ -17,6 +11,36 @@ command! WQA wqa
 command! Q q
 command! Qa qa
 command! QA qa
+
+" highlight trailing whitespace
+" inspired on https://vi.stackexchange.com/questions/8563/toggle-highlighting-of-trailing-whitespace
+let g:toggleHighlightWhitespace = 1
+function! ToggleHighlightWhitespace() abort
+  let g:toggleHighlightWhitespace = 1 - g:toggleHighlightWhitespace
+  call RefreshHighlightWhitespace()
+endfunction
+
+function! RefreshHighlightWhitespace() abort
+  if g:toggleHighlightWhitespace == 1 " normal action, do the hi
+    highlight ExtraWhitespace ctermbg=white guibg=white
+    match ExtraWhitespace /\s\+$/
+    augroup HighLightWhitespace
+      autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+      autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+      autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+      "autocmd BufWinLeave * call clearmatches()
+    augroup END
+  else " clear whitespace highlighting
+    "call clearmatches()
+    autocmd! HighLightWhitespace BufWinEnter
+    autocmd! HighLightWhitespace InsertEnter
+    autocmd! HighLightWhitespace InsertLeave
+    autocmd! HighLightWhitespace BufWinLeave
+  endif
+endfunction
+
+"autocmd BufWinEnter,BufWinLeave * call RefreshHighlightWhitespace()
+
 
 " remove byebug, debugger, binding.pry, puts, console.log
 " the _ is needed to avoid some waste of time http://vim.wikia.com/wiki/Power_of_g
@@ -36,7 +60,11 @@ command! RemoveTrailingSpaces :call RemoveTrailingSpaces()
 " > hide which_key from statusline
 autocmd! FileType which_key
 autocmd! FileType which_key set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+      \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
+" > don't highlight trailing spaces for the whick_key buffer
+autocmd! FileType which_key call ToggleHighlightWhitespace()
+      \| autocmd BufLeave <buffer> call ToggleHighlightWhitespace()
 
 " > hide fzf from statusline
 autocmd! FileType fzf
@@ -128,8 +156,7 @@ function! g:SaveSession()
   execute ':mks! '. g:vimlociraptor_path . '/sessions/' . name . '.vim'
 endfunction
 
-
-" TODO: find a way of fzfing sessions and press enter to restore
+" TODO: find a way of fzfing sessions and pressing enter to restore
 function! g:RestoreSession()
   call inputsave()
   let name = input('Enter session name to restore: ')
@@ -140,3 +167,4 @@ endfunction
 function! g:ListSessions()
   execute ':!ls '. g:vimlociraptor_path . '/sessions/'
 endfunction
+

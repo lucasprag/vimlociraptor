@@ -39,9 +39,9 @@ let g:which_key_map.c.f = ['<Plug>(coc-definition)', 'coc definition']
 let g:which_key_map.c.r = ['<Plug>(coc-references)', 'references']
 
 let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
-let g:which_key_map.c.s = ['RemoveTrailingSpaces', 'remove trailing spaces']
+let g:which_key_map.c[' '] = ['RemoveTrailingSpaces', 'remove trailing spaces']
 let g:which_key_map.c.p = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
-let g:which_key_map.c.u = ['Snippets', 'UltiSnips']
+let g:which_key_map.c.s = ['Snippets', 'snippets']
 
 " f => file ----------
 let g:which_key_map.f = { 'name': '+file' }
@@ -58,6 +58,8 @@ let g:magit_show_magit_mapping = '<leader>gm'
 let g:which_key_map.g.m = [':Magit', 'magit']
 let g:which_key_map.g.o = [':CocCommand git.browserOpen', 'open on github']
 let g:which_key_map.g.s = [':GFiles?', 'status']
+let g:which_key_map.g.l = [':Agit', 'log']
+let g:which_key_map.g.f = [':AgitFile', 'log file']
 
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
@@ -142,6 +144,7 @@ nmap <C-\> :vsplit<CR>
 let g:which_key_map.w.s = { 'name': '+sessions' }
 let g:which_key_map.w.s.s = [':call g:SaveSession()', 'save']
 let g:which_key_map.w.s.r = [':call g:RestoreSession()', 'restore']
+let g:which_key_map.w.s.l = [':call g:ListSessions()', 'list']
 
 let g:which_key_map.w.S = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
 let g:which_key_map.w.z = ['<Plug>(zoom-toggle)', 'zoom']

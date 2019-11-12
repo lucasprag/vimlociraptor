@@ -112,6 +112,9 @@ let g:NERDCreateDefaultMappings = 0
 " Align line-wise comment delimiters flush left instead of following code indentatio
 let g:NERDDefaultAlign = 'left'
 
+" don't comment empty lines
+let g:NERDCommentEmptyLines = 0
+
 " make vim-test use foreman
 let test#ruby#rspec#executable = 'foreman run bundle exec rspec'
 
