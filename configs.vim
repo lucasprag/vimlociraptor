@@ -146,7 +146,9 @@ let g:tabulousTabLabelRenameFixed = 1
 let g:markdown_fenced_languages = ['ruby', 'elixir', 'javascript', 'html', 'python', 'bash=sh', 'vim', 'help']
 
 
-" if hidden is not set, TextEdit might fail, neeed for CoC
+" ----- neeed for CoC -----
+
+" if hidden is not set, TextEdit might fail
 set hidden
 
 " Some servers have issues with backup files, neeed for CoC
@@ -165,11 +167,11 @@ set shortmess+=c
 " always show signcolumns, neeed for CoC
 set signcolumn=yes
 
+" ----- end -----
+
 " for goyo mode for writing RFCs, docs, etc
 let g:goyo_width = 180
 
 " Don't let gutentags run ctags -R . when editing git files
 let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
 
-" Don't let UltiSnip map keys and break coc autocomplete
-let g:UltiSnipsEnableMapping = 0

@@ -14,6 +14,7 @@ let g:which_key_map.b.a = ['CloseAllBuffers', 'close all']
 nmap ; :Buffers<CR>
 let g:which_key_map.b.b = ['Buffers', 'buffers'] " list buffers
 
+let g:which_key_map.b.c = ['bd', 'close'] " delete a buffer and its window
 let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer but keep the window/split intact
 let g:which_key_map.b.h = ['CloseHiddenBuffers', 'close hidden'] " close all buffers not visible in any window
 let g:which_key_map.b.o = ['CloseOtherBuffers', 'close others'] " close all buffers except buffer in current window
@@ -37,11 +38,18 @@ let g:which_key_map.c = { 'name': '+code' }
 let g:which_key_map.c.d = [':GoToTag', 'tag definition']
 let g:which_key_map.c.f = ['<Plug>(coc-definition)', 'coc definition']
 let g:which_key_map.c.r = ['<Plug>(coc-references)', 'references']
+let g:which_key_map.c.n = ['<Plug>(coc-rename)', 'rename']
 
 let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comment
 let g:which_key_map.c[' '] = ['RemoveTrailingSpaces', 'remove trailing spaces']
 let g:which_key_map.c.p = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
 let g:which_key_map.c.s = ['Snippets', 'snippets']
+
+" CoC gotos mappings
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " f => file ----------
 let g:which_key_map.f = { 'name': '+file' }
@@ -94,7 +102,7 @@ let g:which_key_map['<Tab>'] = { 'name': '+tabs' }
 let g:which_key_map['<Tab>'].n = ['tabnew', 'new']
 let g:which_key_map['<Tab>'].l = ['tabnext', 'next'] " next tab (hjkL)
 let g:which_key_map['<Tab>'].h = ['tabprevious', 'previous'] " previous tab (Hjkl)
-let g:which_key_map['<Tab>'].d = ['tabclose', 'delete']
+let g:which_key_map['<Tab>'].c = ['tabclose', 'close']
 let g:which_key_map['<Tab>'].r = [':call g:tabulous#renameTab()', 'rename']
 
 " t => tests ----------
@@ -132,7 +140,7 @@ let g:which_key_map.v.o = [':call coc#refresh()', 'refresh coc']
 
 " w => windows ----------
 let g:which_key_map.w = { 'name': '+windows' }
-let g:which_key_map.w.d = ['q', 'delete']
+let g:which_key_map.w.c = ['q', 'close']
 let g:which_key_map.w.r = ['InteractiveWindow', 'resize interactively']
 let g:which_key_map.w.f = ['Windows', 'find']
 
@@ -227,21 +235,6 @@ let g:move_key_modifier = 'C'
 " open window to find recent files
 map r :History<CR>
 
-
-" Use tab for trigger completion with characters ahead and navigate.
-" Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-
 " jump arround easily even if there are no empty lines
 " this is an altenative to <S-[> and <S-]>
 nmap <C-j> 10j
@@ -249,3 +242,4 @@ nmap <C-k> 10k
 
 " move this away since I can't remove it, TODO: remove this plugin?
 let g:table_mode_map_prefix = "<leader>C"
+
