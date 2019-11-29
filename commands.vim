@@ -168,3 +168,5 @@ function! g:ListSessions()
   execute ':!ls '. g:vimlociraptor_path . '/sessions/'
 endfunction
 
+au BufNewFile,BufRead *.inky set filetype=eruby
+

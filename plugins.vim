@@ -30,9 +30,10 @@ Plug 'tpope/vim-rails' " rails support
 Plug 'elixir-editors/vim-elixir' " syntax highlighting and filetype detection
 Plug 'slashmili/alchemist.vim' " all the other things like go to definition and format
 
-" > javascript
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
+" > javascript / typescript
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Ivo-Donchev/vim-react-goto-definition'
 
 " > coffeescript
@@ -83,7 +84,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'sheerun/vim-haml' " haml
 Plug 'AndrewRadev/vim-eco' " eco (backbone.js)
 Plug 'joukevandermaas/vim-ember-hbs' " handlebars
-Plug 'M4R7iNP/vim-inky' " inky, most used on emails
 
 " > visual
 Plug 'itchyny/lightline.vim' " really light and fast status line
@@ -108,6 +108,7 @@ Plug 'lucasprag/simpleblack'
 " > take a look
 " https://github.com/m00qek/nvim-contabs
 " https://github.com/hardcoreplayers/spaceline.vim, cool, but not customizable
+"https://github.com/reedes/vim-wordy
 
 " END Plugs
 call plug#end()
