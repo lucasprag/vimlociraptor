@@ -88,6 +88,7 @@ Plug 'joukevandermaas/vim-ember-hbs' " handlebars
 " > visual
 Plug 'itchyny/lightline.vim' " really light and fast status line
 Plug 'maximbaz/lightline-ale' " integrates ALE and Lightline
+Plug 'Yggdroot/indentLine'
 
 " > windows
 Plug 'romgrk/winteract.vim' " resize windows interactively

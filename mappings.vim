@@ -122,6 +122,7 @@ let g:which_key_map.T.n = [':ToggleLineNumbers', 'numbers']
 let g:which_key_map.T.r = [':ToggleRelativeLineNumbers', 'relative numbers']
 let g:which_key_map.T.w = [':Goyo', 'writing mode']
 let g:which_key_map.T.m = [':messages', 'messages']
+let g:which_key_map.T.i = [':IndentLinesToggle', 'indent lines']
 
 " v => vimlociraptor ----------
 let g:which_key_map.v = { 'name': '+vimlociraptor' }
@@ -196,9 +197,10 @@ autocmd! FileType elixir call s:MapElixir()
 function! s:MapJavaScript()
   let g:which_key_map.l = { 'name': '+javascript' }
   let g:which_key_map.l.d = [':call ReactGotoDef()', 'definition'] " go to definition
+  let g:which_key_map.l.f = [':CocCommand prettier.formatFile', 'format']
 endfunction
 
-autocmd! FileType javascript call s:MapJavaScript()
+autocmd! FileType javascript,json call s:MapJavaScript()
 
 
 " ----------------------------------------------
@@ -234,6 +236,9 @@ let g:move_key_modifier = 'C'
 
 " open window to find recent files
 map r :History<CR>
+
+" fuzzy search for file types and manually set it
+map <C-f> :Filetypes<CR>
 
 " jump arround easily even if there are no empty lines
 " this is an altenative to <S-[> and <S-]>
