@@ -37,4 +37,5 @@ I try to leave comments telling what each line does:
   - [SpaceVim](https://spacevim.org/)
   - [Doom emacs](https://github.com/hlissner/doom-emacs)
   - [VimKO](https://github.com/AlexVKO/VimKO)
+  - [rafi/vim-config](https://github.com/rafi/vim-config)
 

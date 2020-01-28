@@ -130,7 +130,6 @@ let g:which_key_map.v.m = ['OpenMappingsVim', 'mappings.vim']
 let g:which_key_map.v.p = ['OpenPluginsVim', 'plugins.vim']
 let g:which_key_map.v.c = ['OpenCommandsVim', 'commands.vim']
 let g:which_key_map.v.f = ['OpenConfigsVim', 'configs.vim']
-let g:which_key_map.v.s = ['OpenStatusLineVim', 'statusline.vim']
 
 let g:which_key_map.v.r = ['ReloadVimConfig', 'reload']
 let g:which_key_map.v.i = ['PlugInstall', 'install']

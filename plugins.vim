@@ -69,12 +69,10 @@ Plug 'RRethy/vim-illuminate' " automatically highlight other uses of the current
 Plug 'dhruvasagar/vim-zoom' " zoom into a split
 Plug 'lucasprag/ultisnips', { 'branch': 'add-option-to-enable-disable-mapping' } " snippets engine
 Plug 'honza/vim-snippets' " actual snippets
+Plug 'dominickng/fzf-session.vim'
 
 " completion framework and much more
-Plug 'neoclide/coc.nvim', {
-      \ 'branch': 'release',
-      \ 'do': ':CocInstall coc-git coc-solargraph coc-elixir coc-vimlsp coc-json coc-css coc-explorer'
-      \ }
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " > style
 Plug 'dense-analysis/ale' " Asynchronous Lint Engine
@@ -86,9 +84,10 @@ Plug 'AndrewRadev/vim-eco' " eco (backbone.js)
 Plug 'joukevandermaas/vim-ember-hbs' " handlebars
 
 " > visual
-Plug 'itchyny/lightline.vim' " really light and fast status line
-Plug 'maximbaz/lightline-ale' " integrates ALE and Lightline
 Plug 'Yggdroot/indentLine'
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " > windows
 Plug 'romgrk/winteract.vim' " resize windows interactively
@@ -105,6 +104,8 @@ Plug 'jaredgorski/SpaceCamp'
 Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
 Plug 'lucasprag/simpleblack'
+Plug 'chriskempson/base16-vim'
+
 
 " > take a look
 " https://github.com/m00qek/nvim-contabs

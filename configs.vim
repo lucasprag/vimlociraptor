@@ -22,7 +22,8 @@ set noshowmode
 " enable true colors support
 set termguicolors
 
-colorscheme simpleblack
+"colorscheme simpleblack
+colorscheme base16-classic-dark
 
 " Highlight searches
 set hlsearch
@@ -179,3 +180,20 @@ let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'git
 " needed for indentLine
 let g:indentLine_enabled = 0
 let g:indentLine_char_list = ['|']
+
+" better place to save sessions files
+let g:fzf_session_path = g:vimlociraptor_path . '/sessions'
+
+let g:coc_global_extensions = [
+      \'coc-git',
+      \ 'coc-solargraph',
+      \ 'coc-elixir',
+      \ 'coc-vimlsp',
+      \ 'coc-json',
+      \ 'coc-css',
+      \ 'coc-explorer',
+      \ 'coc-html',
+      \ 'coc-highlight',
+      \ 'coc-ember'
+      \ ]
+      "\ 'coc-tsserver',
