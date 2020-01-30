@@ -237,7 +237,7 @@ let g:move_key_modifier = 'C'
 map r :History<CR>
 
 " fuzzy search for file types and manually set it
-map <C-f> :Filetypes<CR>
+nmap <C-f> :Filetypes<CR>
 
 " jump arround easily even if there are no empty lines
 " this is an altenative to <S-[> and <S-]>

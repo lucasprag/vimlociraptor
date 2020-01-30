@@ -25,6 +25,7 @@ Plug 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
 Plug 'tpope/vim-bundler' " very usefull when generating ctags for gems and more
 Plug 'vim-ruby/vim-ruby' " ruby support
 Plug 'tpope/vim-rails' " rails support
+Plug 'sheerun/vim-haml' " haml
 
 " > elixir
 Plug 'elixir-editors/vim-elixir' " syntax highlighting and filetype detection
@@ -35,6 +36,8 @@ Plug 'yuezk/vim-js'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Ivo-Donchev/vim-react-goto-definition'
+Plug 'leafgarland/typescript-vim'
+Plug 'joukevandermaas/vim-ember-hbs'
 
 " > coffeescript
 Plug 'kchmck/vim-coffee-script'
@@ -78,14 +81,10 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'dense-analysis/ale' " Asynchronous Lint Engine
 Plug 'editorconfig/editorconfig-vim'
 
-" > templates
-Plug 'sheerun/vim-haml' " haml
-Plug 'AndrewRadev/vim-eco' " eco (backbone.js)
-Plug 'joukevandermaas/vim-ember-hbs' " handlebars
-
 " > visual
 Plug 'Yggdroot/indentLine'
 
+" > status line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -101,10 +100,9 @@ Plug 'dag/vim-fish' " support for fish
 
 " > colorschemes
 Plug 'jaredgorski/SpaceCamp'
-Plug 'ayu-theme/ayu-vim'
-Plug 'morhetz/gruvbox'
 Plug 'lucasprag/simpleblack'
 Plug 'chriskempson/base16-vim'
+Plug 'joshdick/onedark.vim'
 
 
 " > take a look

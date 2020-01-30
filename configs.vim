@@ -22,8 +22,9 @@ set noshowmode
 " enable true colors support
 set termguicolors
 
-"colorscheme simpleblack
-colorscheme base16-classic-dark
+"favorites are simpleblack, base16-classic-dark and onedark
+"colorscheme onedark
+colorscheme base16-onedark
 
 " Highlight searches
 set hlsearch
@@ -91,9 +92,19 @@ let g:VimuxHeight = "20"
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
 
-" add standardrb to ruby
-let g:ale_linters = {'ruby': ['standardrb']}
-let g:ale_fixers = {'ruby': ['standardrb']}
+let g:ale_linters = {
+      \ 'ruby': ['standardrb'],
+      \ 'javascript': ['eslint'],
+      \ 'typescript': ['eslint'],
+      \ 'typescript.tsx': ['eslint'],
+      \}
+
+let g:ale_fixers = {
+      \ 'ruby': ['standardrb'],
+      \ 'javascript': ['eslint'],
+      \ 'typescript': ['eslint'],
+      \ 'typescript.tsx': ['eslint'],
+      \}
 
 " keep sign column always open
 let g:ale_sign_column_always = 1
@@ -185,7 +196,8 @@ let g:indentLine_char_list = ['|']
 let g:fzf_session_path = g:vimlociraptor_path . '/sessions'
 
 let g:coc_global_extensions = [
-      \'coc-git',
+      \ 'coc-tsserver',
+      \ 'coc-git',
       \ 'coc-solargraph',
       \ 'coc-elixir',
       \ 'coc-vimlsp',
@@ -196,4 +208,12 @@ let g:coc_global_extensions = [
       \ 'coc-highlight',
       \ 'coc-ember'
       \ ]
-      "\ 'coc-tsserver',
+
+let g:airline_theme='onedark'
+
+" hide branch name
+let g:airline_section_b = 0
+
+" hide encoding
+let g:airline_section_y = 0
+
