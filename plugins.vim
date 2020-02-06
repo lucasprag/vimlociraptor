@@ -85,8 +85,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Yggdroot/indentLine'
 
 " > status line
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim' " really light and fast status line	
+Plug 'maximbaz/lightline-ale' " integrates ALE and Lightline
 
 " > windows
 Plug 'romgrk/winteract.vim' " resize windows interactively
@@ -109,6 +109,7 @@ Plug 'joshdick/onedark.vim'
 " https://github.com/m00qek/nvim-contabs
 " https://github.com/hardcoreplayers/spaceline.vim, cool, but not customizable
 "https://github.com/reedes/vim-wordy
+"https://github.com/glidenote/memolist.vim
 
 " END Plugs
 call plug#end()
