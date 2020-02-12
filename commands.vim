@@ -25,10 +25,10 @@ function! RefreshHighlightWhitespace() abort
     highlight ExtraWhitespace ctermbg=white guibg=white
     match ExtraWhitespace /\s\+$/
     augroup HighLightWhitespace
-      autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-      autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-      autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-      "autocmd BufWinLeave * call clearmatches()
+      autocmd! BufWinEnter * match ExtraWhitespace /\s\+$/
+      autocmd! InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+      autocmd! InsertLeave * match ExtraWhitespace /\s\+$/
+      autocmd BufWinLeave * call clearmatches()
     augroup END
   else " clear whitespace highlighting
     "call clearmatches()
@@ -39,7 +39,11 @@ function! RefreshHighlightWhitespace() abort
   endif
 endfunction
 
-"autocmd BufWinEnter,BufWinLeave * call RefreshHighlightWhitespace()
+autocmd! BufWinEnter,BufWinLeave * call RefreshHighlightWhitespace()
+
+" > don't highlight trailing spaces for the whick_key buffer
+autocmd! FileType which_key call ToggleHighlightWhitespace()
+      \| autocmd BufLeave <buffer> call ToggleHighlightWhitespace()
 
 
 " remove byebug, debugger, binding.pry, puts, console.log
@@ -61,10 +65,6 @@ command! RemoveTrailingSpaces :call RemoveTrailingSpaces()
 autocmd! FileType which_key
 autocmd! FileType which_key set laststatus=0 noshowmode noruler
       \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-
-" > don't highlight trailing spaces for the whick_key buffer
-autocmd! FileType which_key call ToggleHighlightWhitespace()
-      \| autocmd BufLeave <buffer> call ToggleHighlightWhitespace()
 
 " > hide fzf from statusline
 autocmd! FileType fzf
