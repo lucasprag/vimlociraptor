@@ -24,4 +24,4 @@ call LoadFile('configs.vim')
 
 call LoadFile('mappings.vim')
 
-call LoadFile('statusline.vim')	
+call LoadFile('statusline.vim')
