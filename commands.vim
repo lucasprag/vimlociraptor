@@ -170,3 +170,6 @@ endfunction
 
 au BufNewFile,BufRead *.inky set filetype=html
 
+" set spell checking for markdown files
+au BufNewFile,BufRead *.md setlocal spell
+
