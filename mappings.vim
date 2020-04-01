@@ -17,7 +17,7 @@ let g:which_key_map.b.b = ['Buffers', 'buffers'] " list buffers
 let g:which_key_map.b.c = ['bd', 'close'] " delete a buffer and its window
 let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer but keep the window/split intact
 let g:which_key_map.b.h = ['CloseHiddenBuffers', 'close hidden'] " close all buffers not visible in any window
-let g:which_key_map.b.o = ['CloseOtherBuffers', 'close others'] " close all buffers except buffer in current window
+let g:which_key_map.b.o = [':Bdelete other', 'close others'] " close all buffers except buffer in current window
 
 " goes to the previous/next buffer
 nmap <S-h> :BB<CR>
