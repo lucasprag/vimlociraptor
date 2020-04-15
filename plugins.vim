@@ -18,7 +18,6 @@ Plug 'scrooloose/nerdcommenter' " comment code
 Plug 'tpope/vim-surround' " makes surroundings easy
 Plug 'dhruvasagar/vim-table-mode' " table creator & formatter allowing one to create neat tables as you type
 Plug 'junegunn/vim-easy-align' " select text, run :EasyAlign, choose a char to align, press enter
-Plug 'junegunn/goyo.vim' " toggle RFC mode
 
 " > ruby
 Plug 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
@@ -26,6 +25,7 @@ Plug 'tpope/vim-bundler' " very usefull when generating ctags for gems and more
 Plug 'vim-ruby/vim-ruby' " ruby support
 Plug 'tpope/vim-rails' " rails support
 Plug 'sheerun/vim-haml' " haml
+Plug 'gerw/vim-HiLinkTrace' " provides <Plug>HiLinkTrace to debug syntax highlighting
 
 " > elixir
 Plug 'elixir-editors/vim-elixir' " syntax highlighting and filetype detection
@@ -33,7 +33,7 @@ Plug 'slashmili/alchemist.vim' " all the other things like go to definition and 
 
 " > javascript / typescript
 Plug 'yuezk/vim-js'
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'HerringtonDarkholme/yats.vim' " advanced typescript syntax highlighting
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Ivo-Donchev/vim-react-goto-definition'
 Plug 'leafgarland/typescript-vim'
@@ -50,8 +50,6 @@ Plug 'tpope/vim-markdown' " add syntax highlighting to code block on markdown fi
 
 " > git
 Plug 'rhysd/committia.vim' " more pleasant editing on commit message
-Plug 'jreybert/vimagit' " amazing port of emacs magit to vim
-Plug 'cohama/agit.vim' " great git log
 
 " > tmux
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test
@@ -83,33 +81,28 @@ Plug 'editorconfig/editorconfig-vim'
 
 " > visual
 Plug 'Yggdroot/indentLine'
+Plug 'norcalli/nvim-colorizer.lua' " high-performance color highlighter for Neovim
 
 " > status line
-Plug 'itchyny/lightline.vim' " really light and fast status line	
+Plug 'itchyny/lightline.vim' " really light and fast status line
 Plug 'maximbaz/lightline-ale' " integrates ALE and Lightline
 
 " > windows
 Plug 'romgrk/winteract.vim' " resize windows interactively
 Plug 'wesQ3/vim-windowswap' " swap windows
 
-" > devops
-Plug 'chr4/nginx.vim' " nginx
-Plug 'hashivim/vim-terraform' " terraform
 Plug 'stephpy/vim-yaml' " yml, yaml
 Plug 'dag/vim-fish' " support for fish
 
 " > colorschemes
-Plug 'jaredgorski/SpaceCamp'
 Plug 'lucasprag/simpleblack'
-Plug 'chriskempson/base16-vim'
-Plug 'joshdick/onedark.vim'
-
 
 " > take a look
 " https://github.com/m00qek/nvim-contabs
-" https://github.com/hardcoreplayers/spaceline.vim, cool, but not customizable
 "https://github.com/reedes/vim-wordy
 "https://github.com/glidenote/memolist.vim
+"https://github.com/AndrewRadev/splitjoin.vim
+"https://github.com/pechorin/any-jump.vim
 
 " END Plugs
 call plug#end()

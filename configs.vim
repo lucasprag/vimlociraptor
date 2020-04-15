@@ -1,6 +1,6 @@
 " CONFIGS ---------------------------------------------
 
-" turns on "detection", "plugin" and "indent" at once
+" turns on "plugin" and "indent" at once
 filetype indent plugin on
 
 " break lines automaticaly when the reach the end of the window
@@ -13,7 +13,7 @@ set norelativenumber
 " Show partial commands in the last line of the screen
 set showcmd
 
-" Always show the light line
+" Always show the status line
 set laststatus=2
 
 " Don't need to show mode since status line also shows it
@@ -22,9 +22,8 @@ set noshowmode
 " enable true colors support
 set termguicolors
 
-"favorites are simpleblack, base16-classic-dark and onedark
-"colorscheme onedark
-colorscheme base16-onedark
+"favorites are simpleblack, jellybeans and onedark
+colorscheme simpleblack
 
 " Highlight searches
 set hlsearch
@@ -79,28 +78,32 @@ set autoread
 " See more details :help provider-clipboard
 set clipboard=unnamedplus
 
+" use both English and Portuguese when doing spell checking
+set spelllang=en_us,pt_br
+
 " make the editorconfig work using the external command
 let g:EditorConfig_core_mode = 'external_command'
 
 " make vim-test use vim-tmux-runner to run specs in a split bellow
 let test#strategy = "vimux"
 
-" give more height to the split for running specs
-let g:VimuxHeight = "20"
+" height to the split for running specs
+let g:VimuxHeight = "30"
 
 " change icons of the asynchronous linting engine '◉'
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
 
+" add standardrb back
 let g:ale_linters = {
-      \ 'ruby': ['standardrb'],
+      \ 'ruby': ['rubocop'],
       \ 'javascript': ['eslint'],
       \ 'typescript': ['eslint'],
       \ 'typescript.tsx': ['eslint'],
       \}
 
 let g:ale_fixers = {
-      \ 'ruby': ['standardrb'],
+      \ 'ruby': ['rubocop'],
       \ 'javascript': ['eslint'],
       \ 'typescript': ['eslint'],
       \ 'typescript.tsx': ['eslint'],
@@ -155,10 +158,10 @@ let g:tabulousLabelNameOptions = ':t'
 let g:tabulousTabLabelRenameFixed = 1
 
 " enable fenced code block syntax highlighting in markdown files
-let g:markdown_fenced_languages = ['ruby', 'elixir', 'javascript', 'html', 'python', 'bash=sh', 'vim', 'help']
+let g:markdown_fenced_languages = ['ruby', 'elixir', 'javascript', 'html', 'python', 'bash=sh', 'vim', 'help', 'sql']
 
 
-" ----- neeed for CoC -----
+" ----- needed for CoC -----
 
 " if hidden is not set, TextEdit might fail
 set hidden
@@ -181,9 +184,6 @@ set signcolumn=yes
 
 " ----- end -----
 
-" for goyo mode for writing RFCs, docs, etc
-let g:goyo_width = 180
-
 " Don't let gutentags run ctags -R . when editing git files
 let g:gutentags_exclude_filetypes = ['gitcommit', 'gitconfig', 'gitrebase', 'gitsendemail', 'git']
 
@@ -203,17 +203,10 @@ let g:coc_global_extensions = [
       \ 'coc-vimlsp',
       \ 'coc-json',
       \ 'coc-css',
-      \ 'coc-explorer',
       \ 'coc-html',
-      \ 'coc-highlight',
       \ 'coc-ember'
       \ ]
 
-let g:airline_theme='onedark'
-
-" hide branch name
-let g:airline_section_b = 0
-
-" hide encoding
-let g:airline_section_y = 0
+" enable color highlighter
+lua require'colorizer'.setup()
 

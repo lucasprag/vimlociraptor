@@ -56,18 +56,7 @@ let g:which_key_map.f = { 'name': '+file' }
 let g:which_key_map.f.f = ['CopyFullPath', 'copy full path']
 let g:which_key_map.f.n = ['CopyFileName', 'copy file name']
 let g:which_key_map.f.r = ['CopyRelativePath', 'copy relative path']
-
-" g => git ----------
-let g:which_key_map.g = { 'name': '+git' }
-
-" change the default mapping for magit
-let g:magit_show_magit_mapping = '<leader>gm'
-
-let g:which_key_map.g.m = [':Magit', 'magit']
-let g:which_key_map.g.o = [':CocCommand git.browserOpen', 'open on github']
-let g:which_key_map.g.s = [':GFiles?', 'status']
-let g:which_key_map.g.l = [':Agit', 'log']
-let g:which_key_map.g.f = [':AgitFile', 'log file']
+let g:which_key_map.f.g = [':CocCommand git.browserOpen', 'open on github']
 
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
@@ -79,11 +68,13 @@ let g:which_key_map.j.h = ['<Plug>(easymotion-linebackward)', 'backward']
 let g:which_key_map.j.f = ['<Plug>(easymotion-w)', 'forward/down']
 let g:which_key_map.j.b = ['<Plug>(easymotion-b)', 'backward/up']
 
+map f <Plug>(easymotion-lineforward)
+map F <Plug>(easymotion-linebackward)
+
 " p => project ----------
 map <C-p> :Files<CR>
 map <C-g> :Tags<CR>
 let g:which_key_map.p = { 'name': '+project' }
-let g:which_key_map.p.e = [':CocCommand explorer --toggle', 'explorer'] " open explore
 let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
 let g:which_key_map.p.g = ['Tags', 'tags'] " fuzzy find files
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
@@ -120,7 +111,6 @@ let g:which_key_map.T.c = [':Colors', 'colorschemes']
 let g:which_key_map.T.t = [':TableModeToggle', 'table mode']
 let g:which_key_map.T.n = [':ToggleLineNumbers', 'numbers']
 let g:which_key_map.T.r = [':ToggleRelativeLineNumbers', 'relative numbers']
-let g:which_key_map.T.w = [':Goyo', 'writing mode']
 let g:which_key_map.T.m = [':messages', 'messages']
 let g:which_key_map.T.i = [':IndentLinesToggle', 'indent lines']
 
@@ -130,7 +120,7 @@ let g:which_key_map.v.m = ['OpenMappingsVim', 'mappings.vim']
 let g:which_key_map.v.p = ['OpenPluginsVim', 'plugins.vim']
 let g:which_key_map.v.c = ['OpenCommandsVim', 'commands.vim']
 let g:which_key_map.v.f = ['OpenConfigsVim', 'configs.vim']
-let g:which_key_map.v.s = ['OpenStatusLineVim', 'statusline.vim']	
+let g:which_key_map.v.s = ['OpenStatusLineVim', 'statusline.vim']
 
 let g:which_key_map.v.r = ['ReloadVimConfig', 'reload']
 let g:which_key_map.v.i = ['PlugInstall', 'install']
@@ -248,3 +238,4 @@ nmap <C-k> 10k
 " move this away since I can't remove it, TODO: remove this plugin?
 let g:table_mode_map_prefix = "<leader>C"
 
+nmap <C-t> <Plug>HiLinkTrace

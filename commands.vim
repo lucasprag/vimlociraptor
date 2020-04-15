@@ -168,8 +168,8 @@ function! g:ListSessions()
   execute ':!ls '. g:vimlociraptor_path . '/sessions/'
 endfunction
 
-au BufNewFile,BufRead *.inky set filetype=html
+autocmd BufNewFile,BufRead *.inky set filetype=html
 
 " set spell checking for markdown files
-au BufNewFile,BufRead *.md setlocal spell
+autocmd BufNewFile,BufRead *.md setlocal spell
 
