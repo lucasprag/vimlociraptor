@@ -135,9 +135,13 @@ command! TurnOffSearchHighlight :set nohlsearch
 " comment highlighting to json
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
-" Files command with preview window
+" Overwrite fzf's Files command to include a preview
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('down:80%'), <bang>0)
+
+" Overwrite fzf's History command to include a preview
+command! -bang History
+  \ call fzf#vim#history(fzf#vim#with_preview('down:80%'))
 
 " Rg with preview, toggle preview by pressing ?
 command! -bang -nargs=* Rg
