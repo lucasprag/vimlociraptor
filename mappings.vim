@@ -14,24 +14,18 @@ let g:which_key_map.b.a = ['CloseAllBuffers', 'close all']
 nmap ; :FzfPreviewBuffers<CR>
 let g:which_key_map.b.b = ['FzfPreviewBuffers', 'buffers'] " list buffers
 
-let g:which_key_map.b.c = ['bd', 'close'] " delete a buffer and its window
-let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer but keep the window/split intact
-let g:which_key_map.b.h = ['CloseHiddenBuffers', 'close hidden'] " close all buffers not visible in any window
-let g:which_key_map.b.o = [':Bdelete other', 'close others'] " close all buffers except buffer in current window
+let g:which_key_map.b.c = [':BD', 'close'] " delete a buffer but keep its window
+let g:which_key_map.b.d = [':BD', 'close'] " delete a buffer but keep its window
+let g:which_key_map.b.o = [':Bdelete hidden', 'close others'] " close all buffers except buffer in current window
 
 " goes to the previous/next buffer
 nmap <S-h> :BB<CR>
 nmap <S-l> :BF<CR>
-let g:which_key_map.b.p = ['BB', 'previous']
-let g:which_key_map.b.n = ['BF', 'next']
+let g:which_key_map.b.p = [':BB', 'previous']
+let g:which_key_map.b.n = [':BF', 'next']
 
 let g:which_key_map.b.L = ['Lines', 'lines']
 let g:which_key_map.b.l = ['BLines', 'lines']
-
-" ignore
-let g:which_key_map.b.u = { 'name': 'which_key_ignore' }
-let g:which_key_map.b.f = 'which_key_ignore'
-let g:which_key_map.b.w = 'which_key_ignore'
 
 " c => code ----------
 let g:which_key_map.c = { 'name': '+code' }
@@ -63,7 +57,7 @@ let g:which_key_map.f.m = ['FzfPreviewMarks', 'marks']
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
 let g:which_key_map.g.o = [':CocCommand git.browserOpen', 'open on github']
-let g:which_key_map.g.s = ['FzfPreviewGitStatus', 'status']
+let g:which_key_map.g.s = [':GFiles?', 'status']
 
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
@@ -80,6 +74,7 @@ map F <Plug>(easymotion-linebackward)
 
 " p => project ----------
 map <C-p> :Files<CR>
+map s :Rg<CR>
 
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
@@ -151,6 +146,10 @@ let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need t
 let g:which_key_map.w.z = ['<Plug>(zoom-toggle)', 'zoom']
 
 " ignore
+let g:which_key_map.b.u = { 'name': 'which_key_ignore' }
+let g:which_key_map.b.f = 'which_key_ignore'
+let g:which_key_map.b.w = 'which_key_ignore'
+
 let g:which_key_map.C = { 'name': 'which_key_ignore' }
 let g:which_key_map.h = { 'name': 'which_key_ignore' }
 let g:which_key_map['!'] = { 'name': 'which_key_ignore' }
@@ -227,7 +226,7 @@ nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 let g:move_key_modifier = 'C'
 
 " open window to find recent files
-map r :FzfPreviewProjectMruFiles<CR>
+map r :History<CR>
 
 " fuzzy search for file types and manually set it
 nmap <C-f> :Filetypes<CR>

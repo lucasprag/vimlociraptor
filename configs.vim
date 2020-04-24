@@ -213,4 +213,8 @@ let g:coc_global_extensions = [
 lua require'colorizer'.setup()
 
 " make fzf a floating window
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9, 'highlight': 'Todo', 'border': 'sharp' } }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9, 'highlight': 'Todo' } }
+
+" move search to the top of the window
+let $FZF_DEFAULT_OPTS='--layout=reverse'
+

@@ -11,7 +11,7 @@ Plug 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " don't need to install fzf separately
 Plug 'junegunn/fzf.vim' " search and open any file given a name
 Plug 'dominickng/fzf-session.vim' " fuzzy search saved sessions
-Plug 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact -- raises error
+Plug 'qpkorr/vim-bufkill' " :BB :BF, like :bb and bf but in the context of the window; BD to delete buffer and keep window
 Plug 'Asheq/close-buffers.vim' " provides :CloseHiddenBuffers and :CloseOtherBuffers
 
 " > editing tools
@@ -39,9 +39,6 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Ivo-Donchev/vim-react-goto-definition'
 Plug 'leafgarland/typescript-vim'
 Plug 'joukevandermaas/vim-ember-hbs'
-
-" > coffeescript
-Plug 'kchmck/vim-coffee-script'
 
 " css
 Plug 'cakebaker/scss-syntax.vim'
@@ -96,6 +93,7 @@ Plug 'dag/vim-fish' " support for fish
 
 " > colorschemes
 Plug 'lucasprag/simpleblack'
+Plug 'noahfrederick/vim-hemisu'
 
 " > take a look
 " https://github.com/m00qek/nvim-contabs
@@ -108,6 +106,7 @@ Plug 'lucasprag/simpleblack'
 "https://github.com/justinmk/vim-sneak
 "https://github.com/francoiscabrol/ranger.vim
 "https://github.com/mg979/vim-visual-multi
+"https://github.com/noahfrederick/vim-hemisu " inspiration for my new colorscheme
 
 " END Plugs
 call plug#end()
