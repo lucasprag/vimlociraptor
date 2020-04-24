@@ -10,7 +10,8 @@ Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying compl
 Plug 'scrooloose/nerdtree' " presents the filesystem in the form of a tree
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " don't need to install fzf separately
 Plug 'junegunn/fzf.vim' " search and open any file given a name
-Plug 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact
+Plug 'dominickng/fzf-session.vim' " fuzzy search saved sessions
+Plug 'qpkorr/vim-bufkill' " provides :BD to delete a buffer and keep the window/split intact -- raises error
 Plug 'Asheq/close-buffers.vim' " provides :CloseHiddenBuffers and :CloseOtherBuffers
 
 " > editing tools
@@ -70,7 +71,6 @@ Plug 'RRethy/vim-illuminate' " automatically highlight other uses of the current
 Plug 'dhruvasagar/vim-zoom' " zoom into a split
 Plug 'lucasprag/ultisnips', { 'branch': 'add-option-to-enable-disable-mapping' } " snippets engine
 Plug 'honza/vim-snippets' " actual snippets
-Plug 'dominickng/fzf-session.vim'
 
 " completion framework and much more
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -103,6 +103,11 @@ Plug 'lucasprag/simpleblack'
 "https://github.com/glidenote/memolist.vim
 "https://github.com/AndrewRadev/splitjoin.vim
 "https://github.com/pechorin/any-jump.vim
+"https://github.com/fmoralesc/vim-pad
+"https://github.com/brooth/far.vim
+"https://github.com/justinmk/vim-sneak
+"https://github.com/francoiscabrol/ranger.vim
+"https://github.com/mg979/vim-visual-multi
 
 " END Plugs
 call plug#end()

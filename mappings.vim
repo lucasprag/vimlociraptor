@@ -11,8 +11,8 @@ let g:which_key_map = {}
 let g:which_key_map.b = { 'name': '+buffers' }
 let g:which_key_map.b.a = ['CloseAllBuffers', 'close all']
 
-nmap ; :Buffers<CR>
-let g:which_key_map.b.b = ['Buffers', 'buffers'] " list buffers
+nmap ; :FzfPreviewBuffers<CR>
+let g:which_key_map.b.b = ['FzfPreviewBuffers', 'buffers'] " list buffers
 
 let g:which_key_map.b.c = ['bd', 'close'] " delete a buffer and its window
 let g:which_key_map.b.d = ['BD', 'delete'] " delete a buffer but keep the window/split intact
@@ -44,6 +44,8 @@ let g:which_key_map.c.c = ['<plug>NERDCommenterToggle', 'comment'] " toggle comm
 let g:which_key_map.c[' '] = ['RemoveTrailingSpaces', 'remove trailing spaces']
 let g:which_key_map.c.p = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
 let g:which_key_map.c.s = ['Snippets', 'snippets']
+let g:which_key_map.c.t = ['Filetypes', 'change file type']
+let g:which_key_map.c.h = ['TurnOffSearchHighlight', 'turn off highlight']
 
 " CoC gotos mappings
 nmap <silent> gd <Plug>(coc-definition)
@@ -56,7 +58,12 @@ let g:which_key_map.f = { 'name': '+file' }
 let g:which_key_map.f.f = ['CopyFullPath', 'copy full path']
 let g:which_key_map.f.n = ['CopyFileName', 'copy file name']
 let g:which_key_map.f.r = ['CopyRelativePath', 'copy relative path']
-let g:which_key_map.f.g = [':CocCommand git.browserOpen', 'open on github']
+let g:which_key_map.f.m = ['FzfPreviewMarks', 'marks']
+
+" g => git ----------
+let g:which_key_map.g = { 'name': '+git' }
+let g:which_key_map.g.o = [':CocCommand git.browserOpen', 'open on github']
+let g:which_key_map.g.s = ['FzfPreviewGitStatus', 'status']
 
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
@@ -73,18 +80,19 @@ map F <Plug>(easymotion-linebackward)
 
 " p => project ----------
 map <C-p> :Files<CR>
-map <C-g> :Tags<CR>
+
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
-let g:which_key_map.p.g = ['Tags', 'tags'] " fuzzy find files
+let g:which_key_map.p.g = ['Tags', 'tags'] " fuzzy find tags
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
+let g:which_key_map.p.s = ['Rg', 'search'] " ALT-A + enter to copy everything to quickfix
 
-" s => search ----------
-let g:which_key_map.s = { 'name': '+search' }
-let g:which_key_map.s.s = ['Rg', 'search'] " ALT-A + enter to copy everything to quickfix
-let g:which_key_map.s.l = ['RunLastRg', 'last search']
-let g:which_key_map.s.h = ['TurnOffSearchHighlight', 'turn off highlight']
+" s => sessions----------
+let g:which_key_map.s = { 'name': '+sessions' }
+let g:which_key_map.s.s = [':call g:SaveSession()', 'save']
+let g:which_key_map.s.l = ['Sessions', 'list'] " <Ctrl-X> deletes session under the cursor
+let g:which_key_map.s.q = ['SQuit', 'quit tracking sessions']
 
 " TAB => tabs ----------
 nmap <Tab> :tabnext<CR>
@@ -139,13 +147,7 @@ let g:which_key_map.w['-']  = ['split', 'split horizontally']
 let g:which_key_map.w['/'] = ['vsplit', 'split vertically']
 nmap <C-\> :vsplit<CR>
 
-" w s => windows > sessions----------
-let g:which_key_map.w.s = { 'name': '+sessions' }
-let g:which_key_map.w.s.s = [':call g:SaveSession()', 'save']
-let g:which_key_map.w.s.r = [':call g:RestoreSession()', 'restore']
-let g:which_key_map.w.s.l = [':call g:ListSessions()', 'list']
-
-let g:which_key_map.w.S = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
+let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
 let g:which_key_map.w.z = ['<Plug>(zoom-toggle)', 'zoom']
 
 " ignore
@@ -225,7 +227,7 @@ nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 let g:move_key_modifier = 'C'
 
 " open window to find recent files
-map r :History<CR>
+map r :FzfPreviewProjectMruFiles<CR>
 
 " fuzzy search for file types and manually set it
 nmap <C-f> :Filetypes<CR>

@@ -72,6 +72,8 @@ set expandtab
 " Reload the file on changes
 set autoread
 
+"set fillchars=vert:\│,eob:\
+
 " Makes the yank/past work in the X-server
 " Ubuntu: it uses xclip
 " OSX: it uses pbcopy/pbpaste
@@ -210,3 +212,5 @@ let g:coc_global_extensions = [
 " enable color highlighter
 lua require'colorizer'.setup()
 
+" make fzf a floating window
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9, 'highlight': 'Todo', 'border': 'sharp' } }

@@ -91,7 +91,10 @@ command! OpenStatusLineVim execute 'e ' g:vimlociraptor_path . '/statusline.vim'
 command! FormatElixirFile silent :!mix format %
 
 " not sure why ftdetect doesn't work for vim-ember-hbs
-au BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=handlebars
+autocmd BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=handlebars
+
+" add some sort of highlighting to inky templates
+autocmd BufNewFile,BufRead *.inky set filetype=html
 
 function! ToggleLineNumbers()
   if &number == 1
@@ -141,35 +144,18 @@ command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \           : fzf#vim#with_preview('right:60%:hidden', '?'),
   \   <bang>0)
-
-" fzf.vim has the command 'History:' to fuzzy find the history of commands
-command! RunLastRg :History: Rg<CR>
-
-
-" ask for a name to name the session and save it
-function! g:SaveSession()
-  call inputsave()
-  let name = input('Enter name for this session: ')
-  call inputrestore()
-  execute ':mks! '. g:vimlociraptor_path . '/sessions/' . name . '.vim'
-endfunction
-
-" TODO: find a way of fzfing sessions and pressing enter to restore
-function! g:RestoreSession()
-  call inputsave()
-  let name = input('Enter session name to restore: ')
-  call inputrestore()
-  execute ':source '. g:vimlociraptor_path . '/sessions/' . name . '.vim'
-endfunction
-
-function! g:ListSessions()
-  execute ':!ls '. g:vimlociraptor_path . '/sessions/'
-endfunction
-
-autocmd BufNewFile,BufRead *.inky set filetype=html
 
 " set spell checking for markdown files
 autocmd BufNewFile,BufRead *.md setlocal spell
+
+" ask for a name to save the current session
+function! g:SaveSession()
+  call inputsave()
+  let name = input('Enter new name: ')
+  call inputrestore()
+
+  execute ':Session ' . name
+endfunction
 
