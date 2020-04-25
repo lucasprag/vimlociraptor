@@ -9,14 +9,14 @@ let g:which_key_map = {}
 
 " b => buffers ----------
 let g:which_key_map.b = { 'name': '+buffers' }
-let g:which_key_map.b.a = ['CloseAllBuffers', 'close all']
+let g:which_key_map.b.a = [':Bdelete all', 'close all']
 
-nmap ; :FzfPreviewBuffers<CR>
-let g:which_key_map.b.b = ['FzfPreviewBuffers', 'buffers'] " list buffers
+nmap ; :Buffers<CR>
+let g:which_key_map.b.b = [':Buffers', 'buffers'] " list buffers
 
-let g:which_key_map.b.c = [':BD', 'close'] " delete a buffer but keep its window
 let g:which_key_map.b.d = [':BD', 'close'] " delete a buffer but keep its window
 let g:which_key_map.b.o = [':Bdelete hidden', 'close others'] " close all buffers except buffer in current window
+let g:which_key_map.b.w = [':bd', 'close window and buffer']
 
 " goes to the previous/next buffer
 nmap <S-h> :BB<CR>

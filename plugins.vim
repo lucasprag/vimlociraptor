@@ -12,7 +12,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " don't need t
 Plug 'junegunn/fzf.vim' " search and open any file given a name
 Plug 'dominickng/fzf-session.vim' " fuzzy search saved sessions
 Plug 'qpkorr/vim-bufkill' " :BB :BF, like :bb and bf but in the context of the window; BD to delete buffer and keep window
-Plug 'Asheq/close-buffers.vim' " provides :CloseHiddenBuffers and :CloseOtherBuffers
+Plug 'Asheq/close-buffers.vim' " provides :Bdelete to close all, others or hidden buffers
 
 " > editing tools
 Plug 'scrooloose/nerdcommenter' " comment code
