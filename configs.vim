@@ -218,3 +218,5 @@ let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9, 'highlight': 'Todo
 " move search to the top of the window
 let $FZF_DEFAULT_OPTS='--layout=reverse'
 
+" don't need to create BufKill's default mappings
+let g:BufKillCreateMappings = 0

@@ -143,7 +143,7 @@ let g:which_key_map.w['-']  = ['split', 'split horizontally']
 let g:which_key_map.w['/'] = ['vsplit', 'split vertically']
 nmap <C-\> :vsplit<CR>
 
-let g:which_key_map.w.s = [':call WindowSwap#EasyWindowSwap()', 'swap'] " need to run it on both windows
+let g:which_key_map.w.s = [':EasyWindowSwap', 'swap'] " need to run it on both windows
 let g:which_key_map.w.z = ['<Plug>(zoom-toggle)', 'zoom']
 
 " ignore

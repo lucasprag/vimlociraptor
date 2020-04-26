@@ -162,3 +162,5 @@ function! g:SaveSession()
   execute ':Session ' . name
 endfunction
 
+" command to be able to lazy load the plugin for easy swapping
+ command! EasyWindowSwap :call WindowSwap#EasyWindowSwap()
