@@ -52,7 +52,7 @@ let g:which_key_map.f = { 'name': '+file' }
 let g:which_key_map.f.f = ['CopyFullPath', 'copy full path']
 let g:which_key_map.f.n = ['CopyFileName', 'copy file name']
 let g:which_key_map.f.r = ['CopyRelativePath', 'copy relative path']
-let g:which_key_map.f.m = ['FzfPreviewMarks', 'marks']
+let g:which_key_map.f.m = ['Marks', 'marks']
 
 " g => git ----------
 let g:which_key_map.g = { 'name': '+git' }
@@ -131,6 +131,7 @@ let g:which_key_map.v.u = ['PlugUpdate', 'update']
 let g:which_key_map.v.k = ['PlugClean', 'clean']
 
 let g:which_key_map.v.o = [':call coc#refresh()', 'refresh coc']
+let g:which_key_map.v.h = [':Helptags', 'help tags']
 
 " w => windows ----------
 let g:which_key_map.w = { 'name': '+windows' }
@@ -148,7 +149,6 @@ let g:which_key_map.w.z = ['<Plug>(zoom-toggle)', 'zoom']
 " ignore
 let g:which_key_map.b.u = { 'name': 'which_key_ignore' }
 let g:which_key_map.b.f = 'which_key_ignore'
-let g:which_key_map.b.w = 'which_key_ignore'
 
 let g:which_key_map.C = { 'name': 'which_key_ignore' }
 let g:which_key_map.h = { 'name': 'which_key_ignore' }
