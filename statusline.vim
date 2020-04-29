@@ -23,8 +23,8 @@ autocmd User ALELint call g:MaybeUpdateLightline()
 let g:lightline = {
 \ 'colorscheme': 'simpleblack',
 \ 'active': {
-\   'left': [['mode', 'paste'], ['filename', 'modified']],
-\   'right': [['lineinfo'], ['filetype'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok', 'gutentags']]
+\   'left': [['mode', 'paste'], ['filename']],
+\   'right': [['lineinfo'], ['filetype'], ['readonly', 'linter_warnings', 'linter_errors', 'linter_ok', 'gutentags', 'modified']]
 \ },
 \ 'inactive': {
 \   'left': [['filename']],
@@ -35,15 +35,16 @@ let g:lightline = {
 \   'linter_warnings': 'lightline#ale#warnings',
 \   'linter_errors': 'lightline#ale#errors',
 \   'linter_ok': 'lightline#ale#ok',
-\   'gutentags': 'gutentags#statusline()'
+\   'gutentags': 'gutentags#statusline'
 \ },
 \ 'component_type': {
 \   'readonly': 'error',
 \   'linter_warnings': 'warning',
-\   'linter_errors': 'error'
+\   'linter_errors': 'error',
 \ },
 \ 'component_function': {
 \   'filename': 'LightlineFilename',
 \ }
 \ }
+
 

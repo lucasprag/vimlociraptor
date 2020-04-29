@@ -12,11 +12,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " don't need t
 Plug 'junegunn/fzf.vim' " search and open any file given a name
 Plug 'dominickng/fzf-session.vim' " fuzzy search saved sessions
 Plug 'Asheq/close-buffers.vim', { 'on': 'Bdelete' } " provides :Bdelete to close all, others or hidden buffers
-
-" :BB :BF, like :bb and bf but in the context of the window; BD to delete buffer and keep window
-Plug 'qpkorr/vim-bufkill'
-" TOOD: use above after https://github.com/qpkorr/vim-bufkill/pull/26
-"Plug 'lucasprag/vim-bufkill', { 'branch': 'bug-fzf-floating-window' }
+Plug 'qpkorr/vim-bufkill' " :BB :BF, like :bb and bf but in the context of the window; BD to delete buffer and keep window
 
 " > editing tools
 Plug 'scrooloose/nerdcommenter' " comment code
@@ -47,7 +43,7 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'tpope/vim-markdown', { 'for': 'markdown' } " add syntax highlighting to code block on markdown files
 
 " > git
-Plug 'rhysd/committia.vim', { 'for': 'git' } " more pleasant editing on commit message
+Plug 'rhysd/committia.vim' " more pleasant editing on commit message
 
 " > tmux
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test

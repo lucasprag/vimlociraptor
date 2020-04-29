@@ -10,10 +10,8 @@ let g:which_key_map = {}
 " b => buffers ----------
 let g:which_key_map.b = { 'name': '+buffers' }
 let g:which_key_map.b.a = [':Bdelete all', 'close all']
-
 nmap ; :Buffers<CR>
 let g:which_key_map.b.b = [':Buffers', 'buffers'] " list buffers
-
 let g:which_key_map.b.d = [':BD', 'close'] " delete a buffer but keep its window
 let g:which_key_map.b.o = [':Bdelete hidden', 'close others'] " close all buffers except buffer in current window
 let g:which_key_map.b.w = [':bd', 'close window and buffer']
@@ -23,9 +21,6 @@ nmap <S-h> :BB<CR>
 nmap <S-l> :BF<CR>
 let g:which_key_map.b.p = [':BB', 'previous']
 let g:which_key_map.b.n = [':BF', 'next']
-
-let g:which_key_map.b.L = ['Lines', 'lines']
-let g:which_key_map.b.l = ['BLines', 'lines']
 
 " c => code ----------
 let g:which_key_map.c = { 'name': '+code' }
@@ -39,7 +34,6 @@ let g:which_key_map.c[' '] = ['RemoveTrailingSpaces', 'remove trailing spaces']
 let g:which_key_map.c.p = ['RemoveDebuggers', 'remove debuggers'] " remove byebug, debugger, etc
 let g:which_key_map.c.s = ['Snippets', 'snippets']
 let g:which_key_map.c.t = ['Filetypes', 'change file type']
-let g:which_key_map.c.h = ['TurnOffSearchHighlight', 'turn off highlight']
 
 " CoC gotos mappings
 nmap <silent> gd <Plug>(coc-definition)
@@ -74,20 +68,31 @@ map F <Plug>(easymotion-linebackward)
 
 " p => project ----------
 map <C-p> :Files<CR>
-map s :Rg<CR>
 
 let g:which_key_map.p = { 'name': '+project' }
 let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
 let g:which_key_map.p.g = ['Tags', 'tags'] " fuzzy find tags
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
 let g:which_key_map.p.l = ['NERDTreeFind', 'locate on tree'] " locate file on nerdtree
-let g:which_key_map.p.s = ['Rg', 'search'] " ALT-A + enter to copy everything to quickfix
 
-" s => sessions----------
-let g:which_key_map.s = { 'name': '+sessions' }
-let g:which_key_map.s.s = [':call g:SaveSession()', 'save']
-let g:which_key_map.s.l = ['Sessions', 'list'] " <Ctrl-X> deletes session under the cursor
-let g:which_key_map.s.q = ['SQuit', 'quit tracking sessions']
+" s => search----------
+let g:which_key_map.s = { 'name': '+search' }
+map s :Rg<CR>
+let g:which_key_map.s.s = ['Rg', 'search'] " ALT-A + enter to copy everything to quickfix
+let g:which_key_map.s.h = ['TurnOffSearchHighlight', 'turn off highlight']
+let g:which_key_map.s.H = [':Helptags', 'help tags']
+let g:which_key_map.s.l = ['Lines', 'lines in buffers']
+nmap <C-f> :Filetypes<CR>
+let g:which_key_map.s.f = ['Filetypes', 'filetypes'] " fuzzy search for file types and manually set it
+map r :History<CR>
+let g:which_key_map.s.r = ['History', 'recent files'] " open window to find recent files
+let g:which_key_map.s.w = ['Windows', 'windows']
+
+" S => sessions----------
+let g:which_key_map.S = { 'name': '+sessions' }
+let g:which_key_map.S.s = [':call g:SaveSession()', 'save']
+let g:which_key_map.S.l = ['Sessions', 'list'] " <Ctrl-X> deletes session under the cursor
+let g:which_key_map.S.q = ['SQuit', 'quit tracking sessions']
 
 " TAB => tabs ----------
 nmap <Tab> :tabnext<CR>
@@ -111,7 +116,6 @@ let g:which_key_map.t.m = 'which_key_ignore'
 let g:which_key_map.T = { 'name': '+toggles' }
 let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.T.c = [':Colors', 'colorschemes']
-let g:which_key_map.T.t = [':TableModeToggle', 'table mode']
 let g:which_key_map.T.n = [':ToggleLineNumbers', 'numbers']
 let g:which_key_map.T.r = [':ToggleRelativeLineNumbers', 'relative numbers']
 let g:which_key_map.T.m = [':messages', 'messages']
@@ -130,14 +134,13 @@ let g:which_key_map.v.i = ['PlugInstall', 'install']
 let g:which_key_map.v.u = ['PlugUpdate', 'update']
 let g:which_key_map.v.k = ['PlugClean', 'clean']
 
+let g:which_key_map.v.h = ['<Plug>HiLinkTrace', 'show highlight link trace']
 let g:which_key_map.v.o = [':call coc#refresh()', 'refresh coc']
-let g:which_key_map.v.h = [':Helptags', 'help tags']
 
 " w => windows ----------
 let g:which_key_map.w = { 'name': '+windows' }
 let g:which_key_map.w.c = ['q', 'close']
 let g:which_key_map.w.r = ['InteractiveWindow', 'resize interactively']
-let g:which_key_map.w.f = ['Windows', 'find']
 
 let g:which_key_map.w['-']  = ['split', 'split horizontally']
 let g:which_key_map.w['/'] = ['vsplit', 'split vertically']
@@ -225,18 +228,5 @@ nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
 " use Ctrl + hj to move lines
 let g:move_key_modifier = 'C'
 
-" open window to find recent files
-map r :History<CR>
-
-" fuzzy search for file types and manually set it
-nmap <C-f> :Filetypes<CR>
-
-" jump arround easily even if there are no empty lines
-" this is an altenative to <S-[> and <S-]>
-nmap <C-j> 10j
-nmap <C-k> 10k
-
 " move this away since I can't remove it, TODO: remove this plugin?
 let g:table_mode_map_prefix = "<leader>C"
-
-nmap <C-t> <Plug>HiLinkTrace
