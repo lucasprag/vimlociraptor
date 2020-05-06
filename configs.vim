@@ -96,6 +96,12 @@ let g:VimuxHeight = "30"
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
 
+" make rubocop be executed using bundle exec
+let g:ale_ruby_rubocop_executable = 'bundle'
+
+" don't run linters when opening a file
+let g:ale_lint_on_enter = 0
+
 " add standardrb back
 let g:ale_linters = {
       \ 'ruby': ['rubocop'],

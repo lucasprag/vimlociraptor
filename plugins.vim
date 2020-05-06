@@ -90,7 +90,6 @@ Plug 'dag/vim-fish', { 'for': 'fish' } " support for fish
 
 " > colorschemes
 Plug 'lucasprag/simpleblack'
-"Plug 'noahfrederick/vim-hemisu'
 
 " > take a look
 " https://github.com/m00qek/nvim-contabs
