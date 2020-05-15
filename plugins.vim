@@ -44,6 +44,7 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' } " add syntax highlighting to co
 
 " > git
 Plug 'rhysd/committia.vim' " more pleasant editing on commit message
+Plug 'rhysd/git-messenger.vim', { 'on': 'GitMessenger' }
 
 " > tmux
 Plug 'benmills/vimux' " run tests on a tmux pane, works with vim-test
@@ -83,7 +84,7 @@ Plug 'maximbaz/lightline-ale' " integrates ALE and Lightline
 
 " > windows
 Plug 'romgrk/winteract.vim', { 'on': 'InteractiveWindow' } " resize windows interactively
-Plug 'wesQ3/vim-windowswap', { 'on': 'EasyWindowSwap' } " swap windows
+Plug 'wesQ3/vim-windowswap' " swap windows
 
 Plug 'stephpy/vim-yaml', { 'for': ['yml', 'yaml'] } " yml, yaml
 Plug 'dag/vim-fish', { 'for': 'fish' } " support for fish

@@ -52,6 +52,7 @@ let g:which_key_map.f.m = ['Marks', 'marks']
 let g:which_key_map.g = { 'name': '+git' }
 let g:which_key_map.g.o = [':CocCommand git.browserOpen', 'open on github']
 let g:which_key_map.g.s = [':GFiles?', 'status']
+let g:which_key_map.g.l = [':GitMessenger', 'line log']
 
 " j => jump ----------
 let g:which_key_map.j = { 'name': '+jump' }
@@ -140,6 +141,7 @@ let g:which_key_map.v.o = [':call coc#refresh()', 'refresh coc']
 " w => windows ----------
 let g:which_key_map.w = { 'name': '+windows' }
 let g:which_key_map.w.c = ['q', 'close']
+let g:which_key_map.w.o = ['only', 'close others']
 let g:which_key_map.w.r = ['InteractiveWindow', 'resize interactively']
 
 let g:which_key_map.w['-']  = ['split', 'split horizontally']
