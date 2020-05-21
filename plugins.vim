@@ -104,7 +104,6 @@ Plug 'lucasprag/simpleblack'
 "https://github.com/francoiscabrol/ranger.vim
 "https://github.com/mg979/vim-visual-multi
 "https://github.com/noahfrederick/vim-hemisu " inspiration for my new colorscheme
-"https://github.com/Yilin-Yang/vim-markbar
 
 " END Plugs
 call plug#end()
