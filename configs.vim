@@ -80,6 +80,9 @@ set autoread
 " See more details :help provider-clipboard
 set clipboard=unnamedplus
 
+" enable spell checking for all files
+set spell
+
 " use both English and Portuguese when doing spell checking
 set spelllang=en_us,pt_br
 

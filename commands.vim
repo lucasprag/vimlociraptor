@@ -150,9 +150,6 @@ command! -bang -nargs=* Rg
   \   fzf#vim#with_preview('down:80%', '?'),
   \   <bang>0)
 
-" set spell checking for markdown files
-autocmd BufNewFile,BufRead *.md setlocal spell
-
 " ask for a name to save the current session
 function! g:SaveSession()
   call inputsave()
