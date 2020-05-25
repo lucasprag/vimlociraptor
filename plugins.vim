@@ -33,7 +33,6 @@ Plug 'yuezk/vim-js', { 'for': 'javascript' }
 Plug 'HerringtonDarkholme/yats.vim' " advanced typescript syntax highlighting
 Plug 'MaxMEllon/vim-jsx-pretty', { 'for': ['javascript', 'typescript'] }
 Plug 'Ivo-Donchev/vim-react-goto-definition', { 'for': ['javascript', 'typescript'] }
-Plug 'leafgarland/typescript-vim', { 'for': ['javascript', 'typescript'] }
 Plug 'joukevandermaas/vim-ember-hbs', { 'for': ['html.handlebars'] }
 
 " css
@@ -65,7 +64,7 @@ Plug 'RRethy/vim-illuminate' " automatically highlight other uses of the current
 Plug 'dhruvasagar/vim-zoom' " zoom into a split
 Plug 'lucasprag/ultisnips', { 'branch': 'add-option-to-enable-disable-mapping' } " snippets engine
 Plug 'honza/vim-snippets' " actual snippets
-Plug 'gerw/vim-HiLinkTrace', { 'on': 'HiLinkTrace' } " provides <Plug>HiLinkTrace to debug syntax highlighting
+Plug 'gerw/vim-HiLinkTrace' " provides <Plug>HiLinkTrace to debug syntax highlighting
 
 " completion framework and much more
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -93,7 +92,7 @@ Plug 'dag/vim-fish', { 'for': 'fish' } " support for fish
 Plug 'lucasprag/simpleblack'
 
 " > take a look
-" https://github.com/m00qek/nvim-contabs
+"https://github.com/m00qek/nvim-contabs
 "https://github.com/reedes/vim-wordy
 "https://github.com/glidenote/memolist.vim
 "https://github.com/AndrewRadev/splitjoin.vim
@@ -101,9 +100,8 @@ Plug 'lucasprag/simpleblack'
 "https://github.com/fmoralesc/vim-pad
 "https://github.com/brooth/far.vim
 "https://github.com/justinmk/vim-sneak
-"https://github.com/francoiscabrol/ranger.vim
 "https://github.com/mg979/vim-visual-multi
 "https://github.com/noahfrederick/vim-hemisu " inspiration for my new colorscheme
+"https://github.com/Yilin-Yang/vim-markbar
 
-" END Plugs
 call plug#end()
