@@ -22,7 +22,6 @@ set noshowmode
 " enable true colors support
 set termguicolors
 
-"favorites are simpleblack, jellybeans and onedark
 colorscheme simpleblack
 
 " Highlight searches

@@ -173,7 +173,7 @@ function! s:MapRuby()
   let g:which_key_map.l.f = ['ALEFix', 'format']
 endfunction
 
-autocmd! FileType ruby,erubyjremmen/vim-ripgrep call s:MapRuby()
+autocmd! FileType ruby,eruby call s:MapRuby()
 
 
 " l => elixir ----------
