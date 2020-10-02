@@ -22,7 +22,24 @@ set noshowmode
 " enable true colors support
 set termguicolors
 
-colorscheme simpleblack
+"colorscheme simpleblack
+"let s:gb.dark0_hard
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_number_column='bg0'
+let g:gruvbox_sign_column='bg0'
+let g:gruvbox_color_column='bg0'
+let g:gruvbox_vert_split='bg0'
+
+let g:gruvbox_invert_selection=0
+let g:gruvbox_inverse=0
+let g:gruvbox_invert_signs=0
+
+let g:gruvbox_italic=0
+let g:gruvbox_italicize_comments=0
+let g:gruvbox_italicize_strings=0
+let g:gruvbox_underline=0
+
+colorscheme gruvbox
 
 " Highlight searches
 set hlsearch
@@ -86,7 +103,7 @@ set spelllang=en_us,pt_br
 let g:EditorConfig_core_mode = 'external_command'
 
 " make vim-test use vim-tmux-runner to run specs in a split bellow
-let test#strategy = "vimux"
+let test#strategy = 'vimux'
 
 " height to the split for running specs
 let g:VimuxHeight = "30"

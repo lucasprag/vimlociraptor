@@ -16,6 +16,7 @@ Plug 'qpkorr/vim-bufkill' " :BB :BF, like :bb and bf but in the context of the w
 
 " > editing tools
 Plug 'scrooloose/nerdcommenter' " comment code
+Plug 'AndrewRadev/tagalong.vim' " automatically rename closing/opening HTML/XML tags
 
 " > ruby
 Plug 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
@@ -62,9 +63,11 @@ Plug 'tpope/vim-endwise' " helps to end certain structures
 Plug 'vim-utils/vim-troll-stopper' " adds a different bg to Unicode troll characters
 Plug 'RRethy/vim-illuminate' " automatically highlight other uses of the current word under the cursor
 Plug 'dhruvasagar/vim-zoom' " zoom into a split
-Plug 'lucasprag/ultisnips', { 'branch': 'add-option-to-enable-disable-mapping' } " snippets engine
+Plug 'SirVer/ultisnips' " snippets engine
 Plug 'honza/vim-snippets' " actual snippets
 Plug 'gerw/vim-HiLinkTrace' " provides <Plug>HiLinkTrace to debug syntax highlighting
+Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' } " really useful on longer RFCs
+
 
 " completion framework and much more
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -90,6 +93,8 @@ Plug 'dag/vim-fish', { 'for': 'fish' } " support for fish
 
 " > colorschemes
 Plug 'lucasprag/simpleblack'
+"Plug 'lucasprag/rubis'
+Plug 'morhetz/gruvbox'
 
 " > take a look
 "https://github.com/m00qek/nvim-contabs
@@ -102,6 +107,12 @@ Plug 'lucasprag/simpleblack'
 "https://github.com/justinmk/vim-sneak
 "https://github.com/mg979/vim-visual-multi
 "https://github.com/noahfrederick/vim-hemisu " inspiration for my new colorscheme
+"https://github.com/flrnd/candid.vim " this one as well
 "https://github.com/Yilin-Yang/vim-markbar
+"https://github.com/craigemery/vim-autotag
+"https://github.com/chriskempson/base16
+"https://github.com/camspiers/lens.vim
+"https://github.com/kristijanhusak/vim-dadbod-ui
+"https://github.com/pacha/vem-tabline
 
 call plug#end()

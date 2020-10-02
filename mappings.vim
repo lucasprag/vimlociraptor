@@ -7,6 +7,8 @@ vnoremap <silent> <leader> :<c-u>WhichKeyVisual '<Space>'<CR>
 
 let g:which_key_map = {}
 
+" TODO: nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
+
 " b => buffers ----------
 let g:which_key_map.b = { 'name': '+buffers' }
 let g:which_key_map.b.a = [':Bdelete all', 'close all']
@@ -71,6 +73,7 @@ map F <Plug>(easymotion-linebackward)
 map <C-p> :Files<CR>
 
 let g:which_key_map.p = { 'name': '+project' }
+let g:which_key_map.p.b = ['TagbarToggle', 'tagbar'] " locate file on nerdtree
 let g:which_key_map.p.f = ['Files', 'files'] " fuzzy find files
 let g:which_key_map.p.g = ['Tags', 'tags'] " fuzzy find tags
 let g:which_key_map.p.t = ['NERDTreeToggle', 'tree'] " toggle nerdtree
@@ -111,7 +114,7 @@ let g:which_key_map.t.t = ['TestNearest', 'nearest']
 let g:which_key_map.t.f = ['TestFile', 'file']
 let g:which_key_map.t.l = ['TestLast', 'last']
 let g:which_key_map.t.g = ['TestVisit', 'visit']
-let g:which_key_map.t.m = 'which_key_ignore'
+let g:which_key_map.t.m = { 'name': 'which_key_ignore' }
 
 " T => toggles ----------
 let g:which_key_map.T = { 'name': '+toggles' }
