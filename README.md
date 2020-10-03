@@ -3,9 +3,9 @@
 
 My personal collections of plugins and mappings for vim|neovim.
 
-It works with tmux, and it's used for ruby, elixir, bash, and JavaScript.
+It works with tmux, and it's used for ruby, elixir, bash, and javascript.
 
-![nvim](github/vimlociraptor2.png)
+![nvim](github/vimlociraptor3.png)
 
 It's nice to dig into other people's vim files and see how they do things. Feel free to do that.
 
