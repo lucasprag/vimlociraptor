@@ -93,8 +93,11 @@ Plug 'dag/vim-fish', { 'for': 'fish' } " support for fish
 
 " > colorschemes
 Plug 'lucasprag/simpleblack'
-"Plug 'lucasprag/rubis'
-Plug 'morhetz/gruvbox'
+
+" Use official gruvbox again this PR is merged
+" https://github.com/morhetz/gruvbox/pull/355
+" Plug 'morhetz/gruvbox'
+Plug 'lucasprag/gruvbox', { 'branch': 'ability-to-customize-split-line' }
 
 " > take a look
 "https://github.com/m00qek/nvim-contabs
