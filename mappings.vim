@@ -121,6 +121,7 @@ let g:which_key_map.T = { 'name': '+toggles' }
 let g:which_key_map.T.a = ['ALEToggle', 'ALE'] " toggle linting
 let g:which_key_map.T.c = [':Colors', 'colorschemes']
 let g:which_key_map.T.n = [':ToggleLineNumbers', 'numbers']
+let g:which_key_map.T.l = [':ToggleLineNumbers', 'line numbers'] " because I sometimes forgot that that map is SPC T n
 let g:which_key_map.T.r = [':ToggleRelativeLineNumbers', 'relative numbers']
 let g:which_key_map.T.m = [':messages', 'messages']
 let g:which_key_map.T.i = [':IndentLinesToggle', 'indent lines']

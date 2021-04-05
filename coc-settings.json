@@ -4,5 +4,6 @@
   "git.addedSign.text": "•",
   "git.removedSign.text": "•",
   "git.topRemovedSign.text": "•",
-  "git.changeRemovedSign.text": "•"
+  "git.changeRemovedSign.text": "•",
+  "git.removedSign.hlGroup": "DiffGit"
 }

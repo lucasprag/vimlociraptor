@@ -39,7 +39,10 @@ let g:gruvbox_italicize_comments=0
 let g:gruvbox_italicize_strings=0
 let g:gruvbox_underline=0
 
-colorscheme gruvbox
+let ayucolor="dark"
+colorscheme ayu
+"colorscheme simpleblack
+let g:indentLine_setColors = 0
 
 " Highlight searches
 set hlsearch
@@ -72,7 +75,7 @@ set visualbell
 set splitbelow
 set splitright
 
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.gif,*.png,*.jpg,*.jpeg,*.lock,*.temp
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.gif,*.png,*.jpg,*.jpeg,*.lock,*.temp,!*/
 
 " > make which-key faster
 set timeoutlen=300
@@ -106,7 +109,7 @@ let g:EditorConfig_core_mode = 'external_command'
 let test#strategy = 'vimux'
 
 " height to the split for running specs
-let g:VimuxHeight = "30"
+let g:VimuxHeight = "20"
 
 " change icons of the asynchronous linting engine '◉'
 let g:ale_sign_error = '•'
@@ -232,7 +235,7 @@ let g:coc_global_extensions = [
       \ ]
 
 " enable color highlighter
-lua require'colorizer'.setup()
+"lua require'colorizer'.setup()
 
 " make fzf a floating window
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9, 'highlight': 'Todo' } }

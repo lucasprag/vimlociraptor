@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 " > navigation
 Plug 'easymotion/vim-easymotion' " makes a map to easy move the cursor
 Plug 'terryma/vim-multiple-cursors' " multiple cursors using C-n when selecting a word
-Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying completely out of your way
+"Plug 'ludovicchabant/vim-gutentags' " (re)generate tag files while staying completely out of your way
 
 " > finding files/buffers/etc
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " presents the filesystem in the form of a tree
@@ -16,7 +16,7 @@ Plug 'qpkorr/vim-bufkill' " :BB :BF, like :bb and bf but in the context of the w
 
 " > editing tools
 Plug 'scrooloose/nerdcommenter' " comment code
-Plug 'AndrewRadev/tagalong.vim' " automatically rename closing/opening HTML/XML tags
+"Plug 'AndrewRadev/tagalong.vim' " automatically rename closing/opening HTML/XML tags
 
 " > ruby
 Plug 'tpope/vim-rbenv' " sets ruby path and provide rbenv command
@@ -93,11 +93,15 @@ Plug 'dag/vim-fish', { 'for': 'fish' } " support for fish
 
 " > colorschemes
 Plug 'lucasprag/simpleblack'
+Plug 'chriskempson/base16-vim'
+Plug 'ayu-theme/ayu-vim'
+
 
 " Use official gruvbox again this PR is merged
 " https://github.com/morhetz/gruvbox/pull/355
 " Plug 'morhetz/gruvbox'
 Plug 'lucasprag/gruvbox', { 'branch': 'ability-to-customize-split-line' }
+Plug 'bluz71/vim-nightfly-guicolors'
 
 " > take a look
 "https://github.com/m00qek/nvim-contabs
@@ -117,5 +121,6 @@ Plug 'lucasprag/gruvbox', { 'branch': 'ability-to-customize-split-line' }
 "https://github.com/camspiers/lens.vim
 "https://github.com/kristijanhusak/vim-dadbod-ui
 "https://github.com/pacha/vem-tabline
+"https://github.com/thaerkh/vim-workspace
 
 call plug#end()
