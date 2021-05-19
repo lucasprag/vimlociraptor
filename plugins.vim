@@ -60,7 +60,6 @@ Plug 'vim-scripts/restore_view.vim' " restoring cursor position and folding
 Plug 'liuchengxu/vim-which-key' " shows keybindings in popup when you press <leader>
 Plug 'lucasprag/tabulous', { 'branch': 'fixed-tab-name' } " rename tabs
 Plug 'tpope/vim-endwise' " helps to end certain structures
-Plug 'vim-utils/vim-troll-stopper' " adds a different bg to Unicode troll characters
 Plug 'RRethy/vim-illuminate' " automatically highlight other uses of the current word under the cursor
 Plug 'dhruvasagar/vim-zoom' " zoom into a split
 Plug 'SirVer/ultisnips' " snippets engine
@@ -95,7 +94,6 @@ Plug 'dag/vim-fish', { 'for': 'fish' } " support for fish
 Plug 'lucasprag/simpleblack'
 Plug 'chriskempson/base16-vim'
 Plug 'ayu-theme/ayu-vim'
-
 
 " Use official gruvbox again this PR is merged
 " https://github.com/morhetz/gruvbox/pull/355
